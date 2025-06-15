@@ -1,3 +1,4 @@
+// Ersetze den kompletten Inhalt deiner script.js Datei hiermit
 document.addEventListener('DOMContentLoaded', () => {
     // ############ KONFIGURATION ############
     // Ersetze dies mit dem Link aus "Datei > Freigeben > Im Web veröffentlichen"
@@ -55,6 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 header: true,
                 skipEmptyLines: true,
                 complete: (results) => {
+                    // WICHTIG: Erwarte jetzt Spalten wie ID, Name, Beschreibung, URL, Medientyp, ImageURL
                     database = results.data;
                     console.log('Datenbank geladen:', database);
                     populateFilterDropdown();
@@ -100,7 +102,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         let filteredData = database;
 
-        // Nach Suchbegriff filtern
         if (searchTerm) {
             filteredData = filteredData.filter(item => {
                 const name = (item.Name || '').toLowerCase();
@@ -113,7 +114,6 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
-        // Nach Medientyp filtern
         if (useFilter && mediatype) {
             filteredData = filteredData.filter(item => item.Medientyp === mediatype);
         }
@@ -123,8 +123,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Ergebnisse anzeigen ---
     function displayResults(data) {
-        lastResults = data; // Ergebnisse für "zurück"-Button speichern
-        resultsContainer.innerHTML = ''; // Alte Ergebnisse löschen
+        lastResults = data;
+        resultsContainer.innerHTML = '';
         
         if (data.length === 0) {
             resultsContainer.innerHTML = '<p>Keine Ergebnisse gefunden.</p>';
@@ -132,12 +132,9 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        // Ergebnisse nach Medientyp gruppieren
         const groupedResults = data.reduce((acc, item) => {
             const key = item.Medientyp || 'Sonstige';
-            if (!acc[key]) {
-                acc[key] = [];
-            }
+            if (!acc[key]) acc[key] = [];
             acc[key].push(item);
             return acc;
         }, {});
@@ -155,13 +152,15 @@ document.addEventListener('DOMContentLoaded', () => {
             groupedResults[group].forEach(item => {
                 const card = document.createElement('div');
                 card.className = 'result-card';
-                card.dataset.id = item.ID; // ID für Klick-Event
+                card.dataset.id = item.ID;
 
-                // thum.io für Thumbnails verwenden
-                const thumbnailUrl = `https://image.thum.io/get/width/400/crop/300/${item.URL}`;
+                // NEU: Logik für Bild-URL aus dem Spreadsheet
+                const imageUrl = item.ImageURL && item.ImageURL.startsWith('http') ? item.ImageURL : '';
                 
                 card.innerHTML = `
-                    <div class="thumbnail" style="background-image: url('${thumbnailUrl}')" onerror="this.style.backgroundImage='none'; this.innerText='Vorschau nicht verfügbar';"></div>
+                    <div class="thumbnail" style="${imageUrl ? `background-image: url('${imageUrl}')` : ''}">
+                        ${!imageUrl ? 'Kein Bild verfügbar' : ''}
+                    </div>
                     <div class="card-info">
                         <h3 class="card-title">${item.Name}</h3>
                         <p class="card-id">ID: ${item.ID}</p>
@@ -183,19 +182,29 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!item) return;
 
         const detailContent = document.getElementById('detail-content');
-        const thumbnailUrl = `https://image.thum.io/get/width/800/${item.URL}`;
+        
+        // NEU: Logik für Bild-URL und ungültige URL
+        const imageUrl = item.ImageURL && item.ImageURL.startsWith('http') ? item.ImageURL : '';
+        const isValidUrl = item.URL && item.URL.startsWith('http');
+        
+        let urlHtml;
+        if (isValidUrl) {
+            urlHtml = `<a href="${item.URL}" target="_blank" rel="noopener noreferrer">${item.URL}</a>`;
+        } else {
+            urlHtml = `<span class="unavailable-url">URL nicht verfügbar</span>`;
+        }
 
         detailContent.innerHTML = `
-            <img src="${thumbnailUrl}" alt="Vorschau von ${item.Name}" onerror="this.style.display='none';">
+            ${imageUrl ? `<img src="${imageUrl}" alt="Vorschau von ${item.Name}">` : ''}
             <h2>${item.Name}</h2>
             <p><strong>Medientyp:</strong> ${item.Medientyp || 'N/A'}</p>
             <p><strong>Beschreibung:</strong> ${item.Beschreibung || 'Keine Beschreibung verfügbar.'}</p>
-            <p><strong>URL:</strong> <a href="${item.URL}" target="_blank" rel="noopener noreferrer">${item.URL}</a></p>
+            <p><strong>URL:</strong> ${urlHtml}</p>
         `;
         switchView(detailView);
     }
     
-    // --- Event Listener ---
+    // --- Event Listener (unverändert) ---
     filterToggle.addEventListener('change', () => {
         mediatypeFilterSelect.classList.toggle('hidden', !filterToggle.checked);
     });
@@ -210,7 +219,6 @@ document.addEventListener('DOMContentLoaded', () => {
     backToSearchBtn.addEventListener('click', () => switchView(searchView));
     backToResultsBtn.addEventListener('click', () => displayResults(lastResults));
     
-    // Navigation
     navSearchBtn.addEventListener('click', () => {
         switchView(searchView);
         setActiveNav(navSearchBtn);
@@ -224,7 +232,6 @@ document.addEventListener('DOMContentLoaded', () => {
          setActiveNav(navSearchBtn);
     });
     
-    // Kontaktformulare
     function showForm(formToShow) {
         feedbackForm.classList.add('hidden');
         submitForm.classList.add('hidden');
@@ -240,15 +247,13 @@ document.addEventListener('DOMContentLoaded', () => {
         showForm(submitForm);
     });
     
-    // HINWEIS: Das Absenden von Formularen auf einer statischen Seite benötigt einen externen Dienst wie Formspree.io
-    // Der folgende Code ist nur ein Platzhalter.
     feedbackForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        alert('Feedback-Funktion ist noch nicht implementiert. Benötigt einen Service wie Formspree.');
+        alert('Feedback-Funktion ist noch nicht implementiert.');
     });
     submitForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        alert('Submit-Funktion ist noch nicht implementiert. Benötigt einen Service wie Formspree.');
+        alert('Submit-Funktion ist noch nicht implementiert.');
     });
 
 

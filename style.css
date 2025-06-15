@@ -1,3 +1,4 @@
+/* Ersetze den kompletten Inhalt deiner style.css Datei hiermit */
 :root {
     --bg-color: #1e1e1e;
     --container-bg: #2a2a2a;
@@ -220,6 +221,7 @@ input:checked + .slider:before { transform: translateX(22px); }
     justify-content: center;
     align-items: center;
     color: var(--label-color);
+    font-size: 0.9rem;
 }
 
 .result-card .card-info {
@@ -250,11 +252,13 @@ input:checked + .slider:before { transform: translateX(22px); }
     max-width: 100%;
     border-radius: 6px;
     margin-bottom: 1.5rem;
+    background-color: #333; /* Falls Bild nicht lädt */
 }
 
 #detail-content h2 { font-size: 2rem; margin-bottom: 1rem; }
 #detail-content p { margin-bottom: 1rem; line-height: 1.6; }
 #detail-content a { color: var(--primary-accent); word-break: break-all; }
+#detail-content .unavailable-url { color: #999; } /* NEU */
 
 /* Formulare in Kontakt */
 #contact-view .form-container { display: flex; gap: 1rem; max-width: 700px; margin: 0 auto; background: none; border: none; padding: 0; }
