@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     // ############ KONFIGURATION ############
     // Ersetze dies mit dem Link aus "Datei > Freigeben > Im Web veröffentlichen"
-    const GOOGLE_SHEET_CSV_URL = 'DEIN_GOOGLE_SHEET_CSV_LINK_HIER';
+    const GOOGLE_SHEET_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSBBqzOsNzp1-erXm92Vuob7O4UrCluGxUGWQyis7Tag7sOhg2Vroiunhy5Jy0RcYaZF604GJ5IeubV/pub?gid=708853183&single=true&output=csv';
 
     // ############ VARIABLEN & ELEMENTE ############
     let database = [];
