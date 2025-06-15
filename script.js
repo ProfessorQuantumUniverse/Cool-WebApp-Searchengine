@@ -1,21 +1,18 @@
 // Ersetze den kompletten Inhalt deiner script.js Datei hiermit
 document.addEventListener('DOMContentLoaded', () => {
     // ############ KONFIGURATION ############
-    // Ersetze dies mit dem Link aus "Datei > Freigeben > Im Web veröffentlichen"
     const GOOGLE_SHEET_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSBBqzOsNzp1-erXm92Vuob7O4UrCluGxUGWQyis7Tag7sOhg2Vroiunhy5Jy0RcYaZF604GJ5IeubV/pub?gid=708853183&single=true&output=csv';
 
     // ############ VARIABLEN & ELEMENTE ############
     let database = [];
     let lastResults = [];
 
-    // Views
     const searchView = document.getElementById('search-view');
     const resultsView = document.getElementById('results-view');
     const detailView = document.getElementById('detail-view');
     const contactView = document.getElementById('contact-view');
     const allViews = [searchView, resultsView, detailView, contactView];
 
-    // Suchelemente
     const searchTermInput = document.getElementById('search-term');
     const filterToggle = document.getElementById('filter-mediatype-toggle');
     const mediatypeFilterSelect = document.getElementById('mediatype-filter');
@@ -23,29 +20,24 @@ document.addEventListener('DOMContentLoaded', () => {
     const searchButton = document.getElementById('search-button');
     const exploreButton = document.getElementById('explore-button');
     
-    // Ergebniselemente
     const resultsContainer = document.getElementById('results-container');
     
-    // Navigation & Buttons
     const navSearchBtn = document.getElementById('nav-search-btn');
     const navContactBtn = document.getElementById('nav-contact-btn');
     const logoHomeButton = document.getElementById('logo-home-button');
     const backToSearchBtn = document.getElementById('back-to-search-btn');
     const backToResultsBtn = document.getElementById('back-to-results-btn');
 
-    // Kontakt- & Formular-Elemente
     const submitSiteLink = document.getElementById('submit-new-site-link');
     const showFeedbackBtn = document.getElementById('show-feedback-form');
     const showSubmitBtn = document.getElementById('show-submit-form');
     const feedbackForm = document.getElementById('feedback-form');
     const submitForm = document.getElementById('submit-form');
 
-
     // ############ FUNKTIONEN ############
 
-    // --- Daten laden ---
     async function loadDatabase() {
-        if (!GOOGLE_SHEET_CSV_URL.startsWith('https://')) {
+        if (!GOOGLE_SHEET_CSV_URL || !GOOGLE_SHEET_CSV_URL.startsWith('https://')) {
             alert('Bitte füge einen gültigen Google Sheet CSV Link in der script.js Datei ein!');
             return;
         }
@@ -56,23 +48,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 header: true,
                 skipEmptyLines: true,
                 complete: (results) => {
-                    // WICHTIG: Erwarte jetzt Spalten wie ID, Name, Beschreibung, URL, Medientyp, ImageURL
                     database = results.data;
-                    console.log('Datenbank geladen:', database);
+                    console.log('Datenbank geladen. Erster Eintrag:', database[0]);
                     populateFilterDropdown();
                 }
             });
         } catch (error) {
             console.error('Fehler beim Laden der Datenbank:', error);
-            alert('Die Datenbank konnte nicht geladen werden. Prüfe den Link und deine Internetverbindung.');
+            alert('Die Datenbank konnte nicht geladen werden.');
         }
     }
 
-    // --- Ansichten wechseln ---
-    function switchView(targetView) {
+    function switchView(targetView, scrollPosition = 0) {
         allViews.forEach(view => view.classList.remove('active-view'));
         targetView.classList.add('active-view');
-        window.scrollTo(0, 0);
+        // NEU: Sofort zur gewünschten Position scrollen
+        window.scrollTo(0, scrollPosition);
     }
     
     function setActiveNav(activeButton) {
@@ -80,7 +71,6 @@ document.addEventListener('DOMContentLoaded', () => {
         activeButton.classList.add('active');
     }
 
-    // --- Filter-Dropdown füllen ---
     function populateFilterDropdown() {
         const mediatypes = [...new Set(database.map(item => item.Medientyp).filter(Boolean))];
         mediatypes.sort();
@@ -93,7 +83,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- Suchlogik ---
     function handleSearch() {
         const searchTerm = searchTermInput.value.trim().toLowerCase();
         const useFilter = filterToggle.checked;
@@ -121,7 +110,6 @@ document.addEventListener('DOMContentLoaded', () => {
         displayResults(filteredData);
     }
 
-    // --- Ergebnisse anzeigen ---
     function displayResults(data) {
         lastResults = data;
         resultsContainer.innerHTML = '';
@@ -154,19 +142,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 card.className = 'result-card';
                 card.dataset.id = item.ID;
 
-                // NEU: Logik für Bild-URL aus dem Spreadsheet
-                const imageUrl = item.ImageURL && item.ImageURL.startsWith('http') ? item.ImageURL : '';
+                let thumbnailHtml;
+                if (item.ImageURL && item.ImageURL.startsWith('http')) {
+                    thumbnailHtml = `<div class="thumbnail" style="background-image: url('${item.ImageURL}')"></div>`;
+                } else if (item.URL && item.URL.startsWith('http')) {
+                    const thumUrl = `https://image.thum.io/get/width/400/crop/300/${encodeURIComponent(item.URL)}`;
+                    thumbnailHtml = `<div class="thumbnail" style="background-image: url('${thumUrl}')"></div>`;
+                } else {
+                    thumbnailHtml = `<div class="thumbnail">Kein Bild verfügbar</div>`;
+                }
                 
                 card.innerHTML = `
-                    <div class="thumbnail" style="${imageUrl ? `background-image: url('${imageUrl}')` : ''}">
-                        ${!imageUrl ? 'Kein Bild verfügbar' : ''}
-                    </div>
+                    ${thumbnailHtml}
                     <div class="card-info">
                         <h3 class="card-title">${item.Name}</h3>
                         <p class="card-id">ID: ${item.ID}</p>
                     </div>
                 `;
-                card.addEventListener('click', () => showDetails(item.ID));
+                // NEU: Beim Klick Scroll-Position speichern
+                card.addEventListener('click', () => {
+                    sessionStorage.setItem('scrollPosition', window.scrollY);
+                    showDetails(item.ID);
+                });
                 grid.appendChild(card);
             });
             groupContainer.appendChild(grid);
@@ -176,49 +173,56 @@ document.addEventListener('DOMContentLoaded', () => {
         switchView(resultsView);
     }
     
-    // --- Detailansicht anzeigen ---
     function showDetails(id) {
         const item = database.find(d => d.ID == id);
         if (!item) return;
 
         const detailContent = document.getElementById('detail-content');
         
-        // NEU: Logik für Bild-URL und ungültige URL
-        const imageUrl = item.ImageURL && item.ImageURL.startsWith('http') ? item.ImageURL : '';
-        const isValidUrl = item.URL && item.URL.startsWith('http');
-        
-        let urlHtml;
-        if (isValidUrl) {
-            urlHtml = `<a href="${item.URL}" target="_blank" rel="noopener noreferrer">${item.URL}</a>`;
+        let imageHtml;
+        if (item.ImageURL && item.ImageURL.startsWith('http')) {
+            imageHtml = `<img src="${item.ImageURL}" alt="Vorschau von ${item.Name}">`;
+        } else if (item.URL && item.URL.startsWith('http')) {
+             const thumUrl = `https://image.thum.io/get/width/800/${encodeURIComponent(item.URL)}`;
+             imageHtml = `<img src="${thumUrl}" alt="Vorschau von ${item.Name}">`;
         } else {
-            urlHtml = `<span class="unavailable-url">URL nicht verfügbar</span>`;
+            imageHtml = '';
         }
+        
+        const isValidUrl = item.URL && item.URL.startsWith('http');
+        let urlHtml = isValidUrl 
+            ? `<a href="${item.URL}" target="_blank" rel="noopener noreferrer">${item.URL}</a>`
+            : `<span class="unavailable-url">URL nicht verfügbar</span>`;
 
         detailContent.innerHTML = `
-            ${imageUrl ? `<img src="${imageUrl}" alt="Vorschau von ${item.Name}">` : ''}
+            ${imageHtml}
             <h2>${item.Name}</h2>
             <p><strong>Medientyp:</strong> ${item.Medientyp || 'N/A'}</p>
             <p><strong>Beschreibung:</strong> ${item.Beschreibung || 'Keine Beschreibung verfügbar.'}</p>
             <p><strong>URL:</strong> ${urlHtml}</p>
         `;
+        // Ansicht wechseln, ohne nach oben zu scrollen
         switchView(detailView);
     }
     
-    // --- Event Listener (unverändert) ---
+    // --- Event Listener ---
     filterToggle.addEventListener('change', () => {
         mediatypeFilterSelect.classList.toggle('hidden', !filterToggle.checked);
     });
-
     searchButton.addEventListener('click', handleSearch);
     searchTermInput.addEventListener('keyup', (e) => {
         if (e.key === 'Enter') handleSearch();
     });
-    
     exploreButton.addEventListener('click', () => displayResults(database));
     
     backToSearchBtn.addEventListener('click', () => switchView(searchView));
-    backToResultsBtn.addEventListener('click', () => displayResults(lastResults));
     
+    // NEU: "Back to results" Logik angepasst
+    backToResultsBtn.addEventListener('click', () => {
+        const storedPosition = sessionStorage.getItem('scrollPosition') || 0;
+        switchView(resultsView, parseInt(storedPosition, 10));
+    });
+
     navSearchBtn.addEventListener('click', () => {
         switchView(searchView);
         setActiveNav(navSearchBtn);
@@ -231,13 +235,11 @@ document.addEventListener('DOMContentLoaded', () => {
          switchView(searchView);
          setActiveNav(navSearchBtn);
     });
-    
     function showForm(formToShow) {
         feedbackForm.classList.add('hidden');
         submitForm.classList.add('hidden');
-        formToShow.classList.remove('hidden');
+        if (formToShow) formToShow.classList.remove('hidden');
     }
-    
     showFeedbackBtn.addEventListener('click', () => showForm(feedbackForm));
     showSubmitBtn.addEventListener('click', () => showForm(submitForm));
     submitSiteLink.addEventListener('click', (e) => {
@@ -246,7 +248,6 @@ document.addEventListener('DOMContentLoaded', () => {
         setActiveNav(navContactBtn);
         showForm(submitForm);
     });
-    
     feedbackForm.addEventListener('submit', (e) => {
         e.preventDefault();
         alert('Feedback-Funktion ist noch nicht implementiert.');
@@ -255,7 +256,6 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
         alert('Submit-Funktion ist noch nicht implementiert.');
     });
-
 
     // ############ INITIALISIERUNG ############
     loadDatabase();
