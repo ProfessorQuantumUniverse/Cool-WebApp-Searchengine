@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    function handleSearch() {
+function handleSearch() {
         const searchTerm = searchTermInput.value.trim().toLowerCase();
         const useFilter = filterToggle.checked;
         const mediatype = mediatypeFilterSelect.value;
@@ -101,10 +101,17 @@ document.addEventListener('DOMContentLoaded', () => {
             filteredData = filteredData.filter(item => {
                 const name = (item.Name || '').toLowerCase();
                 const desc = (item.Beschreibung || '').toLowerCase();
+                // NEU: Auch die URL für die Suche vorbereiten
+                const url = (item.URL || '').toLowerCase();
+
                 if (isExactMatch) {
+                    // Exakte Suche bezieht sich typischerweise nur auf den Namen.
                     return name === searchTerm;
                 } else {
-                    return name.includes(searchTerm) || desc.includes(searchTerm);
+                    // NEU: Die URL zur "contains"-Suche hinzufügen
+                    return name.includes(searchTerm) || 
+                           desc.includes(searchTerm) || 
+                           url.includes(searchTerm);
                 }
             });
         }
@@ -115,6 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         displayResults(filteredData);
     }
+
 
     function displayResults(data) {
         lastResults = data;
