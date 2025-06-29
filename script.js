@@ -1,33 +1,30 @@
-// Ersetze den kompletten Inhalt deiner script.js Datei hiermit
 document.addEventListener('DOMContentLoaded', () => {
     // ############ KONFIGURATION ############
-    const GOOGLE_SHEET_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSBBqzOsNzp1-erXm92Vuob7O4UrCluGxUGWQyis7Tag7sOhg2Vroiunhy5Jy0RcYaZF604GJ5IeubV/pub?gid=708853183&single=true&output=csv';
+    // HIER DEINE NEUE WEB-APP-URL EINFÜGEN
+    const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbws3rG5E4Q6jzy1bJDzjKSxQH-syVyQ95K2uBNAQeHeuJH76xdLXSg5_eVUO4841h05/exec';
 
     // ############ VARIABLEN & ELEMENTE ############
     let database = [];
     let lastResults = [];
 
+    // ... (alle anderen Element-Variablen bleiben gleich) ...
     const searchView = document.getElementById('search-view');
     const resultsView = document.getElementById('results-view');
     const detailView = document.getElementById('detail-view');
     const contactView = document.getElementById('contact-view');
     const allViews = [searchView, resultsView, detailView, contactView];
-
     const searchTermInput = document.getElementById('search-term');
     const filterToggle = document.getElementById('filter-mediatype-toggle');
     const mediatypeFilterSelect = document.getElementById('mediatype-filter');
     const exactSearchToggle = document.getElementById('exact-search-toggle');
     const searchButton = document.getElementById('search-button');
     const exploreButton = document.getElementById('explore-button');
-    
     const resultsContainer = document.getElementById('results-container');
-    
     const navSearchBtn = document.getElementById('nav-search-btn');
     const navContactBtn = document.getElementById('nav-contact-btn');
     const logoHomeButton = document.getElementById('logo-home-button');
     const backToSearchBtn = document.getElementById('back-to-search-btn');
     const backToResultsBtn = document.getElementById('back-to-results-btn');
-
     const submitSiteLink = document.getElementById('submit-new-site-link');
     const showFeedbackBtn = document.getElementById('show-feedback-form');
     const showSubmitBtn = document.getElementById('show-submit-form');
@@ -36,33 +33,42 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ############ FUNKTIONEN ############
 
+    function preloadImage(url) {
+        if (!url) return;
+        const img = new Image();
+        img.src = url;
+    }
+
+    // ANGEPASST: Lädt jetzt direkt JSON von der Apps Script API
     async function loadDatabase() {
-        if (!GOOGLE_SHEET_CSV_URL || !GOOGLE_SHEET_CSV_URL.startsWith('https://')) {
-            alert('Bitte füge einen gültigen Google Sheet CSV Link in der script.js Datei ein!');
+        if (!APPS_SCRIPT_URL || !APPS_SCRIPT_URL.startsWith('https://')) {
+            alert('Bitte füge deine gültige Apps Script Web-App-URL in der script.js Datei ein!');
             return;
         }
         try {
-            const response = await fetch(GOOGLE_SHEET_CSV_URL);
-            const csvText = await response.text();
-            Papa.parse(csvText, {
-                header: true,
-                skipEmptyLines: true,
-                complete: (results) => {
-                    database = results.data;
-                    console.log('Datenbank geladen. Erster Eintrag:', database[0]);
-                    populateFilterDropdown();
-                }
-            });
+            const response = await fetch(APPS_SCRIPT_URL);
+            // Wir erwarten direkt JSON, kein CSV mehr! PapaParse wird nicht mehr benötigt.
+            const data = await response.json();
+            
+            if (data.error) {
+                throw new Error(data.error);
+            }
+
+            database = data;
+            console.log('Datenbank von API geladen. Erster Eintrag:', database[0]);
+            populateFilterDropdown();
         } catch (error) {
-            console.error('Fehler beim Laden der Datenbank:', error);
-            alert('Die Datenbank konnte nicht geladen werden.');
+            console.error('Fehler beim Laden der Datenbank von der API:', error);
+            alert('Die Datenbank konnte nicht geladen werden. Prüfe die API-URL und die Bereitstellungseinstellungen. Fehlermeldung: ' + error.message);
         }
     }
+
+    // --- Der Rest des Codes ist identisch, da er bereits mit einem Array von Objekten arbeitet ---
+    // --- Du kannst ihn einfach so übernehmen. ---
 
     function switchView(targetView, scrollPosition = 0) {
         allViews.forEach(view => view.classList.remove('active-view'));
         targetView.classList.add('active-view');
-        // NEU: Sofort zur gewünschten Position scrollen
         window.scrollTo(0, scrollPosition);
     }
     
@@ -145,9 +151,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 let thumbnailHtml;
                 if (item.ImageURL && item.ImageURL.startsWith('http')) {
                     thumbnailHtml = `<div class="thumbnail" style="background-image: url('${item.ImageURL}')"></div>`;
+                    preloadImage(item.ImageURL);
                 } else if (item.URL && item.URL.startsWith('http')) {
                     const thumUrl = `https://image.thum.io/get/width/400/crop/300/${encodeURIComponent(item.URL)}`;
                     thumbnailHtml = `<div class="thumbnail" style="background-image: url('${thumUrl}')"></div>`;
+                    preloadImage(`https://image.thum.io/get/width/800/${encodeURIComponent(item.URL)}`);
                 } else {
                     thumbnailHtml = `<div class="thumbnail">Kein Bild verfügbar</div>`;
                 }
@@ -159,7 +167,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         <p class="card-id">ID: ${item.ID}</p>
                     </div>
                 `;
-                // NEU: Beim Klick Scroll-Position speichern
                 card.addEventListener('click', () => {
                     sessionStorage.setItem('scrollPosition', window.scrollY);
                     showDetails(item.ID);
@@ -169,12 +176,11 @@ document.addEventListener('DOMContentLoaded', () => {
             groupContainer.appendChild(grid);
             resultsContainer.appendChild(groupContainer);
         }
-
         switchView(resultsView);
     }
     
     function showDetails(id) {
-        const item = database.find(d => d.ID == id);
+        const item = database.find(d => String(d.ID) === String(id));
         if (!item) return;
 
         const detailContent = document.getElementById('detail-content');
@@ -201,7 +207,6 @@ document.addEventListener('DOMContentLoaded', () => {
             <p><strong>Beschreibung:</strong> ${item.Beschreibung || 'Keine Beschreibung verfügbar.'}</p>
             <p><strong>URL:</strong> ${urlHtml}</p>
         `;
-        // Ansicht wechseln, ohne nach oben zu scrollen
         switchView(detailView);
     }
     
@@ -214,15 +219,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (e.key === 'Enter') handleSearch();
     });
     exploreButton.addEventListener('click', () => displayResults(database));
-    
     backToSearchBtn.addEventListener('click', () => switchView(searchView));
-    
-    // NEU: "Back to results" Logik angepasst
     backToResultsBtn.addEventListener('click', () => {
         const storedPosition = sessionStorage.getItem('scrollPosition') || 0;
         switchView(resultsView, parseInt(storedPosition, 10));
     });
-
     navSearchBtn.addEventListener('click', () => {
         switchView(searchView);
         setActiveNav(navSearchBtn);
