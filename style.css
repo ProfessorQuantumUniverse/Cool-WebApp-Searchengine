@@ -13,7 +13,7 @@
     --font-heading: 'Orbitron', sans-serif; /* Futuristic font for headings */
     --font-body: 'Roboto', sans-serif;
 
-    --blur-intensity: 8px;
+    --blur-intensity: 12px; /* Increased blur intensity */
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Roboto:wght@300;400;500&display=swap');
@@ -34,14 +34,18 @@ body {
     overflow-x: hidden; /* Prevent horizontal scroll from potential glows */
 }
 
-/* Glassmorphism base for containers */
-.glass-effect {
+/* Glassmorphism base for containers and elements */
+.glass-effect,
+nav, /* Applying to nav directly */
+.action-button, /* Applying to buttons */
+input[type="text"], input[type="email"], input[type="url"], input[type="number"], select, textarea /* Applying to inputs/selects/textareas */
+ {
     background-color: var(--container-bg-blur);
     backdrop-filter: blur(var(--blur-intensity));
     -webkit-backdrop-filter: blur(var(--blur-intensity)); /* Safari */
     border: 1px solid var(--glass-border);
-    border-radius: 12px; /* Softer, more modern rounding */
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1), 0 0 50px rgba(0, 217, 255, 0.1) inset; /* Subtle outer and inner glow */
+    border-radius: 12px; /* Softer, more modern rounding for containers, will be overridden for smaller elements */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2), 0 0 30px rgba(var(--primary-accent-rgb, 0, 217, 255), 0.1) inset; /* Adjusted shadow */
 }
 
 header {
@@ -85,21 +89,29 @@ header h1 {
 nav {
     display: flex;
     gap: 1.5rem; /* Increased gap */
+    padding: 0.5rem; /* Add padding to nav for inset glass effect */
+    border-radius: 10px; /* Match glass effect rounding */
 }
 
 .nav-button {
-    background: transparent;
-    border: 1px solid transparent; /* Prepare for border highlight */
+    background: transparent; /* Will be overridden by glass effect if applied to .nav-button directly, or use a sub-element */
+    border: 1px solid transparent;
     color: var(--label-color);
     padding: 0.6rem 1.2rem;
     cursor: pointer;
     font-size: 1rem;
     font-family: var(--font-body);
     font-weight: 500;
-    border-radius: 8px;
+    border-radius: 8px; /* Rounded buttons */
     transition: all 0.3s ease;
     position: relative;
-    overflow: hidden; /* For glow effect */
+    overflow: hidden;
+    /* Individual glass for nav buttons - might be too much, but trying "everywhere" */
+    background-color: rgba(var(--primary-accent-rgb, 0, 217, 255), 0.1); /* Subtle accent color tint */
+    backdrop-filter: blur(calc(var(--blur-intensity) / 2)); /* Less blur for smaller elements */
+    -webkit-backdrop-filter: blur(calc(var(--blur-intensity) / 2));
+    border: 1px solid rgba(var(--primary-accent-rgb, 0, 217, 255), 0.4);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 .nav-button .icon {
@@ -186,9 +198,9 @@ h3 {
 input[type="text"], input[type="email"], input[type="url"], input[type="number"], select, textarea {
     width: 100%;
     padding: 1rem; /* Increased padding */
-    background-color: var(--input-bg);
-    border: 1px solid var(--glass-border);
-    border-radius: 8px;
+    /* background-color: var(--input-bg); Already part of glass-effect */
+    /* border: 1px solid var(--glass-border); Already part of glass-effect */
+    border-radius: 8px; /* Specific rounding for inputs */
     color: var(--text-color);
     font-size: 1rem;
     font-family: var(--font-body);
@@ -197,8 +209,8 @@ input[type="text"], input[type="email"], input[type="url"], input[type="number"]
 
 input:focus, select:focus, textarea:focus {
     outline: none;
-    border-color: var(--primary-accent);
-    box-shadow: 0 0 10px rgba(0, 217, 255, 0.5), 0 0 0 1px var(--primary-accent); /* Glow effect on focus */
+    border-color: var(--primary-accent); /* Keep this for stronger focus indication */
+    box-shadow: 0 0 10px rgba(0, 217, 255, 0.5), 0 0 0 1px var(--primary-accent), 0 0 30px rgba(var(--primary-accent-rgb, 0, 217, 255), 0.2) inset; /* Enhanced Glow effect on focus */
 }
 
 textarea {
@@ -227,35 +239,47 @@ textarea {
     font-weight: bold;
     font-family: var(--font-heading); /* Heading font for buttons */
     letter-spacing: 1px;
-    color: var(--primary-bg);
-    background-color: var(--primary-accent);
-    border: none;
-    border-radius: 8px;
+    color: var(--primary-accent); /* Text color for glass buttons */
+    /* background-color: var(--primary-accent); Will be from glass effect */
+    /* border: none; Will be from glass effect */
+    border-radius: 8px; /* Specific rounding for buttons */
     cursor: pointer;
     transition: all 0.3s ease;
     margin-top: 1rem;
     text-transform: uppercase;
-    box-shadow: 0 0 10px rgba(0, 217, 255, 0.3), 0 2px 5px rgba(0,0,0,0.2);
+    /* box-shadow: 0 0 10px rgba(0, 217, 255, 0.3), 0 2px 5px rgba(0,0,0,0.2); */ /* From glass */
+    position: relative; /* For potential pseudo-element glow */
 }
 
 .action-button:hover, .action-button:focus {
-    background-color: #00b8e6; /* Slightly lighter accent */
-    color: #fff;
-    box-shadow: 0 0 20px rgba(0, 217, 255, 0.7), 0 4px 10px rgba(0,0,0,0.3);
+    /* background-color: #00b8e6; Slightly lighter accent, glass will handle this */
+    color: var(--text-color); /* Brighter text on hover */
+    border-color: var(--primary-accent); /* Stronger border on hover */
+    box-shadow: 0 0 25px rgba(var(--primary-accent-rgb, 0, 217, 255), 0.7), 0 0 40px rgba(var(--primary-accent-rgb, 0, 217, 255), 0.3) inset, 0 4px 10px rgba(0,0,0,0.3);
     transform: translateY(-2px);
 }
+/* Primary action buttons might need a stronger distinction if all are glass */
+.action-button:not(.secondary) {
+    background-color: rgba(var(--primary-accent-rgb,0, 217, 255), 0.25); /* Tint for primary */
+}
+.action-button:not(.secondary):hover, .action-button:not(.secondary):focus {
+    background-color: rgba(var(--primary-accent-rgb,0, 217, 255), 0.4);
+}
+
 
 .action-button.secondary {
-    background-color: transparent;
-    border: 2px solid var(--primary-accent);
+    /* background-color: transparent; From glass */
+    /* border: 2px solid var(--primary-accent); From glass, but maybe stronger */
+    border-width: 2px;
     color: var(--primary-accent);
-    box-shadow: 0 0 10px rgba(0, 217, 255, 0.3);
+    /* box-shadow: 0 0 10px rgba(0, 217, 255, 0.3); From glass */
 }
 
 .action-button.secondary:hover, .action-button.secondary:focus {
-    background-color: var(--primary-accent);
-    color: var(--primary-bg);
-    box-shadow: 0 0 20px rgba(0, 217, 255, 0.7);
+    /* background-color: var(--primary-accent); Glass will handle transparency, tint it */
+    background-color: rgba(var(--primary-accent-rgb, 0, 217, 255), 0.2);
+    color: var(--text-color);
+    /* box-shadow: 0 0 20px rgba(0, 217, 255, 0.7); From glass hover */
 }
 
 .footer-link {
@@ -325,16 +349,24 @@ input:checked + .slider:before {
 }
 
 .result-card {
-    /* glass-effect applied in HTML or via JS */
+    /* glass-effect applied in HTML or via JS, but ensure it inherits base styles if not explicitly set */
     overflow: hidden;
     cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
     position: relative; /* For pseudo-elements if needed */
+    /* Ensure result-card gets the glass effect even if class isn't added by JS yet */
+    background-color: var(--container-bg-blur);
+    backdrop-filter: blur(var(--blur-intensity));
+    -webkit-backdrop-filter: blur(var(--blur-intensity));
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2), 0 0 30px rgba(var(--primary-accent-rgb, 0, 217, 255), 0.1) inset;
 }
 
 .result-card:hover {
     transform: translateY(-8px) scale(1.02); /* More pronounced hover */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), 0 0 25px var(--primary-accent); /* Enhanced glow on hover */
+    border-color: var(--primary-accent); /* Highlight border on hover */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 0 0 35px var(--primary-accent), 0 0 50px rgba(var(--primary-accent-rgb, 0, 217, 255), 0.2) inset; /* Enhanced glow on hover */
 }
 
 .result-card .thumbnail {
@@ -452,10 +484,14 @@ footer {
     margin-top: 3rem; /* Increased margin */
     font-size: 0.9rem;
     color: var(--label-color);
-    background-color: rgba(10, 15, 31, 0.7); /* Consistent with header */
-    backdrop-filter: blur(5px); /* Subtle blur for footer */
-    -webkit-backdrop-filter: blur(5px);
-    border-top: 1px solid var(--glass-border);
+    /* Apply glass effect to footer as well */
+    background-color: var(--container-bg-blur);
+    backdrop-filter: blur(var(--blur-intensity));
+    -webkit-backdrop-filter: blur(var(--blur-intensity));
+    border-top: 1px solid var(--glass-border); /* Keep top border distinct */
+    padding: 1.5rem; /* Ensure padding is consistent */
+    border-radius: 12px 12px 0 0; /* Round top corners if desired, or keep square */
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.2), 0 0 30px rgba(var(--primary-accent-rgb, 0, 217, 255), 0.1) inset;
 }
 
 .hidden {
@@ -485,5 +521,21 @@ footer {
     background: #00b8e6;
 }
 
-/* Add glass-effect class to elements in HTML/JS */
-/* .search-container, .result-card, #detail-content, .form-wrapper */
+/* Ensure glass effect is applied to specific containers if not covered by general selectors */
+.search-container,
+#detail-content,
+.form-wrapper {
+    /* These should already be covered by .glass-effect class in HTML or the general selectors.
+       This is a fallback/reminder. */
+    background-color: var(--container-bg-blur);
+    backdrop-filter: blur(var(--blur-intensity));
+    -webkit-backdrop-filter: blur(var(--blur-intensity));
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2), 0 0 30px rgba(var(--primary-accent-rgb, 0, 217, 255), 0.1) inset;
+}
+
+/* Define --primary-accent-rgb for use in rgba() if not already defined, for safety */
+:root {
+    --primary-accent-rgb: 0, 217, 255; /* Default Electric Blue RGB values */
+}
