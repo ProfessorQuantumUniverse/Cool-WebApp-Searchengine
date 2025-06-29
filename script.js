@@ -153,7 +153,7 @@ function handleSearch() {
 
             groupedResults[group].forEach(item => {
                 const card = document.createElement('div');
-                card.className = 'result-card';
+                card.className = 'result-card glass-effect'; // Added glass-effect class
                 card.dataset.id = item.ID;
 
                 let thumbnailHtml;

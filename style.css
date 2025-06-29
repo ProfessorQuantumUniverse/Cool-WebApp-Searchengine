@@ -1,13 +1,22 @@
-/* Ersetze den kompletten Inhalt deiner style.css Datei hiermit */
+/* Cyber Interface Theme */
 :root {
-    --bg-color: #1e1e1e;
-    --container-bg: #2a2a2a;
-    --primary-accent: #8bc34a; /* Light green */
-    --secondary-accent: #79a73f;
-    --text-color: #e0e0e0;
-    --label-color: #b0b0b0;
-    --border-color: #444;
+    --primary-bg: #0a0f1f; /* Deep space blue */
+    --container-bg-blur: rgba(15, 25, 45, 0.6); /* Semi-transparent for glass effect */
+    --glass-border: rgba(0, 217, 255, 0.3); /* Neon blue border for glass */
+    --primary-accent: #00d9ff; /* Electric Blue */
+    --secondary-accent: #ff00ff; /* Vibrant Magenta (use sparingly) */
+    --text-color: #e0e5f0;
+    --label-color: #a0a5b0;
+    --input-bg: rgba(10, 15, 31, 0.7); /* Darker input bg */
+    --danger-color: #e53935; /* For required fields or errors */
+
+    --font-heading: 'Orbitron', sans-serif; /* Futuristic font for headings */
+    --font-body: 'Roboto', sans-serif;
+
+    --blur-intensity: 8px;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Roboto:wght@300;400;500&display=swap');
 
 * {
     box-sizing: border-box;
@@ -16,21 +25,39 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: var(--bg-color);
+    font-family: var(--font-body);
+    background-color: var(--primary-bg);
     color: var(--text-color);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    overflow-x: hidden; /* Prevent horizontal scroll from potential glows */
+}
+
+/* Glassmorphism base for containers */
+.glass-effect {
+    background-color: var(--container-bg-blur);
+    backdrop-filter: blur(var(--blur-intensity));
+    -webkit-backdrop-filter: blur(var(--blur-intensity)); /* Safari */
+    border: 1px solid var(--glass-border);
+    border-radius: 12px; /* Softer, more modern rounding */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1), 0 0 50px rgba(0, 217, 255, 0.1) inset; /* Subtle outer and inner glow */
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
-    background-color: var(--container-bg);
-    border-bottom: 1px solid var(--border-color);
+    padding: 1.5rem 2.5rem; /* Increased padding */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    /* Applying glass effect directly to header */
+    background-color: rgba(10, 15, 31, 0.7); /* Slightly darker blur for header */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--glass-border);
+    transition: background-color 0.3s ease;
 }
 
 .logo-container {
@@ -41,44 +68,79 @@ header {
 }
 
 .logo-img {
-    height: 40px;
-    width: 40px;
-    border-radius: 6px;
+    height: 45px; /* Slightly larger */
+    width: 45px;
+    border-radius: 8px;
+    filter: drop-shadow(0 0 5px var(--primary-accent)); /* Logo glow */
 }
 
 header h1 {
-    font-size: 1.5rem;
+    font-family: var(--font-heading);
+    font-size: 1.8rem; /* Larger */
     font-weight: 500;
+    color: var(--primary-accent);
+    text-shadow: 0 0 8px rgba(0, 217, 255, 0.7);
 }
 
 nav {
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem; /* Increased gap */
 }
 
 .nav-button {
-    background: none;
-    border: none;
+    background: transparent;
+    border: 1px solid transparent; /* Prepare for border highlight */
     color: var(--label-color);
-    padding: 0.5rem 1rem;
+    padding: 0.6rem 1.2rem;
     cursor: pointer;
     font-size: 1rem;
-    border-radius: 6px;
-    transition: background-color 0.2s, color 0.2s;
+    font-family: var(--font-body);
+    font-weight: 500;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden; /* For glow effect */
+}
+
+.nav-button .icon {
+    margin-right: 0.5em;
+}
+
+.nav-button:before { /* Animated underline/glow effect */
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-accent);
+    transition: width 0.3s ease;
+    box-shadow: 0 0 5px var(--primary-accent);
+}
+
+.nav-button.active:before, .nav-button:hover:before {
+    width: 70%;
 }
 
 .nav-button.active, .nav-button:hover {
-    background-color: var(--primary-accent);
-    color: var(--bg-color);
+    color: var(--primary-accent);
+    text-shadow: 0 0 5px rgba(0, 217, 255, 0.5);
 }
 
 main {
     flex-grow: 1;
-    padding: 2rem;
+    padding: 2.5rem; /* Increased padding */
 }
 
 .view {
     display: none;
+    animation: fadeInView 0.5s ease-out;
+}
+
+@keyframes fadeInView {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 .view.active-view {
@@ -86,135 +148,199 @@ main {
 }
 
 .search-container, .form-wrapper {
-    max-width: 700px;
+    max-width: 750px; /* Slightly wider */
     margin: 0 auto;
-    padding: 2rem;
-    background-color: var(--container-bg);
-    border-radius: 8px;
-    border: 1px solid var(--border-color);
+    padding: 2.5rem; /* Increased padding */
+    /* glass-effect applied in HTML or via JS if dynamic */
 }
 
-.search-box, .filter-box, .form-wrapper > * {
-    margin-bottom: 1.5rem;
+.search-box, .filter-box, .form-wrapper > *:not(h3) { /* Exclude h3 from this rule for tighter spacing */
+    margin-bottom: 1.8rem; /* Increased margin */
 }
 
 label, h3 {
     display: block;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.8rem; /* Increased margin */
     color: var(--label-color);
+    font-family: var(--font-body);
     font-weight: 500;
+    font-size: 0.9rem; /* Slightly smaller labels */
+    text-transform: uppercase; /* Futuristic feel */
+    letter-spacing: 0.5px;
 }
-.required { color: #e57373; }
+
+h3 {
+    font-family: var(--font-heading);
+    color: var(--primary-accent);
+    font-size: 1.5rem;
+    text-shadow: 0 0 6px rgba(0, 217, 255, 0.5);
+    margin-bottom: 1.5rem;
+}
+
+.required {
+    color: var(--danger-color);
+    margin-left: 4px;
+    font-weight: bold;
+}
 
 input[type="text"], input[type="email"], input[type="url"], input[type="number"], select, textarea {
     width: 100%;
-    padding: 0.8rem;
-    background-color: var(--bg-color);
-    border: 1px solid var(--border-color);
-    border-radius: 6px;
+    padding: 1rem; /* Increased padding */
+    background-color: var(--input-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
     color: var(--text-color);
     font-size: 1rem;
+    font-family: var(--font-body);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 input:focus, select:focus, textarea:focus {
     outline: none;
     border-color: var(--primary-accent);
+    box-shadow: 0 0 10px rgba(0, 217, 255, 0.5), 0 0 0 1px var(--primary-accent); /* Glow effect on focus */
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
 }
 
 .toggle-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0.5rem 0; /* Add some padding */
 }
 
 .info-text {
-    font-size: 0.8rem;
+    font-size: 0.85rem; /* Slightly larger */
     color: var(--label-color);
     margin-top: 0.5rem;
+    font-style: italic;
 }
 
 .action-button {
     width: 100%;
-    padding: 1rem;
+    padding: 1rem 1.5rem; /* Consistent padding */
     font-size: 1.1rem;
     font-weight: bold;
-    color: var(--bg-color);
+    font-family: var(--font-heading); /* Heading font for buttons */
+    letter-spacing: 1px;
+    color: var(--primary-bg);
     background-color: var(--primary-accent);
     border: none;
-    border-radius: 6px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.2s;
+    transition: all 0.3s ease;
     margin-top: 1rem;
+    text-transform: uppercase;
+    box-shadow: 0 0 10px rgba(0, 217, 255, 0.3), 0 2px 5px rgba(0,0,0,0.2);
 }
 
-.action-button:hover {
-    background-color: var(--secondary-accent);
+.action-button:hover, .action-button:focus {
+    background-color: #00b8e6; /* Slightly lighter accent */
+    color: #fff;
+    box-shadow: 0 0 20px rgba(0, 217, 255, 0.7), 0 4px 10px rgba(0,0,0,0.3);
+    transform: translateY(-2px);
 }
 
 .action-button.secondary {
     background-color: transparent;
-    border: 1px solid var(--primary-accent);
+    border: 2px solid var(--primary-accent);
     color: var(--primary-accent);
+    box-shadow: 0 0 10px rgba(0, 217, 255, 0.3);
 }
 
-.action-button.secondary:hover {
+.action-button.secondary:hover, .action-button.secondary:focus {
     background-color: var(--primary-accent);
-    color: var(--bg-color);
+    color: var(--primary-bg);
+    box-shadow: 0 0 20px rgba(0, 217, 255, 0.7);
 }
 
 .footer-link {
     display: block;
     text-align: center;
-    margin-top: 2rem;
+    margin-top: 2.5rem; /* Increased margin */
     color: var(--primary-accent);
     text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
 }
-.footer-link:hover { text-decoration: underline; }
+.footer-link:hover {
+    color: #fff;
+    text-decoration: underline;
+    text-shadow: 0 0 8px var(--primary-accent);
+}
 
-/* Switch Toggle CSS */
-.switch { position: relative; display: inline-block; width: 50px; height: 28px; }
+/* Switch Toggle CSS - Futuristic Redesign */
+.switch { position: relative; display: inline-block; width: 60px; height: 30px; } /* Slightly larger */
 .switch input { opacity: 0; width: 0; height: 0; }
-.slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #444; transition: .4s; border-radius: 28px; }
-.slider:before { position: absolute; content: ""; height: 20px; width: 20px; left: 4px; bottom: 4px; background-color: white; transition: .4s; border-radius: 50%; }
-input:checked + .slider { background-color: var(--primary-accent); }
-input:checked + .slider:before { transform: translateX(22px); }
+.slider {
+    position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0;
+    background-color: var(--input-bg);
+    border: 1px solid var(--glass-border);
+    transition: .4s; border-radius: 30px;
+}
+.slider:before {
+    position: absolute; content: ""; height: 22px; width: 22px; left: 3px; bottom: 3px;
+    background-color: var(--label-color);
+    transition: .4s; border-radius: 50%;
+}
+input:checked + .slider {
+    background-color: var(--primary-accent);
+    box-shadow: 0 0 10px var(--primary-accent);
+}
+input:checked + .slider:before {
+    transform: translateX(30px); /* Adjusted for new size */
+    background-color: var(--primary-bg);
+}
 
 /* Results View */
-#results-view { max-width: 1200px; margin: 0 auto; }
-.back-button { width: auto; padding: 0.5rem 1.5rem; margin-bottom: 2rem; }
+#results-view { max-width: 1300px; margin: 0 auto; } /* Wider for more content */
+.back-button {
+    width: auto;
+    padding: 0.8rem 1.8rem; /* Increased padding */
+    margin-bottom: 2.5rem; /* Increased margin */
+    display: inline-flex; /* Align icon and text */
+    align-items: center;
+    gap: 0.5em;
+}
 
 .results-group h2 {
-    font-size: 1.8rem;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-    padding-bottom: 0.5rem;
+    font-family: var(--font-heading);
+    font-size: 2rem; /* Larger */
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.8rem;
     border-bottom: 2px solid var(--primary-accent);
+    color: var(--primary-accent);
+    text-shadow: 0 0 6px rgba(0, 217, 255, 0.5);
 }
 
 .results-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); /* Slightly larger cards */
+    gap: 2rem; /* Increased gap */
 }
 
 .result-card {
-    background-color: var(--container-bg);
-    border-radius: 8px;
+    /* glass-effect applied in HTML or via JS */
     overflow: hidden;
     cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
-    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative; /* For pseudo-elements if needed */
 }
 
 .result-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transform: translateY(-8px) scale(1.02); /* More pronounced hover */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), 0 0 25px var(--primary-accent); /* Enhanced glow on hover */
 }
 
 .result-card .thumbnail {
     width: 100%;
-    height: 180px;
-    background-color: #333;
+    height: 200px; /* Increased height */
+    background-color: var(--input-bg); /* Fallback */
     background-size: cover;
     background-position: center;
     display: flex;
@@ -222,58 +348,142 @@ input:checked + .slider:before { transform: translateX(22px); }
     align-items: center;
     color: var(--label-color);
     font-size: 0.9rem;
+    border-bottom: 1px solid var(--glass-border); /* Separator */
+    position: relative;
+    overflow: hidden;
+}
+.result-card .thumbnail::before { /* Subtle overlay */
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(transparent, rgba(10, 15, 31, 0.5));
 }
 
+
 .result-card .card-info {
-    padding: 1rem;
+    padding: 1.2rem; /* Increased padding */
 }
 
 .result-card .card-title {
-    font-size: 1.1rem;
-    font-weight: bold;
-    margin-bottom: 0.3rem;
+    font-family: var(--font-heading);
+    font-size: 1.3rem; /* Larger */
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: var(--text-color); /* Brighter title */
+    transition: color 0.3s ease;
+}
+.result-card:hover .card-title {
+    color: var(--primary-accent);
+    text-shadow: 0 0 5px var(--primary-accent);
 }
 
 .result-card .card-id {
     font-size: 0.8rem;
     color: var(--label-color);
+    opacity: 0.7;
 }
 
 /* Detail View */
 #detail-content {
-    max-width: 900px;
+    max-width: 950px; /* Wider */
     margin: 0 auto;
-    background-color: var(--container-bg);
-    padding: 2rem;
-    border-radius: 8px;
+    padding: 2.5rem; /* Increased padding */
+    /* glass-effect applied in HTML or via JS */
 }
 
 #detail-content img {
     max-width: 100%;
-    border-radius: 6px;
-    margin-bottom: 1.5rem;
-    background-color: #333; /* Falls Bild nicht lädt */
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    background-color: var(--input-bg);
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-#detail-content h2 { font-size: 2rem; margin-bottom: 1rem; }
-#detail-content p { margin-bottom: 1rem; line-height: 1.6; }
-#detail-content a { color: var(--primary-accent); word-break: break-all; }
-#detail-content .unavailable-url { color: #999; } /* NEU */
+#detail-content h2 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem; /* Larger */
+    margin-bottom: 1.5rem;
+    color: var(--primary-accent);
+    text-shadow: 0 0 8px rgba(0, 217, 255, 0.7);
+}
+#detail-content p {
+    margin-bottom: 1.2rem;
+    line-height: 1.7; /* Increased line height */
+    font-size: 1.05rem;
+}
+#detail-content p strong {
+    color: var(--label-color);
+    font-weight: 500;
+}
+#detail-content a {
+    color: var(--primary-accent);
+    word-break: break-all;
+    text-decoration: none;
+    border-bottom: 1px dashed var(--primary-accent);
+    transition: color 0.3s ease, border-bottom-color 0.3s ease;
+}
+#detail-content a:hover {
+    color: #fff;
+    border-bottom-color: #fff;
+    text-shadow: 0 0 5px var(--primary-accent);
+}
+#detail-content .unavailable-url { color: #999; font-style: italic; }
 
 /* Formulare in Kontakt */
-#contact-view .form-container { display: flex; gap: 1rem; max-width: 700px; margin: 0 auto; background: none; border: none; padding: 0; }
+#contact-view .form-container {
+    display: flex;
+    gap: 1.5rem; /* Increased gap */
+    max-width: 750px;
+    margin: 0 auto 2.5rem auto; /* Add bottom margin */
+    background: none;
+    border: none;
+    padding: 0;
+    backdrop-filter: none; /* No glass for this wrapper, forms inside will have it */
+    box-shadow: none;
+}
 #contact-view .action-button { margin-top: 0; }
-#contact-view .form-wrapper { margin-top: 2rem; }
+#contact-view .form-wrapper { margin-top: 0; /* Reset margin, handled by .form-container gap */ }
+
 
 footer {
     text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
+    padding: 1.5rem; /* Increased padding */
+    margin-top: 3rem; /* Increased margin */
     font-size: 0.9rem;
     color: var(--label-color);
-    background-color: var(--container-bg);
+    background-color: rgba(10, 15, 31, 0.7); /* Consistent with header */
+    backdrop-filter: blur(5px); /* Subtle blur for footer */
+    -webkit-backdrop-filter: blur(5px);
+    border-top: 1px solid var(--glass-border);
 }
 
 .hidden {
     display: none !important;
 }
+
+.icon {
+    display: inline-block;
+    font-style: normal;
+    margin-right: 8px;
+    color: inherit;
+    font-size: 1.1em;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: var(--primary-bg);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--primary-accent);
+    border-radius: 5px;
+    border: 2px solid var(--primary-bg);
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #00b8e6;
+}
+
+/* Add glass-effect class to elements in HTML/JS */
+/* .search-container, .result-card, #detail-content, .form-wrapper */
