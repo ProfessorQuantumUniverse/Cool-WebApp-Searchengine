@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     // ############ KONFIGURATION ############
     // HIER DEINE NEUE WEB-APP-URL EINFÜGEN
-    const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbws3rG5E4Q6jzy1bJDzjKSxQH-syVyQ95K2uBNAQeHeuJH76xdLXSg5_eVUO4841h05/exec';
+    const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxuW9-iRsTqfI1joojJ7RVYnwYPZjFRj-nRs-r13BwBwT5wHamOPe2B230JRwURSxIuyg/exec';
 
     // ############ VARIABLEN & ELEMENTE ############
     let database = [];
