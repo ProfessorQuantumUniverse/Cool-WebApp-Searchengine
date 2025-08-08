@@ -8,11 +8,12 @@ document.addEventListener('DOMContentLoaded', () => {
     let lastResults = [];
 
     // ... (alle anderen Element-Variablen bleiben gleich) ...
+    const loadingScreen = document.getElementById('loading-screen');
     const searchView = document.getElementById('search-view');
     const resultsView = document.getElementById('results-view');
     const detailView = document.getElementById('detail-view');
     const contactView = document.getElementById('contact-view');
-    const allViews = [searchView, resultsView, detailView, contactView];
+    const allViews = [loadingScreen, searchView, resultsView, detailView, contactView];
     const searchTermInput = document.getElementById('search-term');
     const filterToggle = document.getElementById('filter-mediatype-toggle');
     const mediatypeFilterSelect = document.getElementById('mediatype-filter');
@@ -57,9 +58,13 @@ document.addEventListener('DOMContentLoaded', () => {
             database = data;
             console.log('Datenbank von API geladen. Erster Eintrag:', database[0]);
             populateFilterDropdown();
+            // Erfolgreich geladen: Ladebildschirm ausblenden, Suche einblenden
+            switchView(searchView);
         } catch (error) {
             console.error('Fehler beim Laden der Datenbank von der API:', error);
             alert('Die Datenbank konnte nicht geladen werden. Prüfe die API-URL und die Bereitstellungseinstellungen. Fehlermeldung: ' + error.message);
+            // Auch bei Fehler: Ladebildschirm ausblenden, damit die Seite nicht hängt
+            loadingScreen.innerHTML = '<div class="loading-container"><p style="color: var(--danger-color);">Failed to load database.</p></div>';
         }
     }
 
@@ -67,8 +72,20 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Du kannst ihn einfach so übernehmen. ---
 
     function switchView(targetView, scrollPosition = 0) {
-        allViews.forEach(view => view.classList.remove('active-view'));
+        // Alle Ansichten ausblenden, auch den Ladebildschirm
+        allViews.forEach(view => {
+            view.classList.remove('active-view');
+            // Optional: Wenn .hidden-Klasse für sofortiges Ausblenden verwendet wird
+            if (!view.classList.contains('hidden')) {
+                 view.classList.add('hidden');
+            }
+        });
+
+        // Zielansicht einblenden
+        targetView.classList.remove('hidden');
+        // Fade-in Animation auslösen
         targetView.classList.add('active-view');
+
         window.scrollTo(0, scrollPosition);
     }
     

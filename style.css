@@ -297,6 +297,54 @@ textarea {
     text-shadow: 0 0 8px var(--primary-accent);
 }
 
+/* Loading Screen */
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-bg); /* Solid background to hide content */
+    z-index: 9999;
+    display: flex; /* Use flexbox to center content */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* Starts as a visible view */
+}
+
+#loading-screen.hidden {
+    display: none; /* This will be used by JS to hide it */
+}
+
+.loading-container {
+    text-align: center;
+}
+
+.loader {
+    border: 5px solid var(--glass-border);
+    border-top: 5px solid var(--primary-accent);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1.5s linear infinite;
+    margin: 0 auto 20px auto;
+    box-shadow: 0 0 20px rgba(0, 217, 255, 0.5);
+}
+
+#loading-screen p {
+    font-family: var(--font-heading);
+    color: var(--primary-accent);
+    font-size: 1.5rem;
+    text-shadow: 0 0 8px rgba(0, 217, 255, 0.7);
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
 /* Switch Toggle CSS - Futuristic Redesign */
 .switch { position: relative; display: inline-block; width: 60px; height: 30px; } /* Slightly larger */
 .switch input { opacity: 0; width: 0; height: 0; }
