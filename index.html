@@ -10,7 +10,13 @@
 </head>
 <body>
 
-    <header>
+    <!-- Lade-Overlay -->
+    <div id="loading-overlay">
+        <div class="loader"></div>
+        <p>Loading data...</p>
+    </div>
+
+    <header class="content-hidden">
         <div class="logo-container" id="logo-home-button">
             <img src="https://i.imgur.com/r6yVFfN.png" alt="Logo" class="logo-img">
             <h1>WebApps Searchengine</h1>
@@ -21,7 +27,7 @@
         </nav>
     </header>
 
-    <main>
+    <main class="content-hidden">
         <!-- Ansicht 1: Suche -->
         <div id="search-view" class="view active-view">
             <div class="search-container">

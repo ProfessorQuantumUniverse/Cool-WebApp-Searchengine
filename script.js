@@ -8,6 +8,9 @@ document.addEventListener('DOMContentLoaded', () => {
     let lastResults = [];
 
     // ... (alle anderen Element-Variablen bleiben gleich) ...
+    const loadingOverlay = document.getElementById('loading-overlay');
+    const header = document.querySelector('header');
+    const main = document.querySelector('main');
     const searchView = document.getElementById('search-view');
     const resultsView = document.getElementById('results-view');
     const detailView = document.getElementById('detail-view');
@@ -60,6 +63,11 @@ document.addEventListener('DOMContentLoaded', () => {
         } catch (error) {
             console.error('Fehler beim Laden der Datenbank von der API:', error);
             alert('Die Datenbank konnte nicht geladen werden. Prüfe die API-URL und die Bereitstellungseinstellungen. Fehlermeldung: ' + error.message);
+        } finally {
+            // Lade-Overlay ausblenden und Hauptinhalt einblenden
+            loadingOverlay.style.display = 'none';
+            header.classList.remove('content-hidden');
+            main.classList.remove('content-hidden');
         }
     }
 
