@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/papaparse@5.3.2/papaparse.min.js"></script> <!-- Hilft beim Lesen der CSV -->
     <script src="script.js" defer></script>
@@ -27,8 +28,8 @@
             <h1>WebApps Searchengine</h1>
         </div>
         <nav>
-            <button id="nav-search-btn" class="nav-button active"><span class="icon">[SearchIcon]</span> Search</button>
-            <button id="nav-contact-btn" class="nav-button"><span class="icon">[ContactIcon]</span> Contact</button>
+            <button id="nav-search-btn" class="nav-button active"><span class="material-symbols-outlined">search</span> Search</button>
+            <button id="nav-contact-btn" class="nav-button"><span class="material-symbols-outlined">contact_page</span> Contact</button>
         </nav>
     </header>
 
@@ -60,15 +61,15 @@
                     </div>
                     <p class="info-text">When activated, the searchmode is set to "IS EXACTLY" instead of "CONTAINS".</p>
                 </div>
-                <button id="search-button" class="action-button"><span class="icon">[SearchIcon]</span> Search!</button>
-                <button id="explore-button" class="action-button secondary"><span class="icon">[ExploreIcon]</span> Explore Random</button>
+                <button id="search-button" class="action-button"><span class="material-symbols-outlined">search</span> Search!</button>
+                <button id="explore-button" class="action-button secondary"><span class="material-symbols-outlined">contact_page</span> Explore Random</button>
             </div>
-             <a href="#" id="submit-new-site-link" class="footer-link"><span class="icon">[SubmitIcon]</span> Submit new Site!</a>
+             <a href="#" id="submit-new-site-link" class="footer-link"><span class="material-symbols-outlined">send</span> Submit new Site!</a>
         </div>
 
         <!-- Ansicht 2: Ergebnisse -->
         <div id="results-view" class="view">
-            <button id="back-to-search-btn" class="action-button back-button"><span class="icon">[BackArrowIcon]</span> Go to back Search!</button>
+            <button id="back-to-search-btn" class="action-button back-button"><span class="material-symbols-outlined">arrow_back</span> Go to back Search!</button>
             <div id="results-container">
                 <!-- Ergebnisse werden hier von JS eingefügt -->
                 <!-- JS will need to add 'glass-effect' to .result-card elements (though CSS now has a fallback) -->
@@ -77,7 +78,7 @@
         
         <!-- Ansicht 3: Detailansicht -->
         <div id="detail-view" class="view">
-             <button id="back-to-results-btn" class="action-button back-button"><span class="icon">[BackArrowIcon]</span> Back to results</button>
+             <button id="back-to-results-btn" class="action-button back-button"><span class="material-symbols-outlined">arrow_back</span> Back to results</button>
              <div id="detail-content" class="glass-effect">
                 <!-- Detailinhalt wird hier von JS eingefügt -->
              </div>
@@ -86,8 +87,8 @@
         <!-- Ansicht 4: Kontakt & Formulare -->
         <div id="contact-view" class="view">
             <div class="form-container">
-                <button id="show-feedback-form" class="action-button"><span class="icon">[FeedbackIcon]</span> Feedback / Bug report</button>
-                <button id="show-submit-form" class="action-button"><span class="icon">[PlusIcon]</span> Submit new Website!</button>
+                <button id="show-feedback-form" class="action-button"><span class="material-symbols-outlined">feedback</span> Feedback / Bug report</button>
+                <button id="show-submit-form" class="action-button"><span class="material-symbols-outlined">add_circle</span> Submit new Website!</button>
             </div>
             
             <!-- Feedback-Formular -->
