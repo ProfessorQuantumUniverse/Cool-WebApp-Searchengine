@@ -117,7 +117,7 @@ function handleSearch() {
         if (searchTerm) {
             filteredData = filteredData.filter(item => {
                 const name = (item.Name || '').toLowerCase();
-                const desc = (item.Beschreibung || '').toLowerCase();
+                const desc = (item.Desc || '').toLowerCase();
                 // NEU: Auch die URL für die Suche vorbereiten
                 const url = (item.URL || '').toLowerCase();
 
@@ -229,7 +229,7 @@ function handleSearch() {
             ${imageHtml}
             <h2>${item.Name}</h2>
             <p><strong>Medientyp:</strong> ${item.Medientyp || 'N/A'}</p>
-            <p><strong>Beschreibung:</strong> ${item.Beschreibung || 'Keine Beschreibung verfügbar.'}</p>
+            <p><strong>Beschreibung:</strong> ${item.Desc || 'Keine Beschreibung verfügbar.'}</p>
             <p><strong>URL:</strong> ${urlHtml}</p>
         `;
         switchView(detailView);
