@@ -228,8 +228,8 @@ function handleSearch() {
         detailContent.innerHTML = `
             ${imageHtml}
             <h2>${item.Name}</h2>
-            <p><strong>Medientyp:</strong> ${item.Medientyp || 'N/A'}</p>
-            <p><strong>Beschreibung:</strong> ${item.Desc || 'Keine Beschreibung verfügbar.'}</p>
+            <p><strong>Mediatyp:</strong> ${item.Medientyp || 'N/A'}</p>
+            <p><strong>Description</strong> ${item.Desc || 'Keine Beschreibung verfügbar.'}</p>
             <p><strong>URL:</strong> ${urlHtml}</p>
         `;
         switchView(detailView);
