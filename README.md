@@ -33,6 +33,11 @@ To get a local copy up and running, follow these simple steps.
 
 All you need is a modern web browser.
 
+> [!NOTE]
+> 🚧 **THE MAIN BRANCH IS THE FUTURISTIC REDESIGN BRANCH** 🚧
+>
+
+
 ### Installation
 
 1.  Clone the repository:
