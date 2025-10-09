@@ -45,13 +45,6 @@ All you need is a modern web browser.
     ```
 3.  Open the `index.html` file in your browser. That's it!
 
-## 🖼️ Screenshots
-
-*This is the perfect place to add screenshots of your application to give potential users a visual preview.*
-
-**Example:**
-*![Screenshot of the Search View](URL_TO_SCREENSHOT)*
-*![Screenshot of the Detail View](URL_TO_SCREENSHOT)*
 
 ## 👤 Author
 
