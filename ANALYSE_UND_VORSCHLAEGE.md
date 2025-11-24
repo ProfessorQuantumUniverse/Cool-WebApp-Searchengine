@@ -529,7 +529,7 @@ describe('Search Function', () => {
 - [ ] **Component Library**: Wiederverwendbare UI-Komponenten
 - [ ] **Typography Scale**: Konsistente Schriftgrößen
 - [ ] **Spacing System**: 4px/8px Grid-System
-- [ ] **Color Palette erweitertn**: Semantische Farben
+- [ ] **Color Palette erweitern**: Semantische Farben
 
 ```css
 /* Beispiel: Erweitertes Design System */
