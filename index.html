@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com https://cdn.jsdelivr.net https://www.googletagmanager.com https://script.google.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' https: data:; connect-src 'self' https://script.google.com https://www.google-analytics.com; frame-src 'none';">
     <title>WebApps Searchengine - Future Edition</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -10,6 +11,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/papaparse@5.3.2/papaparse.min.js"></script> <!-- Hilft beim Lesen der CSV -->
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script> <!-- Fuzzy Search Library -->
     <script src="script.js" defer></script>
     <meta name="google-site-verification" content="9z2VEA3UZJ2MW8lOS7BZLECCCfyN5nA7n4KqIbWS6Eo" />
     <!-- Google tag (gtag.js) -->
@@ -49,7 +51,10 @@
             <div class="search-container glass-effect">
                 <div class="search-box">
                     <label for="search-term">SEARCH</label>
-                    <input type="text" id="search-term" placeholder="Search term">
+                    <div class="search-input-wrapper">
+                        <input type="text" id="search-term" placeholder="Search term" autocomplete="off">
+                        <div id="autocomplete-dropdown" class="autocomplete-dropdown hidden"></div>
+                    </div>
                 </div>
                 <div class="filter-box">
                     <div class="toggle-container">
@@ -139,6 +144,9 @@
     <footer>
         <p>Made with HTML, CSS & JS</p>
     </footer>
+
+    <!-- Toast Container -->
+    <div id="toast-container"></div>
 
 </body>
 </html>
