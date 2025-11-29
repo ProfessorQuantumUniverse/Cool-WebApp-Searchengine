@@ -3,9 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WebApps Searchengine</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com https://cdn.jsdelivr.net https://www.googletagmanager.com https://script.google.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' https: data:; connect-src 'self' https://script.google.com https://www.google-analytics.com; frame-src 'none';">
+    <title>WebApps Searchengine - Future Edition</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/papaparse@5.3.2/papaparse.min.js"></script> <!-- Hilft beim Lesen der CSV -->
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script> <!-- Fuzzy Search Library -->
     <script src="script.js" defer></script>
     <meta name="google-site-verification" content="9z2VEA3UZJ2MW8lOS7BZLECCCfyN5nA7n4KqIbWS6Eo" />
     <!-- Google tag (gtag.js) -->
@@ -14,35 +20,41 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-        gtag('config', 'G-06JLD71Y50');
+
+      gtag('config', 'G-06JLD71Y50');
     </script>
 </head>
 <body>
 
-    <!-- Lade-Overlay -->
-    <div id="loading-overlay">
-        <div class="loader"></div>
-        <p>Loading data...</p>
+    <!-- Ansicht 0: Loading Screen -->
+    <div id="loading-screen" class="view active-view">
+        <div class="loading-container">
+            <div class="loader"></div>
+            <p>Loading Database...</p>
+        </div>
     </div>
 
-    <header class="content-hidden">
+    <header>
         <div class="logo-container" id="logo-home-button">
             <img src="https://i.imgur.com/r6yVFfN.png" alt="Logo" class="logo-img">
             <h1>WebApps Searchengine</h1>
         </div>
         <nav>
-            <button id="nav-search-btn" class="nav-button active"><i class="icon">🔍</i> Search</button>
-            <button id="nav-contact-btn" class="nav-button"><i class="icon">✉️</i> Contact</button>
+            <button id="nav-search-btn" class="nav-button active"><span class="material-symbols-outlined">search</span> Search</button>
+            <button id="nav-contact-btn" class="nav-button"><span class="material-symbols-outlined">contact_page</span> Contact</button>
         </nav>
     </header>
 
     <main class="content-hidden">
         <!-- Ansicht 1: Suche -->
-        <div id="search-view" class="view active-view">
-            <div class="search-container">
+        <div id="search-view" class="view">
+            <div class="search-container glass-effect">
                 <div class="search-box">
                     <label for="search-term">SEARCH</label>
-                    <input type="text" id="search-term" placeholder="Search term">
+                    <div class="search-input-wrapper">
+                        <input type="text" id="search-term" placeholder="Search term" autocomplete="off">
+                        <div id="autocomplete-dropdown" class="autocomplete-dropdown hidden"></div>
+                    </div>
                 </div>
                 <div class="filter-box">
                     <div class="toggle-container">
@@ -64,24 +76,25 @@
                     </div>
                     <p class="info-text">When activated, the searchmode is set to "IS EXACTLY" instead of "CONTAINS".</p>
                 </div>
-                <button id="search-button" class="action-button">🔍 Search!</button>
-                <button id="explore-button" class="action-button secondary">🧭 Explore Random</button>
+                <button id="search-button" class="action-button"><span class="material-symbols-outlined">search</span> Search!</button>
+                <button id="explore-button" class="action-button secondary"><span class="material-symbols-outlined">contact_page</span> Explore </button>
             </div>
-             <a href="#" id="submit-new-site-link" class="footer-link">✍️ Submit new Site!</a>
+             <a href="#" id="submit-new-site-link" class="footer-link"><span class="material-symbols-outlined">send</span> Submit new Site!</a>
         </div>
 
         <!-- Ansicht 2: Ergebnisse -->
         <div id="results-view" class="view">
-            <button id="back-to-search-btn" class="action-button back-button">← Go to back Search!</button>
+            <button id="back-to-search-btn" class="action-button back-button"><span class="material-symbols-outlined">arrow_back</span> Go to back Search!</button>
             <div id="results-container">
                 <!-- Ergebnisse werden hier von JS eingefügt -->
+                <!-- JS will need to add 'glass-effect' to .result-card elements (though CSS now has a fallback) -->
             </div>
         </div>
         
         <!-- Ansicht 3: Detailansicht -->
         <div id="detail-view" class="view">
-             <button id="back-to-results-btn" class="action-button back-button">← Back to results</button>
-             <div id="detail-content">
+             <button id="back-to-results-btn" class="action-button back-button"><span class="material-symbols-outlined">arrow_back</span> Back to results</button>
+             <div id="detail-content" class="glass-effect">
                 <!-- Detailinhalt wird hier von JS eingefügt -->
              </div>
         </div>
@@ -89,12 +102,12 @@
         <!-- Ansicht 4: Kontakt & Formulare -->
         <div id="contact-view" class="view">
             <div class="form-container">
-                <button id="show-feedback-form" class="action-button">📣 Feedback / Bug report</button>
-                <button id="show-submit-form" class="action-button">➕ Submit new Website!</button>
+                <button id="show-feedback-form" class="action-button"><span class="material-symbols-outlined">feedback</span> Feedback / Bug report</button>
+                <button id="show-submit-form" class="action-button"><span class="material-symbols-outlined">add_circle</span> Submit new Website!</button>
             </div>
             
             <!-- Feedback-Formular -->
-            <form id="feedback-form" class="form-wrapper hidden">
+            <form id="feedback-form" class="form-wrapper hidden glass-effect">
                 <h3>Feedback / Bug report</h3>
                 <label for="feedback-name">Name</label>
                 <input type="text" id="feedback-name" name="name">
@@ -108,11 +121,11 @@
                 <label for="feedback-entry">Entry Number</label>
                 <input type="number" id="feedback-entry" name="entry_number">
                 
-                <button type="submit" class="action-button">Absenden</button>
+                <button type="submit" class="action-button">Send</button>
             </form>
 
             <!-- Submit-Formular -->
-            <form id="submit-form" class="form-wrapper hidden">
+            <form id="submit-form" class="form-wrapper hidden glass-effect">
                 <h3>Submit new Site!</h3>
                 <label for="submit-name">Name <span class="required">*</span></label>
                 <input type="text" id="submit-name" name="name" required>
@@ -123,7 +136,7 @@
                 <label for="submit-url">URL <span class="required">*</span></label>
                 <input type="url" id="submit-url" name="url" required>
                 
-                <button type="submit" class="action-button">Absenden</button>
+                <button type="submit" class="action-button">Send</button>
             </form>
         </div>
     </main>
@@ -131,6 +144,9 @@
     <footer>
         <p>Made with HTML, CSS & JS</p>
     </footer>
+
+    <!-- Toast Container -->
+    <div id="toast-container"></div>
 
 </body>
 </html>

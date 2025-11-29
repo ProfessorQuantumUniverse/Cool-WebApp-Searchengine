@@ -1,13 +1,22 @@
-/* Ersetze den kompletten Inhalt deiner style.css Datei hiermit */
+/* Cyber Interface Theme */
 :root {
-    --bg-color: #1e1e1e;
-    --container-bg: #2a2a2a;
-    --primary-accent: #8bc34a; /* Light green */
-    --secondary-accent: #79a73f;
-    --text-color: #e0e0e0;
-    --label-color: #b0b0b0;
-    --border-color: #444;
+    --primary-bg: #0a0f1f; /* Deep space blue */
+    --container-bg-blur: rgba(15, 25, 45, 0.6); /* Semi-transparent for glass effect */
+    --glass-border: rgba(0, 217, 255, 0.3); /* Neon blue border for glass */
+    --primary-accent: #00d9ff; /* Electric Blue */
+    --secondary-accent: #ff00ff; /* Vibrant Magenta (use sparingly) */
+    --text-color: #e0e5f0;
+    --label-color: #a0a5b0;
+    --input-bg: rgba(10, 15, 31, 0.7); /* Darker input bg */
+    --danger-color: #e53935; /* For required fields or errors */
+
+    --font-heading: 'Orbitron', sans-serif; /* Futuristic font for headings */
+    --font-body: 'Roboto', sans-serif;
+
+    --blur-intensity: 12px; /* Increased blur intensity */
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Roboto:wght@300;400;500&display=swap');
 
 * {
     box-sizing: border-box;
@@ -16,21 +25,43 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: var(--bg-color);
+    font-family: var(--font-body);
+    background-color: var(--primary-bg);
     color: var(--text-color);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    overflow-x: hidden; /* Prevent horizontal scroll from potential glows */
+}
+
+/* Glassmorphism base for containers and elements */
+.glass-effect,
+nav, /* Applying to nav directly */
+.action-button, /* Applying to buttons */
+input[type="text"], input[type="email"], input[type="url"], input[type="number"], select, textarea /* Applying to inputs/selects/textareas */
+ {
+    background-color: var(--container-bg-blur);
+    backdrop-filter: blur(var(--blur-intensity));
+    -webkit-backdrop-filter: blur(var(--blur-intensity)); /* Safari */
+    border: 1px solid var(--glass-border);
+    border-radius: 12px; /* Softer, more modern rounding for containers, will be overridden for smaller elements */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2), 0 0 30px rgba(var(--primary-accent-rgb, 0, 217, 255), 0.1) inset; /* Adjusted shadow */
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
-    background-color: var(--container-bg);
-    border-bottom: 1px solid var(--border-color);
+    padding: 1.5rem 2.5rem; /* Increased padding */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    /* Applying glass effect directly to header */
+    background-color: rgba(10, 15, 31, 0.7); /* Slightly darker blur for header */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--glass-border);
+    transition: background-color 0.3s ease;
 }
 
 .logo-container {
@@ -41,44 +72,87 @@ header {
 }
 
 .logo-img {
-    height: 40px;
-    width: 40px;
-    border-radius: 6px;
+    height: 45px; /* Slightly larger */
+    width: 45px;
+    border-radius: 8px;
+    filter: drop-shadow(0 0 5px var(--primary-accent)); /* Logo glow */
 }
 
 header h1 {
-    font-size: 1.5rem;
+    font-family: var(--font-heading);
+    font-size: 1.8rem; /* Larger */
     font-weight: 500;
+    color: var(--primary-accent);
+    text-shadow: 0 0 8px rgba(0, 217, 255, 0.7);
 }
 
 nav {
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem; /* Increased gap */
+    padding: 0.5rem; /* Add padding to nav for inset glass effect */
+    border-radius: 10px; /* Match glass effect rounding */
 }
 
 .nav-button {
-    background: none;
-    border: none;
+    background: transparent; /* Will be overridden by glass effect if applied to .nav-button directly, or use a sub-element */
+    border: 1px solid transparent;
     color: var(--label-color);
-    padding: 0.5rem 1rem;
+    padding: 0.6rem 1.2rem;
     cursor: pointer;
     font-size: 1rem;
-    border-radius: 6px;
-    transition: background-color 0.2s, color 0.2s;
+    font-family: var(--font-body);
+    font-weight: 500;
+    border-radius: 8px; /* Rounded buttons */
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    /* Individual glass for nav buttons - might be too much, but trying "everywhere" */
+    background-color: rgba(var(--primary-accent-rgb, 0, 217, 255), 0.1); /* Subtle accent color tint */
+    backdrop-filter: blur(calc(var(--blur-intensity) / 2)); /* Less blur for smaller elements */
+    -webkit-backdrop-filter: blur(calc(var(--blur-intensity) / 2));
+    border: 1px solid rgba(var(--primary-accent-rgb, 0, 217, 255), 0.4);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.nav-button .icon {
+    margin-right: 0.5em;
+}
+
+.nav-button:before { /* Animated underline/glow effect */
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-accent);
+    transition: width 0.3s ease;
+    box-shadow: 0 0 5px var(--primary-accent);
+}
+
+.nav-button.active:before, .nav-button:hover:before {
+    width: 70%;
 }
 
 .nav-button.active, .nav-button:hover {
-    background-color: var(--primary-accent);
-    color: var(--bg-color);
+    color: var(--primary-accent);
+    text-shadow: 0 0 5px rgba(0, 217, 255, 0.5);
 }
 
 main {
     flex-grow: 1;
-    padding: 2rem;
+    padding: 2.5rem; /* Increased padding */
 }
 
 .view {
     display: none;
+    animation: fadeInView 0.5s ease-out;
+}
+
+@keyframes fadeInView {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 .view.active-view {
@@ -86,226 +160,183 @@ main {
 }
 
 .search-container, .form-wrapper {
-    max-width: 700px;
+    max-width: 750px; /* Slightly wider */
     margin: 0 auto;
-    padding: 2rem;
-    background-color: var(--container-bg);
-    border-radius: 8px;
-    border: 1px solid var(--border-color);
+    padding: 2.5rem; /* Increased padding */
+    /* glass-effect applied in HTML or via JS if dynamic */
 }
 
-.search-box, .filter-box, .form-wrapper > * {
-    margin-bottom: 1.5rem;
+.search-box, .filter-box, .form-wrapper > *:not(h3) { /* Exclude h3 from this rule for tighter spacing */
+    margin-bottom: 1.8rem; /* Increased margin */
 }
 
 label, h3 {
     display: block;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.8rem; /* Increased margin */
     color: var(--label-color);
+    font-family: var(--font-body);
     font-weight: 500;
+    font-size: 0.9rem; /* Slightly smaller labels */
+    text-transform: uppercase; /* Futuristic feel */
+    letter-spacing: 0.5px;
 }
-.required { color: #e57373; }
+
+h3 {
+    font-family: var(--font-heading);
+    color: var(--primary-accent);
+    font-size: 1.5rem;
+    text-shadow: 0 0 6px rgba(0, 217, 255, 0.5);
+    margin-bottom: 1.5rem;
+}
+
+.required {
+    color: var(--danger-color);
+    margin-left: 4px;
+    font-weight: bold;
+}
 
 input[type="text"], input[type="email"], input[type="url"], input[type="number"], select, textarea {
     width: 100%;
-    padding: 0.8rem;
-    background-color: var(--bg-color);
-    border: 1px solid var(--border-color);
-    border-radius: 6px;
+    padding: 1rem; /* Increased padding */
+    /* background-color: var(--input-bg); Already part of glass-effect */
+    /* border: 1px solid var(--glass-border); Already part of glass-effect */
+    border-radius: 8px; /* Specific rounding for inputs */
     color: var(--text-color);
     font-size: 1rem;
+    font-family: var(--font-body);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 input:focus, select:focus, textarea:focus {
     outline: none;
-    border-color: var(--primary-accent);
+    border-color: var(--primary-accent); /* Keep this for stronger focus indication */
+    box-shadow: 0 0 10px rgba(0, 217, 255, 0.5), 0 0 0 1px var(--primary-accent), 0 0 30px rgba(var(--primary-accent-rgb, 0, 217, 255), 0.2) inset; /* Enhanced Glow effect on focus */
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
 }
 
 .toggle-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0.5rem 0; /* Add some padding */
 }
 
 .info-text {
-    font-size: 0.8rem;
+    font-size: 0.85rem; /* Slightly larger */
     color: var(--label-color);
     margin-top: 0.5rem;
+    font-style: italic;
 }
 
 .action-button {
     width: 100%;
-    padding: 1rem;
+    padding: 1rem 1.5rem; /* Consistent padding */
     font-size: 1.1rem;
     font-weight: bold;
-    color: var(--bg-color);
-    background-color: var(--primary-accent);
-    border: none;
-    border-radius: 6px;
+    font-family: var(--font-heading); /* Heading font for buttons */
+    letter-spacing: 1px;
+    color: var(--primary-accent); /* Text color for glass buttons */
+    /* background-color: var(--primary-accent); Will be from glass effect */
+    /* border: none; Will be from glass effect */
+    border-radius: 8px; /* Specific rounding for buttons */
     cursor: pointer;
-    transition: background-color 0.2s;
+    transition: all 0.3s ease;
     margin-top: 1rem;
+    text-transform: uppercase;
+    /* box-shadow: 0 0 10px rgba(0, 217, 255, 0.3), 0 2px 5px rgba(0,0,0,0.2); */ /* From glass */
+    position: relative; /* For potential pseudo-element glow */
 }
 
-.action-button:hover {
-    background-color: var(--secondary-accent);
+.action-button:hover, .action-button:focus {
+    /* background-color: #00b8e6; Slightly lighter accent, glass will handle this */
+    color: var(--text-color); /* Brighter text on hover */
+    border-color: var(--primary-accent); /* Stronger border on hover */
+    box-shadow: 0 0 25px rgba(var(--primary-accent-rgb, 0, 217, 255), 0.7), 0 0 40px rgba(var(--primary-accent-rgb, 0, 217, 255), 0.3) inset, 0 4px 10px rgba(0,0,0,0.3);
+    transform: translateY(-2px);
 }
+/* Primary action buttons might need a stronger distinction if all are glass */
+.action-button:not(.secondary) {
+    background-color: rgba(var(--primary-accent-rgb,0, 217, 255), 0.25); /* Tint for primary */
+}
+.action-button:not(.secondary):hover, .action-button:not(.secondary):focus {
+    background-color: rgba(var(--primary-accent-rgb,0, 217, 255), 0.4);
+}
+
 
 .action-button.secondary {
-    background-color: transparent;
-    border: 1px solid var(--primary-accent);
+    /* background-color: transparent; From glass */
+    /* border: 2px solid var(--primary-accent); From glass, but maybe stronger */
+    border-width: 2px;
     color: var(--primary-accent);
+    /* box-shadow: 0 0 10px rgba(0, 217, 255, 0.3); From glass */
 }
 
-.action-button.secondary:hover {
-    background-color: var(--primary-accent);
-    color: var(--bg-color);
+.action-button.secondary:hover, .action-button.secondary:focus {
+    /* background-color: var(--primary-accent); Glass will handle transparency, tint it */
+    background-color: rgba(var(--primary-accent-rgb, 0, 217, 255), 0.2);
+    color: var(--text-color);
+    /* box-shadow: 0 0 20px rgba(0, 217, 255, 0.7); From glass hover */
 }
 
 .footer-link {
     display: block;
     text-align: center;
-    margin-top: 2rem;
+    margin-top: 2.5rem; /* Increased margin */
     color: var(--primary-accent);
     text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
 }
-.footer-link:hover { text-decoration: underline; }
-
-/* Switch Toggle CSS */
-.switch { position: relative; display: inline-block; width: 50px; height: 28px; }
-.switch input { opacity: 0; width: 0; height: 0; }
-.slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #444; transition: .4s; border-radius: 28px; }
-.slider:before { position: absolute; content: ""; height: 20px; width: 20px; left: 4px; bottom: 4px; background-color: white; transition: .4s; border-radius: 50%; }
-input:checked + .slider { background-color: var(--primary-accent); }
-input:checked + .slider:before { transform: translateX(22px); }
-
-/* Results View */
-#results-view { max-width: 1200px; margin: 0 auto; }
-.back-button { width: auto; padding: 0.5rem 1.5rem; margin-bottom: 2rem; }
-
-.results-group h2 {
-    font-size: 1.8rem;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid var(--primary-accent);
+.footer-link:hover {
+    color: #fff;
+    text-decoration: underline;
+    text-shadow: 0 0 8px var(--primary-accent);
 }
 
-.results-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1.5rem;
-}
-
-.result-card {
-    background-color: var(--container-bg);
-    border-radius: 8px;
-    overflow: hidden;
-    cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
-    border: 1px solid var(--border-color);
-}
-
-.result-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-}
-
-.result-card .thumbnail {
-    width: 100%;
-    height: 180px;
-    background-color: #333;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--label-color);
-    font-size: 0.9rem;
-}
-
-.result-card .card-info {
-    padding: 1rem;
-}
-
-.result-card .card-title {
-    font-size: 1.1rem;
-    font-weight: bold;
-    margin-bottom: 0.3rem;
-}
-
-.result-card .card-id {
-    font-size: 0.8rem;
-    color: var(--label-color);
-}
-
-/* Detail View */
-#detail-content {
-    max-width: 900px;
-    margin: 0 auto;
-    background-color: var(--container-bg);
-    padding: 2rem;
-    border-radius: 8px;
-}
-
-#detail-content img {
-    max-width: 100%;
-    border-radius: 6px;
-    margin-bottom: 1.5rem;
-    background-color: #333; /* Falls Bild nicht lädt */
-}
-
-#detail-content h2 { font-size: 2rem; margin-bottom: 1rem; }
-#detail-content p { margin-bottom: 1rem; line-height: 1.6; }
-#detail-content a { color: var(--primary-accent); word-break: break-all; }
-#detail-content .unavailable-url { color: #999; } /* NEU */
-
-/* Formulare in Kontakt */
-#contact-view .form-container { display: flex; gap: 1rem; max-width: 700px; margin: 0 auto; background: none; border: none; padding: 0; }
-#contact-view .action-button { margin-top: 0; }
-#contact-view .form-wrapper { margin-top: 2rem; }
-
-footer {
-    text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
-    font-size: 0.9rem;
-    color: var(--label-color);
-    background-color: var(--container-bg);
-}
-
-.hidden {
-    display: none !important;
-}
-
-/* Lade-Overlay */
-#loading-overlay {
+/* Loading Screen */
+#loading-screen {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--bg-color);
-    display: flex;
-    flex-direction: column;
+    background-color: var(--primary-bg); /* Solid background to hide content */
+    z-index: 9999;
+    display: flex; /* Use flexbox to center content */
     justify-content: center;
     align-items: center;
-    z-index: 9999;
+    flex-direction: column;
+    /* Starts as a visible view */
+}
+
+#loading-screen.hidden {
+    display: none; /* This will be used by JS to hide it */
+}
+
+.loading-container {
+    text-align: center;
 }
 
 .loader {
-    border: 8px solid var(--container-bg);
-    border-top: 8px solid var(--primary-accent);
+    border: 5px solid var(--glass-border);
+    border-top: 5px solid var(--primary-accent);
     border-radius: 50%;
     width: 60px;
     height: 60px;
     animation: spin 1.5s linear infinite;
-    margin-bottom: 1rem;
+    margin: 0 auto 20px auto;
+    box-shadow: 0 0 20px rgba(0, 217, 255, 0.5);
 }
 
-#loading-overlay p {
-    color: var(--text-color);
-    font-size: 1.2rem;
+#loading-screen p {
+    font-family: var(--font-heading);
+    color: var(--primary-accent);
+    font-size: 1.5rem;
+    text-shadow: 0 0 8px rgba(0, 217, 255, 0.7);
 }
 
 @keyframes spin {
@@ -313,8 +344,553 @@ footer {
     100% { transform: rotate(360deg); }
 }
 
-/* Klasse zum Verstecken des Hauptinhalts */
-.content-hidden {
-    visibility: hidden;
+
+/* Switch Toggle CSS - Futuristic Redesign */
+.switch { position: relative; display: inline-block; width: 60px; height: 30px; } /* Slightly larger */
+.switch input { opacity: 0; width: 0; height: 0; }
+.slider {
+    position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0;
+    background-color: var(--input-bg);
+    border: 1px solid var(--glass-border);
+    transition: .4s; border-radius: 30px;
+}
+.slider:before {
+    position: absolute; content: ""; height: 22px; width: 22px; left: 3px; bottom: 3px;
+    background-color: var(--label-color);
+    transition: .4s; border-radius: 50%;
+}
+input:checked + .slider {
+    background-color: var(--primary-accent);
+    box-shadow: 0 0 10px var(--primary-accent);
+}
+input:checked + .slider:before {
+    transform: translateX(30px); /* Adjusted for new size */
+    background-color: var(--primary-bg);
+}
+
+/* Results View */
+#results-view { max-width: 1300px; margin: 0 auto; } /* Wider for more content */
+.back-button {
+    width: auto;
+    padding: 0.8rem 1.8rem; /* Increased padding */
+    margin-bottom: 2.5rem; /* Increased margin */
+    display: inline-flex; /* Align icon and text */
+    align-items: center;
+    gap: 0.5em;
+}
+
+.results-group h2 {
+    font-family: var(--font-heading);
+    font-size: 2rem; /* Larger */
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 2px solid var(--primary-accent);
+    color: var(--primary-accent);
+    text-shadow: 0 0 6px rgba(0, 217, 255, 0.5);
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); /* Slightly larger cards */
+    gap: 2rem; /* Increased gap */
+}
+
+.result-card {
+    /* glass-effect applied in HTML or via JS, but ensure it inherits base styles if not explicitly set */
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    position: relative; /* For pseudo-elements if needed */
+    /* Ensure result-card gets the glass effect even if class isn't added by JS yet */
+    background-color: var(--container-bg-blur);
+    backdrop-filter: blur(var(--blur-intensity));
+    -webkit-backdrop-filter: blur(var(--blur-intensity));
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2), 0 0 30px rgba(var(--primary-accent-rgb, 0, 217, 255), 0.1) inset;
+}
+
+.result-card:hover {
+    transform: translateY(-8px) scale(1.02); /* More pronounced hover */
+    border-color: var(--primary-accent); /* Highlight border on hover */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 0 0 35px var(--primary-accent), 0 0 50px rgba(var(--primary-accent-rgb, 0, 217, 255), 0.2) inset; /* Enhanced glow on hover */
+}
+
+.result-card .thumbnail {
+    width: 100%;
+    height: 200px; /* Increased height */
+    background-color: var(--input-bg); /* Fallback */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--label-color);
+    font-size: 0.9rem;
+    border-bottom: 1px solid var(--glass-border); /* Separator */
+    position: relative;
+    overflow: hidden;
+}
+.result-card .thumbnail::before { /* Subtle overlay */
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(transparent, rgba(10, 15, 31, 0.5));
+}
+
+
+.result-card .card-info {
+    padding: 1.2rem; /* Increased padding */
+}
+
+.result-card .card-title {
+    font-family: var(--font-heading);
+    font-size: 1.3rem; /* Larger */
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: var(--text-color); /* Brighter title */
+    transition: color 0.3s ease;
+}
+.result-card:hover .card-title {
+    color: var(--primary-accent);
+    text-shadow: 0 0 5px var(--primary-accent);
+}
+
+.result-card .card-id {
+    font-size: 0.8rem;
+    color: var(--label-color);
+    opacity: 0.7;
+}
+
+/* Detail View */
+#detail-content {
+    max-width: 950px; /* Wider */
+    margin: 0 auto;
+    padding: 2.5rem; /* Increased padding */
+    /* glass-effect applied in HTML or via JS */
+}
+
+#detail-content img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    background-color: var(--input-bg);
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+#detail-content h2 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem; /* Larger */
+    margin-bottom: 1.5rem;
+    color: var(--primary-accent);
+    text-shadow: 0 0 8px rgba(0, 217, 255, 0.7);
+}
+#detail-content p {
+    margin-bottom: 1.2rem;
+    line-height: 1.7; /* Increased line height */
+    font-size: 1.05rem;
+}
+#detail-content p strong {
+    color: var(--label-color);
+    font-weight: 500;
+}
+#detail-content a {
+    color: var(--primary-accent);
+    word-break: break-all;
+    text-decoration: none;
+    border-bottom: 1px dashed var(--primary-accent);
+    transition: color 0.3s ease, border-bottom-color 0.3s ease;
+}
+#detail-content a:hover {
+    color: #fff;
+    border-bottom-color: #fff;
+    text-shadow: 0 0 5px var(--primary-accent);
+}
+#detail-content .unavailable-url { color: #999; font-style: italic; }
+
+/* Formulare in Kontakt */
+#contact-view .form-container {
+    display: flex;
+    gap: 1.5rem; /* Increased gap */
+    max-width: 750px;
+    margin: 0 auto 2.5rem auto; /* Add bottom margin */
+    background: none;
+    border: none;
+    padding: 0;
+    backdrop-filter: none; /* No glass for this wrapper, forms inside will have it */
+    box-shadow: none;
+}
+#contact-view .action-button { margin-top: 0; }
+#contact-view .form-wrapper { margin-top: 0; /* Reset margin, handled by .form-container gap */ }
+
+
+footer {
+    text-align: center;
+    padding: 1.5rem; /* Increased padding */
+    margin-top: 3rem; /* Increased margin */
+    font-size: 0.9rem;
+    color: var(--label-color);
+    /* Apply glass effect to footer as well */
+    background-color: var(--container-bg-blur);
+    backdrop-filter: blur(var(--blur-intensity));
+    -webkit-backdrop-filter: blur(var(--blur-intensity));
+    border-top: 1px solid var(--glass-border); /* Keep top border distinct */
+    padding: 1.5rem; /* Ensure padding is consistent */
+    border-radius: 12px 12px 0 0; /* Round top corners if desired, or keep square */
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.2), 0 0 30px rgba(var(--primary-accent-rgb, 0, 217, 255), 0.1) inset;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.icon {
+    display: inline-block;
+    font-style: normal;
+    margin-right: 8px;
+    color: inherit;
+    font-size: 1.1em;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: var(--primary-bg);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--primary-accent);
+    border-radius: 5px;
+    border: 2px solid var(--primary-bg);
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #00b8e6;
+}
+
+/* Ensure glass effect is applied to specific containers if not covered by general selectors */
+.search-container,
+#detail-content,
+.form-wrapper {
+    /* These should already be covered by .glass-effect class in HTML or the general selectors.
+       This is a fallback/reminder. */
+    background-color: var(--container-bg-blur);
+    backdrop-filter: blur(var(--blur-intensity));
+    -webkit-backdrop-filter: blur(var(--blur-intensity));
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2), 0 0 30px rgba(var(--primary-accent-rgb, 0, 217, 255), 0.1) inset;
+}
+
+/* Define --primary-accent-rgb for use in rgba() if not already defined, for safety */
+:root {
+    --primary-accent-rgb: 0, 217, 255; /* Default Electric Blue RGB values */
+}
+
+/* ############ TOAST NOTIFICATIONS ############ */
+#toast-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10000;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    pointer-events: none;
+}
+
+.toast {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 20px;
+    min-width: 280px;
+    max-width: 400px;
+    background-color: var(--container-bg-blur);
+    backdrop-filter: blur(var(--blur-intensity));
+    -webkit-backdrop-filter: blur(var(--blur-intensity));
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    color: var(--text-color);
+    font-family: var(--font-body);
     opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: auto;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.toast-icon {
+    font-size: 24px;
+}
+
+.toast-message {
+    flex: 1;
+    font-size: 0.95rem;
+}
+
+.toast-success {
+    border-color: #4caf50;
+}
+
+.toast-success .toast-icon {
+    color: #4caf50;
+}
+
+.toast-error {
+    border-color: var(--danger-color);
+}
+
+.toast-error .toast-icon {
+    color: var(--danger-color);
+}
+
+.toast-info {
+    border-color: var(--primary-accent);
+}
+
+.toast-info .toast-icon {
+    color: var(--primary-accent);
+}
+
+.toast-loading {
+    border-color: var(--primary-accent);
+}
+
+.toast-loading .toast-icon {
+    color: var(--primary-accent);
+    animation: spin 1.5s linear infinite;
+}
+
+/* ############ AUTOCOMPLETE DROPDOWN ############ */
+.search-input-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.autocomplete-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--container-bg-blur);
+    backdrop-filter: blur(var(--blur-intensity));
+    -webkit-backdrop-filter: blur(var(--blur-intensity));
+    border: 1px solid var(--glass-border);
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 100;
+}
+
+.autocomplete-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    min-height: 44px; /* Touch target */
+}
+
+.autocomplete-item:hover {
+    background-color: rgba(var(--primary-accent-rgb), 0.2);
+}
+
+.autocomplete-name {
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.autocomplete-type {
+    font-size: 0.8rem;
+    color: var(--label-color);
+    background-color: rgba(var(--primary-accent-rgb), 0.15);
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+/* ############ FAVORITES SYSTEM ############ */
+.favorite-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 10;
+    padding: 0;
+}
+
+.favorite-btn .material-symbols-outlined {
+    font-size: 24px;
+    color: var(--label-color);
+    transition: color 0.3s ease;
+}
+
+.favorite-btn:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    transform: scale(1.1);
+}
+
+.favorite-btn.active .material-symbols-outlined {
+    color: #ffc107;
+}
+
+.detail-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.detail-header h2 {
+    margin-bottom: 0;
+}
+
+.detail-favorite {
+    position: relative;
+    top: auto;
+    right: auto;
+    flex-shrink: 0;
+}
+
+/* ############ MOBILE TOUCH TARGETS & RESPONSIVE ############ */
+@media (max-width: 768px) {
+    /* Ensure minimum touch target sizes */
+    .action-button,
+    .nav-button,
+    .back-button,
+    .favorite-btn,
+    .switch {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    .action-button {
+        padding: 14px 20px;
+        font-size: 1rem;
+    }
+    
+    .nav-button {
+        padding: 12px 16px;
+    }
+    
+    /* Single column layout on mobile */
+    .results-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    /* Header adjustments */
+    header {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    
+    header h1 {
+        font-size: 1.3rem;
+    }
+    
+    nav {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    /* Main content padding */
+    main {
+        padding: 1rem;
+    }
+    
+    .search-container,
+    .form-wrapper,
+    #detail-content {
+        padding: 1.5rem;
+    }
+    
+    #detail-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .results-group h2 {
+        font-size: 1.5rem;
+    }
+    
+    /* Form container stacking */
+    #contact-view .form-container {
+        flex-direction: column;
+    }
+    
+    /* Toast positioning for mobile */
+    #toast-container {
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+    }
+    
+    .toast {
+        min-width: auto;
+        max-width: none;
+    }
+    
+    /* Autocomplete full width */
+    .autocomplete-dropdown {
+        max-height: 200px;
+    }
+    
+    .detail-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .detail-favorite {
+        align-self: flex-end;
+        margin-top: -60px;
+    }
+}
+
+/* Even smaller screens */
+@media (max-width: 480px) {
+    .logo-container {
+        gap: 0.5rem;
+    }
+    
+    .logo-img {
+        height: 35px;
+        width: 35px;
+    }
+    
+    header h1 {
+        font-size: 1.1rem;
+    }
+    
+    .nav-button {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+    }
+    
+    .search-container,
+    .form-wrapper,
+    #detail-content {
+        padding: 1rem;
+    }
 }
