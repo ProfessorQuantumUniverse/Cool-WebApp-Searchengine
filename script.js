@@ -1,7 +1,10 @@
 // ############ HTTPS REDIRECT ############
-if (location.protocol === 'http:' && location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
-    location.replace('https:' + location.href.substring(location.protocol.length));
-}
+(function() {
+    const isLocalDev = ['localhost', '127.0.0.1', '0.0.0.0'].includes(location.hostname);
+    if (location.protocol === 'http:' && !isLocalDev) {
+        location.replace('https://' + location.host + location.pathname + location.search + location.hash);
+    }
+})();
 
 document.addEventListener('DOMContentLoaded', () => {
     // ############ KONFIGURATION ############
@@ -20,6 +23,18 @@ document.addEventListener('DOMContentLoaded', () => {
         const temp = document.createElement('div');
         temp.textContent = str;
         return temp.innerHTML;
+    }
+
+    // Validate and sanitize URL for use in HTML attributes
+    function sanitizeURLForAttr(url) {
+        if (!url) return '';
+        // Block dangerous URL schemes
+        const lowerUrl = url.toLowerCase().trim();
+        if (lowerUrl.startsWith('javascript:') || lowerUrl.startsWith('data:') || lowerUrl.startsWith('vbscript:')) {
+            return '';
+        }
+        // Encode the URL and also escape single/double quotes for safe HTML attribute usage
+        return encodeURI(url).replace(/'/g, '%27').replace(/"/g, '%22');
     }
 
     // ############ TOAST NOTIFICATION SYSTEM ############
@@ -317,7 +332,7 @@ function handleSearch() {
 
                 let thumbnailHtml;
                 if (item.ImageURL && item.ImageURL.startsWith('http')) {
-                    thumbnailHtml = `<div class="thumbnail" style="background-image: url('${encodeURI(item.ImageURL)}')"></div>`;
+                    thumbnailHtml = `<div class="thumbnail" style="background-image: url('${sanitizeURLForAttr(item.ImageURL)}')"></div>`;
                     preloadImage(item.ImageURL);
                 } else if (item.URL && item.URL.startsWith('http')) {
                     const thumUrl = `https://image.thum.io/get/width/400/crop/300/${encodeURIComponent(item.URL)}`;
@@ -328,17 +343,18 @@ function handleSearch() {
                 }
                 
                 const isFav = isFavorite(item.ID);
+                const sanitizedId = sanitizeHTML(String(item.ID));
                 
                 card.innerHTML = `
                     ${thumbnailHtml}
                     <div class="card-info">
                         <div class="card-header">
                             <h3 class="card-title">${sanitizeHTML(item.Name)}</h3>
-                            <button class="favorite-btn ${isFav ? 'active' : ''}" data-id="${item.ID}" title="Toggle favorite">
+                            <button class="favorite-btn ${isFav ? 'active' : ''}" data-id="${sanitizedId}" title="Toggle favorite">
                                 ${isFav ? '★' : '☆'}
                             </button>
                         </div>
-                        <p class="card-id">ID: ${sanitizeHTML(String(item.ID))}</p>
+                        <p class="card-id">ID: ${sanitizedId}</p>
                     </div>
                 `;
                 
@@ -371,7 +387,7 @@ function handleSearch() {
         
         let imageHtml;
         if (item.ImageURL && item.ImageURL.startsWith('http')) {
-            imageHtml = `<img src="${encodeURI(item.ImageURL)}" alt="Vorschau von ${sanitizeHTML(item.Name)}">`;
+            imageHtml = `<img src="${sanitizeURLForAttr(item.ImageURL)}" alt="Vorschau von ${sanitizeHTML(item.Name)}">`;
         } else if (item.URL && item.URL.startsWith('http')) {
              const thumUrl = `https://image.thum.io/get/width/800/${encodeURIComponent(item.URL)}`;
              imageHtml = `<img src="${thumUrl}" alt="Vorschau von ${sanitizeHTML(item.Name)}">`;
@@ -381,16 +397,17 @@ function handleSearch() {
         
         const isValidUrl = item.URL && item.URL.startsWith('http');
         let urlHtml = isValidUrl 
-            ? `<a href="${encodeURI(item.URL)}" target="_blank" rel="noopener noreferrer">${sanitizeHTML(item.URL)}</a>`
+            ? `<a href="${sanitizeURLForAttr(item.URL)}" target="_blank" rel="noopener noreferrer">${sanitizeHTML(item.URL)}</a>`
             : `<span class="unavailable-url">URL nicht verfügbar</span>`;
 
         const isFav = isFavorite(item.ID);
+        const sanitizedId = sanitizeHTML(String(item.ID));
 
         detailContent.innerHTML = `
             ${imageHtml}
             <div class="detail-header">
                 <h2>${sanitizeHTML(item.Name)}</h2>
-                <button class="favorite-btn detail-fav ${isFav ? 'active' : ''}" data-id="${item.ID}" title="Toggle favorite">
+                <button class="favorite-btn detail-fav ${isFav ? 'active' : ''}" data-id="${sanitizedId}" title="Toggle favorite">
                     ${isFav ? '★' : '☆'}
                 </button>
             </div>
@@ -449,6 +466,7 @@ function handleSearch() {
         }
 
         autocompleteDropdown.innerHTML = '';
+        const fragment = document.createDocumentFragment();
         suggestions.forEach(item => {
             const div = document.createElement('div');
             div.className = 'autocomplete-item';
@@ -458,8 +476,9 @@ function handleSearch() {
                 autocompleteDropdown.classList.add('hidden');
                 handleSearch();
             });
-            autocompleteDropdown.appendChild(div);
+            fragment.appendChild(div);
         });
+        autocompleteDropdown.appendChild(fragment);
         autocompleteDropdown.classList.remove('hidden');
     }
 
