@@ -1,11 +1,64 @@
+// ############ HTTPS REDIRECT ############
+if (location.protocol === 'http:' && location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
+    location.replace('https:' + location.href.substring(location.protocol.length));
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     // ############ KONFIGURATION ############
-    // HIER DEINE NEUE WEB-APP-URL EINFÜGEN
-    const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbws3rG5E4Q6jzy1bJDzjKSxQH-syVyQ95K2uBNAQeHeuJH76xdLXSg5_eVUO4841h05/exec';
+    const CONFIG = {
+        API_URL: 'https://script.google.com/macros/s/AKfycbws3rG5E4Q6jzy1bJDzjKSxQH-syVyQ95K2uBNAQeHeuJH76xdLXSg5_eVUO4841h05/exec',
+        CACHE_KEY: 'webapp_database',
+        CACHE_TIMESTAMP_KEY: 'webapp_database_timestamp',
+        CACHE_DURATION_MS: 30 * 60 * 1000, // 30 minutes
+        FAVORITES_KEY: 'favorites',
+        DEBOUNCE_DELAY: 300
+    };
+
+    // ############ SECURITY: HTML SANITIZATION ############
+    function sanitizeHTML(str) {
+        if (str == null) return '';
+        const temp = document.createElement('div');
+        temp.textContent = str;
+        return temp.innerHTML;
+    }
+
+    // ############ TOAST NOTIFICATION SYSTEM ############
+    function showToast(message, type = 'info', duration = 3000) {
+        const container = document.getElementById('toast-container');
+        const toast = document.createElement('div');
+        toast.className = `toast toast-${type}`;
+        toast.textContent = message;
+        container.appendChild(toast);
+
+        // Trigger animation
+        requestAnimationFrame(() => {
+            toast.classList.add('toast-show');
+        });
+
+        // Auto remove
+        setTimeout(() => {
+            toast.classList.remove('toast-show');
+            setTimeout(() => toast.remove(), 300);
+        }, duration);
+    }
+
+    // ############ DEBOUNCE UTILITY ############
+    function debounce(func, wait) {
+        let timeout;
+        return function executedFunction(...args) {
+            const later = () => {
+                clearTimeout(timeout);
+                func(...args);
+            };
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+        };
+    }
 
     // ############ VARIABLEN & ELEMENTE ############
     let database = [];
     let lastResults = [];
+    let fuseInstance = null;
 
     // ... (alle anderen Element-Variablen bleiben gleich) ...
     const loadingOverlay = document.getElementById('loading-overlay');
@@ -33,6 +86,39 @@ document.addEventListener('DOMContentLoaded', () => {
     const showSubmitBtn = document.getElementById('show-submit-form');
     const feedbackForm = document.getElementById('feedback-form');
     const submitForm = document.getElementById('submit-form');
+    const autocompleteDropdown = document.getElementById('autocomplete-dropdown');
+
+    // ############ FAVORITES SYSTEM ############
+    function getFavorites() {
+        try {
+            return JSON.parse(localStorage.getItem(CONFIG.FAVORITES_KEY)) || [];
+        } catch {
+            return [];
+        }
+    }
+
+    function saveFavorites(favorites) {
+        localStorage.setItem(CONFIG.FAVORITES_KEY, JSON.stringify(favorites));
+    }
+
+    function toggleFavorite(id) {
+        const favorites = getFavorites();
+        const idStr = String(id);
+        const index = favorites.indexOf(idStr);
+        if (index > -1) {
+            favorites.splice(index, 1);
+            showToast('Removed from favorites', 'info');
+        } else {
+            favorites.push(idStr);
+            showToast('Added to favorites!', 'success');
+        }
+        saveFavorites(favorites);
+        return favorites.includes(idStr);
+    }
+
+    function isFavorite(id) {
+        return getFavorites().includes(String(id));
+    }
 
     // ############ FUNKTIONEN ############
 
@@ -42,14 +128,69 @@ document.addEventListener('DOMContentLoaded', () => {
         img.src = url;
     }
 
-    // ANGEPASST: Lädt jetzt direkt JSON von der Apps Script API
+    // ############ CACHING FUNCTIONS ############
+    function getCachedDatabase() {
+        try {
+            const cachedData = localStorage.getItem(CONFIG.CACHE_KEY);
+            const cachedTimestamp = localStorage.getItem(CONFIG.CACHE_TIMESTAMP_KEY);
+            
+            if (cachedData && cachedTimestamp) {
+                const age = Date.now() - parseInt(cachedTimestamp, 10);
+                if (age < CONFIG.CACHE_DURATION_MS) {
+                    return JSON.parse(cachedData);
+                }
+            }
+        } catch (e) {
+            console.warn('Cache read error:', e);
+        }
+        return null;
+    }
+
+    function setCachedDatabase(data) {
+        try {
+            localStorage.setItem(CONFIG.CACHE_KEY, JSON.stringify(data));
+            localStorage.setItem(CONFIG.CACHE_TIMESTAMP_KEY, String(Date.now()));
+        } catch (e) {
+            console.warn('Cache write error:', e);
+        }
+    }
+
+    // ############ FUZZY SEARCH INITIALIZATION ############
+    function initFuseSearch() {
+        if (typeof Fuse !== 'undefined' && database.length > 0) {
+            fuseInstance = new Fuse(database, {
+                keys: ['Name', 'Desc', 'URL'],
+                threshold: 0.4,
+                includeScore: true,
+                minMatchCharLength: 2
+            });
+        }
+    }
+
+    // ANGEPASST: Lädt jetzt direkt JSON von der Apps Script API mit Caching
     async function loadDatabase() {
-        if (!APPS_SCRIPT_URL || !APPS_SCRIPT_URL.startsWith('https://')) {
-            alert('Bitte füge deine gültige Apps Script Web-App-URL in der script.js Datei ein!');
+        if (!CONFIG.API_URL || !CONFIG.API_URL.startsWith('https://')) {
+            showToast('Please add a valid Apps Script Web-App-URL!', 'error', 5000);
             return;
         }
+
+        // Check cache first
+        const cachedData = getCachedDatabase();
+        if (cachedData) {
+            database = cachedData;
+            console.log('Database loaded from cache. First entry:', database[0]);
+            populateFilterDropdown();
+            initFuseSearch();
+            loadingOverlay.style.display = 'none';
+            header.classList.remove('content-hidden');
+            main.classList.remove('content-hidden');
+            showToast('Data loaded from cache', 'info', 2000);
+            return;
+        }
+
         try {
-            const response = await fetch(APPS_SCRIPT_URL);
+            showToast('Loading data...', 'info', 2000);
+            const response = await fetch(CONFIG.API_URL);
             // Wir erwarten direkt JSON, kein CSV mehr! PapaParse wird nicht mehr benötigt.
             const data = await response.json();
             
@@ -58,11 +199,14 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             database = data;
+            setCachedDatabase(data);
             console.log('Datenbank von API geladen. Erster Eintrag:', database[0]);
             populateFilterDropdown();
+            initFuseSearch();
+            showToast('Data loaded successfully!', 'success');
         } catch (error) {
             console.error('Fehler beim Laden der Datenbank von der API:', error);
-            alert('Die Datenbank konnte nicht geladen werden. Prüfe die API-URL und die Bereitstellungseinstellungen. Fehlermeldung: ' + error.message);
+            showToast('Could not load database. Error: ' + error.message, 'error', 5000);
         } finally {
             // Lade-Overlay ausblenden und Hauptinhalt einblenden
             loadingOverlay.style.display = 'none';
@@ -106,28 +250,35 @@ function handleSearch() {
         let filteredData = database;
 
         if (searchTerm) {
-            filteredData = filteredData.filter(item => {
-                const name = (item.Name || '').toLowerCase();
-                const desc = (item.Desc || '').toLowerCase();
-                // NEU: Auch die URL für die Suche vorbereiten
-                const url = (item.URL || '').toLowerCase();
-
-                if (isExactMatch) {
-                    // Exakte Suche bezieht sich typischerweise nur auf den Namen.
+            if (isExactMatch) {
+                // Exact match mode
+                filteredData = filteredData.filter(item => {
+                    const name = (item.Name || '').toLowerCase();
                     return name === searchTerm;
-                } else {
-                    // NEU: Die URL zur "contains"-Suche hinzufügen
+                });
+            } else if (fuseInstance) {
+                // Use fuzzy search with Fuse.js
+                const fuseResults = fuseInstance.search(searchTerm);
+                filteredData = fuseResults.map(result => result.item);
+            } else {
+                // Fallback to simple contains search
+                filteredData = filteredData.filter(item => {
+                    const name = (item.Name || '').toLowerCase();
+                    const desc = (item.Desc || '').toLowerCase();
+                    const url = (item.URL || '').toLowerCase();
                     return name.includes(searchTerm) || 
                            desc.includes(searchTerm) || 
                            url.includes(searchTerm);
-                }
-            });
+                });
+            }
         }
 
         if (useFilter && mediatype) {
             filteredData = filteredData.filter(item => item.Medientyp === mediatype);
         }
 
+        // Hide autocomplete when searching
+        autocompleteDropdown.classList.add('hidden');
         displayResults(filteredData);
     }
 
@@ -154,7 +305,7 @@ function handleSearch() {
         for (const group of sortedKeys) {
             const groupContainer = document.createElement('div');
             groupContainer.className = 'results-group';
-            groupContainer.innerHTML = `<h2>${group}</h2>`;
+            groupContainer.innerHTML = `<h2>${sanitizeHTML(group)}</h2>`;
 
             const grid = document.createElement('div');
             grid.className = 'results-grid';
@@ -166,7 +317,7 @@ function handleSearch() {
 
                 let thumbnailHtml;
                 if (item.ImageURL && item.ImageURL.startsWith('http')) {
-                    thumbnailHtml = `<div class="thumbnail" style="background-image: url('${item.ImageURL}')"></div>`;
+                    thumbnailHtml = `<div class="thumbnail" style="background-image: url('${encodeURI(item.ImageURL)}')"></div>`;
                     preloadImage(item.ImageURL);
                 } else if (item.URL && item.URL.startsWith('http')) {
                     const thumUrl = `https://image.thum.io/get/width/400/crop/300/${encodeURIComponent(item.URL)}`;
@@ -176,13 +327,30 @@ function handleSearch() {
                     thumbnailHtml = `<div class="thumbnail">Kein Bild verfügbar</div>`;
                 }
                 
+                const isFav = isFavorite(item.ID);
+                
                 card.innerHTML = `
                     ${thumbnailHtml}
                     <div class="card-info">
-                        <h3 class="card-title">${item.Name}</h3>
-                        <p class="card-id">ID: ${item.ID}</p>
+                        <div class="card-header">
+                            <h3 class="card-title">${sanitizeHTML(item.Name)}</h3>
+                            <button class="favorite-btn ${isFav ? 'active' : ''}" data-id="${item.ID}" title="Toggle favorite">
+                                ${isFav ? '★' : '☆'}
+                            </button>
+                        </div>
+                        <p class="card-id">ID: ${sanitizeHTML(String(item.ID))}</p>
                     </div>
                 `;
+                
+                // Favorite button click handler
+                const favBtn = card.querySelector('.favorite-btn');
+                favBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const isNowFav = toggleFavorite(item.ID);
+                    favBtn.classList.toggle('active', isNowFav);
+                    favBtn.textContent = isNowFav ? '★' : '☆';
+                });
+                
                 card.addEventListener('click', () => {
                     sessionStorage.setItem('scrollPosition', window.scrollY);
                     showDetails(item.ID);
@@ -203,26 +371,44 @@ function handleSearch() {
         
         let imageHtml;
         if (item.ImageURL && item.ImageURL.startsWith('http')) {
-            imageHtml = `<img src="${item.ImageURL}" alt="Vorschau von ${item.Name}">`;
+            imageHtml = `<img src="${encodeURI(item.ImageURL)}" alt="Vorschau von ${sanitizeHTML(item.Name)}">`;
         } else if (item.URL && item.URL.startsWith('http')) {
              const thumUrl = `https://image.thum.io/get/width/800/${encodeURIComponent(item.URL)}`;
-             imageHtml = `<img src="${thumUrl}" alt="Vorschau von ${item.Name}">`;
+             imageHtml = `<img src="${thumUrl}" alt="Vorschau von ${sanitizeHTML(item.Name)}">`;
         } else {
             imageHtml = '';
         }
         
         const isValidUrl = item.URL && item.URL.startsWith('http');
         let urlHtml = isValidUrl 
-            ? `<a href="${item.URL}" target="_blank" rel="noopener noreferrer">${item.URL}</a>`
+            ? `<a href="${encodeURI(item.URL)}" target="_blank" rel="noopener noreferrer">${sanitizeHTML(item.URL)}</a>`
             : `<span class="unavailable-url">URL nicht verfügbar</span>`;
+
+        const isFav = isFavorite(item.ID);
 
         detailContent.innerHTML = `
             ${imageHtml}
-            <h2>${item.Name}</h2>
-            <p><strong>Medientyp:</strong> ${item.Medientyp || 'N/A'}</p>
-            <p><strong>Beschreibung:</strong> ${item.Desc || 'Keine Beschreibung verfügbar.'}</p>
+            <div class="detail-header">
+                <h2>${sanitizeHTML(item.Name)}</h2>
+                <button class="favorite-btn detail-fav ${isFav ? 'active' : ''}" data-id="${item.ID}" title="Toggle favorite">
+                    ${isFav ? '★' : '☆'}
+                </button>
+            </div>
+            <p><strong>Medientyp:</strong> ${sanitizeHTML(item.Medientyp) || 'N/A'}</p>
+            <p><strong>Beschreibung:</strong> ${sanitizeHTML(item.Desc) || 'Keine Beschreibung verfügbar.'}</p>
             <p><strong>URL:</strong> ${urlHtml}</p>
         `;
+
+        // Favorite button in detail view
+        const detailFavBtn = detailContent.querySelector('.detail-fav');
+        if (detailFavBtn) {
+            detailFavBtn.addEventListener('click', () => {
+                const isNowFav = toggleFavorite(item.ID);
+                detailFavBtn.classList.toggle('active', isNowFav);
+                detailFavBtn.textContent = isNowFav ? '★' : '☆';
+            });
+        }
+
         switchView(detailView);
     }
     
@@ -232,8 +418,67 @@ function handleSearch() {
     });
     searchButton.addEventListener('click', handleSearch);
     searchTermInput.addEventListener('keyup', (e) => {
-        if (e.key === 'Enter') handleSearch();
+        if (e.key === 'Enter') {
+            autocompleteDropdown.classList.add('hidden');
+            handleSearch();
+        }
     });
+
+    // ############ AUTOCOMPLETE FUNCTIONALITY ############
+    function showAutocomplete(term) {
+        if (!term || term.length < 2 || database.length === 0) {
+            autocompleteDropdown.classList.add('hidden');
+            return;
+        }
+
+        let suggestions = [];
+        
+        if (fuseInstance) {
+            const fuseResults = fuseInstance.search(term, { limit: 8 });
+            suggestions = fuseResults.map(r => r.item);
+        } else {
+            const lowerTerm = term.toLowerCase();
+            suggestions = database
+                .filter(item => (item.Name || '').toLowerCase().includes(lowerTerm))
+                .slice(0, 8);
+        }
+
+        if (suggestions.length === 0) {
+            autocompleteDropdown.classList.add('hidden');
+            return;
+        }
+
+        autocompleteDropdown.innerHTML = '';
+        suggestions.forEach(item => {
+            const div = document.createElement('div');
+            div.className = 'autocomplete-item';
+            div.textContent = item.Name;
+            div.addEventListener('click', () => {
+                searchTermInput.value = item.Name;
+                autocompleteDropdown.classList.add('hidden');
+                handleSearch();
+            });
+            autocompleteDropdown.appendChild(div);
+        });
+        autocompleteDropdown.classList.remove('hidden');
+    }
+
+    // Debounced autocomplete handler
+    const debouncedAutocomplete = debounce((value) => {
+        showAutocomplete(value);
+    }, CONFIG.DEBOUNCE_DELAY);
+
+    searchTermInput.addEventListener('input', (e) => {
+        debouncedAutocomplete(e.target.value.trim());
+    });
+
+    // Hide autocomplete when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.autocomplete-wrapper')) {
+            autocompleteDropdown.classList.add('hidden');
+        }
+    });
+
     exploreButton.addEventListener('click', () => displayResults(database));
     backToSearchBtn.addEventListener('click', () => switchView(searchView));
     backToResultsBtn.addEventListener('click', () => {
@@ -267,11 +512,11 @@ function handleSearch() {
     });
     feedbackForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        alert('Feedback-Funktion ist noch nicht implementiert.');
+        showToast('Feedback function is not yet implemented.', 'info');
     });
     submitForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        alert('Submit-Funktion ist noch nicht implementiert.');
+        showToast('Submit function is not yet implemented.', 'info');
     });
 
     // ############ INITIALISIERUNG ############

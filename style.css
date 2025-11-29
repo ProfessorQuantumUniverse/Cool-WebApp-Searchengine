@@ -318,3 +318,201 @@ footer {
     visibility: hidden;
     opacity: 0;
 }
+
+/* ############ AUTOCOMPLETE DROPDOWN ############ */
+.autocomplete-wrapper {
+    position: relative;
+}
+
+.autocomplete-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--container-bg);
+    border: 1px solid var(--border-color);
+    border-top: none;
+    border-radius: 0 0 6px 6px;
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.autocomplete-item {
+    padding: 0.8rem;
+    cursor: pointer;
+    border-bottom: 1px solid var(--border-color);
+    transition: background-color 0.2s;
+}
+
+.autocomplete-item:last-child {
+    border-bottom: none;
+}
+
+.autocomplete-item:hover {
+    background-color: var(--primary-accent);
+    color: var(--bg-color);
+}
+
+/* ############ TOAST NOTIFICATIONS ############ */
+#toast-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10000;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    pointer-events: none;
+}
+
+.toast {
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    color: white;
+    font-weight: 500;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 0.3s, transform 0.3s;
+    pointer-events: auto;
+    min-width: 250px;
+    max-width: 400px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.toast-show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.toast-info {
+    background-color: #2196F3;
+}
+
+.toast-success {
+    background-color: var(--primary-accent);
+    color: var(--bg-color);
+}
+
+.toast-error {
+    background-color: #f44336;
+}
+
+/* ############ FAVORITES BUTTON ############ */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.favorite-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--label-color);
+    transition: color 0.2s, transform 0.2s;
+    padding: 0;
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.favorite-btn:hover {
+    transform: scale(1.2);
+}
+
+.favorite-btn.active {
+    color: #FFD700;
+}
+
+.detail-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.detail-header h2 {
+    margin-bottom: 0;
+}
+
+.detail-fav {
+    font-size: 2rem;
+}
+
+/* ############ MOBILE OPTIMIZATIONS ############ */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    
+    .logo-container {
+        justify-content: center;
+    }
+    
+    header h1 {
+        font-size: 1.2rem;
+    }
+    
+    nav {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    /* Touch targets minimum 44px */
+    .nav-button {
+        min-height: 44px;
+        min-width: 44px;
+        padding: 0.75rem 1rem;
+    }
+    
+    .action-button {
+        min-height: 44px;
+    }
+    
+    .switch {
+        min-width: 50px;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+    }
+    
+    main {
+        padding: 1rem;
+    }
+    
+    .search-container, .form-wrapper {
+        padding: 1.5rem;
+    }
+    
+    /* Single column grid on mobile */
+    .results-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .result-card {
+        min-height: 44px;
+    }
+    
+    #contact-view .form-container {
+        flex-direction: column;
+    }
+    
+    #toast-container {
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+    }
+    
+    .toast {
+        min-width: auto;
+        max-width: none;
+    }
+}
