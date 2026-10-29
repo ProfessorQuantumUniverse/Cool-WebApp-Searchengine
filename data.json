@@ -1,0 +1,1874 @@
+[
+  {
+    "ID": "1",
+    "Medientyp": "Karten",
+    "Name": "Copernicus Browser: Explore Live Satellite Imagery",
+    "Link": "www.browser.dataspace.copernicus.eu/",
+    "URL": "http://www.browser.dataspace.copernicus.eu/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/http://www.browser.dataspace.copernicus.eu/",
+    "Desc": "Explore live satellite imagery from the European Union's Copernicus Earth observation program through this dedicated browser."
+  },
+  {
+    "ID": "2",
+    "Medientyp": "Karten",
+    "Name": "Medieval Fantasy City Map Generator",
+    "Link": "www.watabou.itch.io/medieval-fantasy-city-generator",
+    "URL": "http://www.watabou.itch.io/medieval-fantasy-city-generator",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/http://www.watabou.itch.io/medieval-fantasy-city-generator",
+    "Desc": "This tool allows users to generate artificial city maps, specifically focusing on medieval fantasy settings."
+  },
+  {
+    "ID": "3",
+    "Medientyp": "Karten",
+    "Name": "German Electricity Grid Expansion Projects: Interactive Map",
+    "Link": "https://netzausbau.de/Vorhaben/uebersicht/karte/karte.html",
+    "URL": "https://netzausbau.de/Vorhaben/uebersicht/karte/karte.html",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://netzausbau.de/Vorhaben/uebersicht/karte/karte.html",
+    "Desc": "This Bundesnetzagentur page offers an interactive map and overview of key electricity grid expansion projects across Germany. It details numerous major transmission line developments mandated by the Federal Requirements Plan Act."
+  },
+  {
+    "ID": "4",
+    "Medientyp": "Daten",
+    "Name": "Bundesnetzagentur Data Portal: Official Market & Consumer Data",
+    "Link": "https://bundesnetzagentur.de/DE/Fachthemen/Datenportal/start.html",
+    "URL": "https://bundesnetzagentur.de/DE/Fachthemen/Datenportal/start.html",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://bundesnetzagentur.de/DE/Fachthemen/Datenportal/start.html",
+    "Desc": "The Bundesnetzagentur Data Portal provides a comprehensive selection of official market and consumer protection data. It covers various sectors regulated by the German Federal Network Agency, including telecommunications, post, energy, and railways."
+  },
+  {
+    "ID": "5",
+    "Medientyp": "Karten",
+    "Name": "Esri World Imagery Wayback: Historical Satellite Imagery Archive",
+    "Link": "https://livingatlas.arcgis.com/wayback",
+    "URL": "https://livingatlas.arcgis.com/wayback",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://livingatlas.arcgis.com/wayback",
+    "Desc": "Esri's World Imagery Wayback provides access to historical satellite photographs of the Earth, allowing users to explore past versions of global imagery."
+  },
+  {
+    "ID": "6",
+    "Medientyp": "Karten",
+    "Name": "Geoportal Frankfurt: Official Geographic Data & Maps",
+    "Link": "https://geoportal.frankfurt.de",
+    "URL": "https://geoportal.frankfurt.de/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://geoportal.frankfurt.de/",
+    "Desc": "The official Geoportal Frankfurt provides comprehensive geographic information and interactive maps for the city."
+  },
+  {
+    "ID": "7",
+    "Medientyp": "Tools",
+    "Name": "Online GPS Tools: Distance, Bearing, Waypoint Projection",
+    "Link": "https://www.ibm.franken.de/gps03.html",
+    "URL": "https://www.ibm.franken.de/gps03.html",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://www.ibm.franken.de/gps03.html",
+    "Desc": "This page offers online tools for GPS coordinate calculations, allowing users to determine the distance and bearing between two points. It also provides a waypoint projection tool to calculate new coordinates based on a starting point, distance, and direction."
+  },
+  {
+    "ID": "8",
+    "Medientyp": "3D Tools / Karten",
+    "Name": "Touch Mapper: Generate & Print Tactile 3D City Maps",
+    "Link": "https://touch-mapper.org",
+    "URL": "https://touch-mapper.org/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://touch-mapper.org/",
+    "Desc": "Touch Mapper is a platform that enables the generation and printing of tactile or 3D maps, specifically focusing on urban areas."
+  },
+  {
+    "ID": "9",
+    "Medientyp": "3D Tools / Karten",
+    "Name": "Terrain2STL: Online 3D Printable Terrain STL Generator",
+    "Link": "https://jthatch.com/Terrain2STL/",
+    "URL": "https://jthatch.com/Terrain2STL/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://jthatch.com/Terrain2STL/",
+    "Desc": "Terrain2STL is a free online tool enabling users to generate customizable STL files of Earth's terrain, including landscapes and mountains. Users can select a specific region and adjust parameters to create 3D models, ideal for printing."
+  },
+  {
+    "ID": "10",
+    "Medientyp": "3D Tools / Karten",
+    "Name": "Moon2STL: Generate 3D Printable Moon Models",
+    "Link": "https://jthatch.com/Moon2STL/",
+    "URL": "https://jthatch.com/Moon2STL/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://jthatch.com/Moon2STL/",
+    "Desc": "Moon2STL generates 3D printable (STL) files of the Moon's surface using high-resolution topographic data from the ULCN Moon DEM 2005. Users can customize vertical scale and place markers before downloading their lunar models."
+  },
+  {
+    "ID": "11",
+    "Medientyp": "Karten",
+    "Name": "USGS EarthExplorer: Search Portal for Geospatial Data & Imagery",
+    "Link": "https://earthexplorer.usgs.gov",
+    "URL": "https://earthexplorer.usgs.gov/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://earthexplorer.usgs.gov/",
+    "Desc": "EarthExplorer is an official U.S. government website that provides a comprehensive search portal for geographical data and satellite imagery, allowing users to define search areas by location, coordinates, and date ranges."
+  },
+  {
+    "ID": "12",
+    "Medientyp": "Karten",
+    "Name": "NOAA Data Access Viewer: Coastal U.S. Imagery, Lidar & Land Cover Data",
+    "Link": "https://coast.noaa.gov/dataviewer/#/imagery/search",
+    "URL": "https://coast.noaa.gov/dataviewer/#/imagery/search",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://coast.noaa.gov/dataviewer/#/imagery/search",
+    "Desc": "The NOAA Data Access Viewer allows users to search for, customize, and freely download authoritative imagery, land cover, and lidar data for the coastal U.S. and its territories."
+  },
+  {
+    "ID": "13",
+    "Medientyp": "Karten",
+    "Name": "NASA Earthdata Search: Earth Observation & Satellite Data",
+    "Link": "https://search.earthdata.nasa.gov/search",
+    "URL": "https://search.earthdata.nasa.gov/search",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://search.earthdata.nasa.gov/search",
+    "Desc": "Explore NASA's extensive collection of Earth observation data, including satellite imagery, through this dedicated Earthdata Search portal."
+  },
+  {
+    "ID": "14",
+    "Medientyp": "Daten",
+    "Name": "Space Weather Live: Real-time Space Weather Updates",
+    "Link": "https://spaceweatherlive.com",
+    "URL": "https://spaceweatherlive.com/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://spaceweatherlive.com/",
+    "Desc": "Spaceweatherlive.com provides real-time information and updates on space weather, including solar activity and its potential effects on Earth."
+  },
+  {
+    "ID": "15",
+    "Medientyp": "Tools / Wetter",
+    "Name": "NOAA APT Weather Images: Online Decoder",
+    "Link": "https://open-weather.community/decode/",
+    "URL": "https://open-weather.community/decode/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://open-weather.community/decode/",
+    "Desc": "This page offers a browser-based tool and detailed explanations for decoding Automatic Picture Transmissions (APT) from NOAA satellites into weather images. It outlines various demodulation methods, aiming to make satellite signal processing accessible to all practitioners."
+  },
+  {
+    "ID": "16",
+    "Medientyp": "Karten / Wetter",
+    "Name": "Zoom Earth: Real-time Global Weather & Storm Tracking",
+    "Link": "https://zoom.earth",
+    "URL": "https://zoom.earth/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://zoom.earth/",
+    "Desc": "Zoom Earth is an interactive global weather map providing current conditions, detailed forecasts for rain, wind, and temperature, and near real-time satellite imagery for tracking storms, hurricanes, and wildfires."
+  },
+  {
+    "ID": "17",
+    "Medientyp": "Karten",
+    "Name": "LightningMaps.org: Real-Time Global Lightning Map",
+    "Link": "https://lightningmaps.org",
+    "URL": "https://lightningmaps.org/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://lightningmaps.org/",
+    "Desc": "LightningMaps.org is a free, real-time lightning map, a community project visualizing global lightning activity. It offers detailed maps, statistics, and apps for various regions worldwide."
+  },
+  {
+    "ID": "18",
+    "Medientyp": "Tools / Karten",
+    "Name": "Wanderkarten 3D: Plan & Explore Outdoor Routes in 3D",
+    "Link": "https://og.realitymaps.de",
+    "URL": "https://og.realitymaps.de/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://og.realitymaps.de/",
+    "Desc": "\"Wanderkarten 3D\" offers three-dimensional hiking maps, providing users with detailed visualizations to plan and explore outdoor routes and terrains."
+  },
+  {
+    "ID": "19",
+    "Medientyp": "Weltraum ",
+    "Name": "skyBuilders.com: Content Management, E-commerce & E-learning Solutions",
+    "Link": "https://thesky.com",
+    "URL": "https://thesky.com/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://thesky.com/",
+    "Desc": "SkyBuilders.com provides web tools, software, and services for information managers, specializing in content management, e-commerce, and e-learning solutions. It assists organizations in developing, hosting, and maintaining their online presence and collaborative platforms."
+  },
+  {
+    "ID": "20",
+    "Medientyp": "Weltraum ",
+    "Name": "GOCE-Swarm Interactive Data Map",
+    "Link": "https://visioterra.net/VtGsep/",
+    "URL": "https://visioterra.net/VtGsep/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://visioterra.net/VtGsep/",
+    "Desc": "This GOCE-Swarm Exploration Platform offers an interactive map for visualizing data from the GOCE and Swarm satellite missions."
+  },
+  {
+    "ID": "21",
+    "Medientyp": "Karten",
+    "Name": "ESA Earth Observation Data Portal",
+    "Link": "https://eocat.esa.int/sec/",
+    "URL": "https://eocat.esa.int/sec/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://eocat.esa.int/sec/",
+    "Desc": "Explore a vast collection of satellite images and Earth observation data from the European Space Agency (ESA), complemented by powerful tools for analysis, processing, and visualization. This comprehensive portal serves as a central hub for accessing ESA's Earth observation resources and information."
+  },
+  {
+    "ID": "22",
+    "Medientyp": "Karten",
+    "Name": "VirES for Aeolus: ESA Aeolus Wind Data Platform",
+    "Link": "https://aeolus.services",
+    "URL": "https://aeolus.services/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://aeolus.services/",
+    "Desc": "VirES for Aeolus provides interactive access to and visualization of atmospheric wind data collected by ESA's Aeolus satellite. This platform offers crucial global wind profiles, aiding in advanced weather forecasting, climate research, and atmospheric dynamics studies."
+  },
+  {
+    "ID": "23",
+    "Medientyp": "Karten",
+    "Name": "ESA 3D Earth Portal: Geospatial Datacube",
+    "Link": "https://datacube.pdgs.eo.esa.int",
+    "URL": "https://datacube.pdgs.eo.esa.int/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://datacube.pdgs.eo.esa.int/",
+    "Desc": "Explore the European Space Agency's (ESA) \"3D Earth\" portal, serving as a datacube platform for accessing and visualizing geospatial data."
+  },
+  {
+    "ID": "24",
+    "Medientyp": "Daten",
+    "Name": "ESA Earth Observation: Data Tools & Applications",
+    "Link": "https://earth.esa.int/eogateway/tools",
+    "URL": "https://earth.esa.int/eogateway/tools",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://earth.esa.int/eogateway/tools",
+    "Desc": "This ESA gateway offers a comprehensive suite of tools for visualizing, analyzing, and processing the European Space Agency's Earth observation data. Users can explore various analysis, processing, and visualization tools, alongside mobile applications and data catalogues."
+  },
+  {
+    "ID": "25",
+    "Medientyp": "Karten",
+    "Name": "FedEO Client for ESA Earth Observation Data",
+    "Link": "https://fedeo-client.ceos.org",
+    "URL": "https://fedeo-client.ceos.org/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://fedeo-client.ceos.org/",
+    "Desc": "This FedEO client provides access to ESA satellite images, enabling users to navigate maps and search for Earth observation data."
+  },
+  {
+    "ID": "26",
+    "Medientyp": "Karten",
+    "Name": "HEDAVI Explorer: Interactive Heritage Data Visualization",
+    "Link": "https://hedavi.esa.int/explorer/?",
+    "URL": "https://hedavi.esa.int/explorer/?",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://hedavi.esa.int/explorer/?",
+    "Desc": "The HEDAVI Explorer is an interactive web application designed for the visualization of heritage data. It provides a platform to explore and understand diverse historical information through visual representations."
+  },
+  {
+    "ID": "27",
+    "Medientyp": "Daten",
+    "Name": "ESA SREM Data: Online Plotting & Visualization",
+    "Link": "https://space-env.esa.int/srem-data-plotting/",
+    "URL": "https://space-env.esa.int/srem-data-plotting/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://space-env.esa.int/srem-data-plotting/",
+    "Desc": "The ESA Space Environment portal offers online tools for visualizing data from its Standard Radiation Environment Monitor (SREM), providing key insights into the space radiation environment."
+  },
+  {
+    "ID": "28",
+    "Medientyp": "Karten",
+    "Name": "ESA Climate from Space: Space-Based Climate Observation Platform",
+    "Link": "https://cfs.climate.esa.int/index.html#/",
+    "URL": "https://cfs.climate.esa.int/index.html#/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://cfs.climate.esa.int/index.html#/",
+    "Desc": "Explore how the European Space Agency (ESA) utilizes satellite technology to monitor and understand Earth's climate through its \"Climate from Space\" initiative. This platform provides insights into space-based climate observation and research."
+  },
+  {
+    "ID": "29",
+    "Medientyp": "Karten / Daten",
+    "Name": "ESA Orbital Prediction and Overpass Tool",
+    "Link": "https://evdc.esa.int/orbit/",
+    "URL": "https://evdc.esa.int/orbit/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://evdc.esa.int/orbit/",
+    "Desc": "This ESA tool, the Orbital Prediction and Overpass Tool (OPOT), generates and visualizes satellite overpasses, showing when a satellite's instrument field of view passes over a specific area of interest. It allows users to search by satellite and instrument, download data, and plan future campaigns."
+  },
+  {
+    "ID": "30",
+    "Medientyp": "Daten",
+    "Name": "Germany's Emissions and Waste Data Portal",
+    "Link": "https://thru.de/#umweltdaten",
+    "URL": "https://thru.de/#umweltdaten",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://thru.de/#umweltdaten",
+    "Desc": "The \"Umweltdaten\" section on Thru.de provides transparent and freely accessible environmental data for Germany, encompassing information on industrial emissions, diffuse sources like traffic and households, and municipal wastewater. It serves as a central resource for detailed insights into pollutant releases and waste."
+  },
+  {
+    "ID": "31",
+    "Medientyp": "Karten",
+    "Name": "Hessen Geoportal: Central Portal for Geospatial Information",
+    "Link": "https://www.geoportal.hessen.de",
+    "URL": "https://www.geoportal.hessen.de/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://www.geoportal.hessen.de/",
+    "Desc": "The Hessen Geoportal provides unified access to a wide array of spatial data, maps, and geographic information services for the German state of Hessen."
+  },
+  {
+    "ID": "32",
+    "Medientyp": "Daten",
+    "Name": "German Federal Environment Agency: Environmental Metadata Catalog",
+    "Link": "https://metadaten.uba.de/smartfinder-client/?lang=de#/",
+    "URL": "https://metadaten.uba.de/smartfinder-client/?lang=de#/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://metadaten.uba.de/smartfinder-client/?lang=de#/",
+    "Desc": "The German Federal Environment Agency (UBA) offers this data portal as its metadata catalog. It serves as a central resource for exploring and accessing environmental information."
+  },
+  {
+    "ID": "33",
+    "Medientyp": "Karten / Daten",
+    "Name": "BfS: Germany's Current Gamma Radiation Levels (ODL) Map",
+    "Link": "https://odlinfo.bfs.de/ODL/DE/home/",
+    "URL": "https://odlinfo.bfs.de/ODL/DE/home/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://odlinfo.bfs.de/ODL/DE/home/",
+    "Desc": "This page from the German Federal Office for Radiation Protection provides an interactive map displaying current gamma radiation levels (Ortsdosisleistung - ODL) across Germany. It also offers comprehensive information about ODL, its measurement, and influencing factors."
+  },
+  {
+    "ID": "34",
+    "Medientyp": "Daten",
+    "Name": "EEA Environmental Information: Advanced Search",
+    "Link": "https://www.eea.europa.eu/en/advanced-search",
+    "URL": "https://www.eea.europa.eu/en/advanced-search",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://www.eea.europa.eu/en/advanced-search",
+    "Desc": "This advanced search page helps users navigate and find specific environmental data, statistics, and information available across all public websites of the European Environment Agency (EEA) and its network. It offers various filters like topics, countries, and content type to refine search results efficiently."
+  },
+  {
+    "ID": "35",
+    "Medientyp": "Karten ",
+    "Name": "Thünen-Landatlas: Interactive Atlas of Rural Germany",
+    "Link": "https://karten.landatlas.de",
+    "URL": "https://karten.landatlas.de/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://karten.landatlas.de/",
+    "Desc": "The Thünen-Landatlas is an interactive online platform offering comprehensive maps and data on various indicators concerning rural areas across Germany. It allows users to explore topics like population, accessibility, economy, and land use, with options to download data and analyze regional trends."
+  },
+  {
+    "ID": "36",
+    "Medientyp": "Karten",
+    "Name": "BfS IMIS Geoportal: Radiation Protection Data",
+    "Link": "https://www.imis.bfs.de/geoportal",
+    "URL": "https://www.imis.bfs.de/geoportal",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://www.imis.bfs.de/geoportal",
+    "Desc": "Explore the official geoportal of the German Federal Office for Radiation Protection (BfS), which provides geographical information and data from its Integrated Measuring and Information System (IMIS) concerning radiation protection."
+  },
+  {
+    "ID": "37",
+    "Medientyp": "Karten",
+    "Name": "Bundesamt für Geographie: Digital Orthophoto Viewer",
+    "Link": "https://sg.geodatenzentrum.de/dop_viewer/viewer.html#lat=50.9684&lon=9.1027&zoom=3.8786041451790845&webatlasde=false&dop40=true&layer_4=false&layer_3=true&layer_2=true&layer_1=false",
+    "URL": "https://sg.geodatenzentrum.de/dop_viewer/viewer.html#lat=50.9684&lon=9.1027&zoom=3.8786041451790845&webatlasde=false&dop40=true&layer_4=false&layer_3=true&layer_2=true&layer_1=false",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://sg.geodatenzentrum.de/dop_viewer/viewer.html#lat=50.9684&lon=9.1027&zoom=3.8786041451790845&webatlasde=false&dop40=true&layer_4=false&layer_3=true&layer_2=true&layer_1=false",
+    "Desc": "This interactive viewer from the German Federal Office for Geography (Bundesamt für Geographie) enables users to explore digital orthophotos, which are georeferenced aerial images, of various locations."
+  },
+  {
+    "ID": "38",
+    "Medientyp": "Karten",
+    "Name": "BKG: Geospatial Applications Directory",
+    "Link": "https://sg.geodatenzentrum.de/web_bkg_webmap/applications",
+    "URL": "https://sg.geodatenzentrum.de/web_bkg_webmap/applications",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://sg.geodatenzentrum.de/web_bkg_webmap/applications",
+    "Desc": "Explore a directory of web-based mapping applications and geospatial data tools offered by the German Federal Agency for Cartography and Geodesy (BKG)."
+  },
+  {
+    "ID": "39",
+    "Medientyp": "Daten",
+    "Name": "ECHA: Information on Chemicals – Hazards & Safe Use",
+    "Link": "https://echa.europa.eu/de/information-on chemicals",
+    "URL": "https://echa.europa.eu/de/information-on%20chemicals",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://echa.europa.eu/de/information-on%20chemicals",
+    "Desc": "This European Chemicals Agency (ECHA) page provides a comprehensive resource for information on chemicals manufactured or imported into Europe, detailing their hazardous properties, classification, labelling, and safe use."
+  },
+  {
+    "ID": "40",
+    "Medientyp": "Daten",
+    "Name": "ENISA: Cybersecurity Digital Tools & Resources",
+    "Link": "https://enisa.europa.eu/tools",
+    "URL": "https://enisa.europa.eu/tools",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://enisa.europa.eu/tools",
+    "Desc": "This ENISA page provides a comprehensive collection of digital tools and resources designed to enhance cybersecurity awareness, capabilities, and strategic development for citizens, businesses, and national authorities across Europe."
+  },
+  {
+    "ID": "41",
+    "Medientyp": "Karten",
+    "Name": "Earth Engine Apps: Geospatial Data Explorer",
+    "Link": "https://earthengine.app",
+    "URL": "https://earthengine.app/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://earthengine.app/",
+    "Desc": "This site provides a collection of dynamic and publicly accessible applications built on Google Earth Engine. These apps offer interactive user interfaces for analyzing and exploring a wide range of geospatial datasets, from ocean temperatures to global population and forest change."
+  },
+  {
+    "ID": "42",
+    "Medientyp": "Karten",
+    "Name": "USGS WaterWatch: US Streamflow & River Levels",
+    "Link": "https://waterwatch.usgs.gov/new/",
+    "URL": "https://waterwatch.usgs.gov/new/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://waterwatch.usgs.gov/new/",
+    "Desc": "USGS WaterWatch provides comprehensive data and tools for monitoring streamflow conditions across the United States. It offers information on current river levels, historical flows, and specific conditions such as drought and flood."
+  },
+  {
+    "ID": "43",
+    "Medientyp": "Daten",
+    "Name": "USGS Scientific Data Releases",
+    "Link": "https://usgs.gov/products/data/data-releases",
+    "URL": "https://usgs.gov/products/data/data-releases",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://usgs.gov/products/data/data-releases",
+    "Desc": "This official U.S. Geological Survey (USGS) page serves as a comprehensive portal for accessing and filtering a vast collection of their released scientific data across various topics."
+  },
+  {
+    "ID": "44",
+    "Medientyp": "Daten",
+    "Name": "Umweltbundesamt: Environmental Data for Germany",
+    "Link": "https://umweltbundesamt.de/daten/",
+    "URL": "https://umweltbundesamt.de/daten/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://umweltbundesamt.de/daten/",
+    "Desc": "The Umweltbundesamt Data Portal provides current data, trends, and assessments on Germany's environmental situation. It offers direct access to a data search, a thematic environmental atlas, and various other data-related services from the Federal Environment Agency."
+  },
+  {
+    "ID": "45",
+    "Medientyp": "Karten",
+    "Name": "DWD GeoServer: Weather Maps & Geospatial Data",
+    "Link": "https://maps.dwd.de/geoserver/",
+    "URL": "https://maps.dwd.de/geoserver/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://maps.dwd.de/geoserver/",
+    "Desc": "This is the official GeoServer of the German Weather Service (DWD), which hosts and provides access to a variety of weather-related maps and geospatial data."
+  },
+  {
+    "ID": "46",
+    "Medientyp": "Karten",
+    "Name": "Kepler.gl Demo: Web-Based Graphical Data Visualization",
+    "Link": "https://kepler.gl/demo",
+    "URL": "https://kepler.gl/demo",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://kepler.gl/demo",
+    "Desc": "Kepler.gl offers a web-based demo that functions as a viewer for \"gl files.\" This platform enables the in-browser visualization of graphical data."
+  },
+  {
+    "ID": "47",
+    "Medientyp": "Karten",
+    "Name": "IQAir: Real-time Global Air Quality Information",
+    "Link": "https://iqair.com",
+    "URL": "https://iqair.com/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://iqair.com/",
+    "Desc": "IQAir provides real-time global air quality data, forecasts, and rankings, accessible via an interactive map, to help users monitor and understand air pollution worldwide."
+  },
+  {
+    "ID": "48",
+    "Medientyp": "Karte",
+    "Name": "Night Earth: Interactive Map of Global Light Pollution",
+    "Link": "https://nightearth.com",
+    "URL": "https://nightearth.com/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://nightearth.com/",
+    "Desc": "Night Earth is an interactive map showcasing our planet at night, using NASA satellite imagery to visualize global light pollution, urbanization patterns, and population density. It offers a captivating perspective on human activity, highlighting the stark contrast between brightly lit cities and the Earth's remote, unlit expanses."
+  },
+  {
+    "ID": "49",
+    "Medientyp": "Daten",
+    "Name": "Diercke Klimagraph: Online Climatograph Generator",
+    "Link": "https://diercke.de/sites/klimagraph/klimagraph.php",
+    "URL": "https://diercke.de/sites/klimagraph/klimagraph.php",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://diercke.de/sites/klimagraph/klimagraph.php",
+    "Desc": "The Diercke Klimagraph is an online tool designed for users to input meteorological data and generate a custom climatograph. It automatically calculates annual averages for temperature, precipitation, and optional evaporation, allowing the diagram to be saved."
+  },
+  {
+    "ID": "50",
+    "Medientyp": "Sonstiges",
+    "Name": "Indonesian Football & Major Sports News Portal",
+    "Link": "https://beforetheflood.com",
+    "URL": "https://beforetheflood.com/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://beforetheflood.com/",
+    "Desc": "This Indonesian sports news portal provides comprehensive coverage of football, including the latest news, match schedules, league standings, and scores, alongside updates on other major sports and related business news."
+  },
+  {
+    "ID": "51",
+    "Medientyp": "Karten",
+    "Name": "Uradmonitor: Air Quality Monitoring Map",
+    "Link": "https://uradmonitor.com",
+    "URL": "https://uradmonitor.com/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://uradmonitor.com/",
+    "Desc": "Uradmonitor.com offers an air quality map, as indicated by its title, enabling users to monitor environmental conditions."
+  },
+  {
+    "ID": "52",
+    "Medientyp": "Karten",
+    "Name": "REMon: European Radioactivity Monitoring Maps",
+    "Link": "https://remap.jrc.ec.europa.eu/",
+    "URL": "https://remap.jrc.ec.europa.eu/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://remap.jrc.ec.europa.eu/",
+    "Desc": "This European Commission website provides interactive radiological maps, including real-time and historical gamma dose rate values, for monitoring environmental radioactivity across Europe."
+  },
+  {
+    "ID": "53",
+    "Medientyp": "Karten ",
+    "Name": "Earth Viewer: Interactive Map of Plate Tectonics & Geological History",
+    "Link": "https://media.hhmi.org/biointeractive/earthviewer_web/earthviewer.html",
+    "URL": "https://media.hhmi.org/biointeractive/earthviewer_web/earthviewer.html",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://media.hhmi.org/biointeractive/earthviewer_web/earthviewer.html",
+    "Desc": "Explore Earth's geological history and plate tectonics with this interactive \"Earth Viewer\" map. It visually presents how continents have shifted over various geological ages."
+  },
+  {
+    "ID": "54",
+    "Medientyp": "Karte",
+    "Name": "BiodiversityMapping.org: Global Biodiversity Maps & GIS Data",
+    "Link": "https://biodiversitymapping.org",
+    "URL": "https://biodiversitymapping.org/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://biodiversitymapping.org/",
+    "Desc": "BiodiversityMapping.org offers an extensive collection of global and regional maps illustrating the distribution of various plant and animal species. This valuable resource provides visual data and downloadable GIS datasets to support teaching and research in conservation science."
+  },
+  {
+    "ID": "55",
+    "Medientyp": "Karten / Daten",
+    "Name": "ESASky: ESA Space Data Explorer",
+    "Link": "https://sky.esa.int/esasky",
+    "URL": "https://sky.esa.int/esasky",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://sky.esa.int/esasky",
+    "Desc": "ESASky is a web-based application from the European Space Agency (ESA) designed to help users explore and download space-related data."
+  },
+  {
+    "ID": "56",
+    "Medientyp": "Karten / Daten",
+    "Name": "Eyes on Asteroids: NASA's Interactive Asteroid Explorer",
+    "Link": "https://eyes.nasa.gov/apps/asteroids#",
+    "URL": "https://eyes.nasa.gov/apps/asteroids",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://eyes.nasa.gov/apps/asteroids",
+    "Desc": "This NASA/JPL application, \"Eyes on Asteroids,\" offers an interactive platform for users to visually explore and monitor asteroids tracked by the agency."
+  },
+  {
+    "ID": "57",
+    "Medientyp": "Karten / Daten",
+    "Name": "NASA's Eyes on the Solar System: Interactive Virtual Journey",
+    "Link": "https://eyes.nasa.gov/apps/solar-system/#/home",
+    "URL": "https://eyes.nasa.gov/apps/solar-system/#/home",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://eyes.nasa.gov/apps/solar-system/#/home",
+    "Desc": "NASA's \"Eyes on the Solar System\" is an interactive platform from NASA/JPL, offering a unique virtual journey through our solar system. Users can explore planets, spacecraft, and celestial events from a new perspective."
+  },
+  {
+    "ID": "58",
+    "Medientyp": "Karten / Daten",
+    "Name": "NASA's Eyes on the Earth: Interactive Earth Data Visualization",
+    "Link": "https://eyes.nasa.gov/apps/earth/#/",
+    "URL": "https://eyes.nasa.gov/apps/earth/#/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://eyes.nasa.gov/apps/earth/#/",
+    "Desc": "NASA's \"Eyes on the Earth\" is an interactive online application that allows users to explore and visualize Earth data and observations. It offers a unique perspective of our planet as seen through NASA's instruments."
+  },
+  {
+    "ID": "59",
+    "Medientyp": "Karten / Daten",
+    "Name": "NASA's Eyes on Exoplanets: Interactive Exploration Tool",
+    "Link": "https://eyes.nasa.gov/apps/exo/#/",
+    "URL": "https://eyes.nasa.gov/apps/exo/#/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://eyes.nasa.gov/apps/exo/#/",
+    "Desc": "NASA's \"Eyes on Exoplanets\" is an interactive application from JPL that enables users to visually explore various exoplanets and learn about these distant worlds."
+  },
+  {
+    "ID": "60",
+    "Medientyp": "Simulation",
+    "Name": "NASA Mars 2020 EDL Simulation",
+    "Link": "https://eyes.nasa.gov/apps/mars2020/#/home",
+    "URL": "https://eyes.nasa.gov/apps/mars2020/#/home",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://eyes.nasa.gov/apps/mars2020/#/home",
+    "Desc": "Dive into an interactive pre-landing simulation of the Mars 2020 mission's critical Entry, Descent, and Landing (EDL) sequence, brought to life by NASA's Eyes."
+  },
+  {
+    "ID": "61",
+    "Medientyp": "Simulation",
+    "Name": "NASA EYES: Mars Relay Network Simulation",
+    "Link": "https://eyes.nasa.gov/apps/mrn/#/mars",
+    "URL": "https://eyes.nasa.gov/apps/mrn/#/mars",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://eyes.nasa.gov/apps/mrn/#/mars",
+    "Desc": "Explore NASA's Mars Relay Network simulation, powered by their EYES platform. This application visualizes the communication pathways between missions on and around Mars and Earth."
+  },
+  {
+    "ID": "62",
+    "Medientyp": "Daten",
+    "Name": "DSN Now: Live NASA Deep Space Network Communications",
+    "Link": "https://eyes.nasa.gov/dsn/dsn.html",
+    "URL": "https://eyes.nasa.gov/dsn/dsn.html",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://eyes.nasa.gov/dsn/dsn.html",
+    "Desc": "This NASA tool provides a real-time overview of the Deep Space Network (DSN) activities. It visualizes live communications between ground antennas and deep space spacecraft, displaying active links, data rates, and signal travel times."
+  },
+  {
+    "ID": "63",
+    "Medientyp": "Daten",
+    "Name": "Climate Explorer: Interactive US County Climate Projections",
+    "Link": "https://crt-climate-explorer.nemac.org",
+    "URL": "https://crt-climate-explorer.nemac.org/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://crt-climate-explorer.nemac.org/",
+    "Desc": "The Climate Explorer provides interactive charts showing projected climate change for any county across the United States, including Hawai'i and U.S. territories."
+  },
+  {
+    "ID": "64",
+    "Medientyp": "Karten",
+    "Name": "Natural Earth: Free Vector & Raster Map Data Downloads",
+    "Link": "https://naturalearthdata.com/downloads",
+    "URL": "https://naturalearthdata.com/downloads",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://naturalearthdata.com/downloads",
+    "Desc": "Download free vector and raster map data from Natural Earth, available in cultural, physical, and raster themes at various scales (1:10m, 1:50m, 1:110m) for use in any project."
+  },
+  {
+    "ID": "65",
+    "Medientyp": "Karten",
+    "Name": "Marine Data Portal",
+    "Link": "https://marine-data.de",
+    "URL": "https://marine-data.de/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://marine-data.de/",
+    "Desc": "This website functions as a data portal, providing access to marine data."
+  },
+  {
+    "ID": "66",
+    "Medientyp": "Daten",
+    "Name": "Live Satellite Tracking: Interactive 3D Map",
+    "Link": "https://satellitemap.space/",
+    "URL": "https://satellitemap.space/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://satellitemap.space/",
+    "Desc": "Satellitemap.space offers an interactive 3D globe to visualize and track the real-time positions of various satellite constellations, including Starlink, GPS, and other networks. Users can explore live satellite orbits and ground station locations with this dynamic visualization tool."
+  },
+  {
+    "ID": "67",
+    "Medientyp": "Karten",
+    "Name": "MyShipTracking: Real-Time Global Vessel Tracking",
+    "Link": "https://www.myshiptracking.com/",
+    "URL": "https://www.myshiptracking.com/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://www.myshiptracking.com/",
+    "Desc": "MyShipTracking.com offers free, real-time AIS vessel tracking, enabling users to locate ships on a global map and access detailed information about vessels, ports, and port calls. The platform also provides features like weather overlays and historical track data for comprehensive maritime insights."
+  },
+  {
+    "ID": "68",
+    "Medientyp": "Karten",
+    "Name": "Sentinel Hub EO Browser: Satellite Imagery Explorer",
+    "Link": "https://apps.sentinel-hub.com/eo-browser",
+    "URL": "https://apps.sentinel-hub.com/eo-browser",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://apps.sentinel-hub.com/eo-browser",
+    "Desc": "Access the Sentinel Hub EO Browser to explore and visualize satellite imagery. This platform provides a comprehensive view of Earth observation data."
+  },
+  {
+    "ID": "69",
+    "Medientyp": "Karten",
+    "Name": "David Rumsey Map Collection: Historical Map Archive",
+    "Link": "https://davidrumsey.com",
+    "URL": "https://davidrumsey.com/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://davidrumsey.com/",
+    "Desc": "The David Rumsey Map Collection offers a vast online archive of over 142,000 historical maps and related images, spanning from the 16th to the 21st century. It allows users to explore the history of cartography through diverse primary sources from around the world."
+  },
+  {
+    "ID": "70",
+    "Medientyp": "Karten",
+    "Name": "ArcGIS EcoExplorer: Global Vegetation & Ecosystems Map",
+    "Link": "https://livingatlas.arcgis.com/ecoexplorer",
+    "URL": "https://livingatlas.arcgis.com/ecoexplorer",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://livingatlas.arcgis.com/ecoexplorer",
+    "Desc": "Titled \"Ecology map of vegetation,\" this ArcGIS EcoExplorer page likely offers an interactive platform to visualize and explore ecological data related to plant life. It provides a mapping tool for understanding vegetation patterns and ecosystems."
+  },
+  {
+    "ID": "71",
+    "Medientyp": "Karten",
+    "Name": "TRAVIC: Live Global Public Transport Map",
+    "Link": "https://travic.app/",
+    "URL": "https://travic.app/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://travic.app/",
+    "Desc": "TRAVIC is a global transit visualization client providing a live map of public transport movements. It visualizes trams, subways, rail, buses, and ferries worldwide by combining static schedule data with real-time updates when available."
+  },
+  {
+    "ID": "72",
+    "Medientyp": "Karten / Daten",
+    "Name": "Worldmapper: Thematic World Maps & Cartograms",
+    "Link": "https://worldmapper.org/",
+    "URL": "https://worldmapper.org/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://worldmapper.org/",
+    "Desc": "Worldmapper offers a unique collection of cartograms, which are world maps where territories are resized according to various thematic data. This allows users to visualize global information and patterns on diverse topics such as elections, emissions, and social issues."
+  },
+  {
+    "ID": "73",
+    "Medientyp": "Karten",
+    "Name": "Global Forest Change: Interactive Map",
+    "Link": "https://earthenginepartners.appspot.com/science-2013-global-forest",
+    "URL": "https://earthenginepartners.appspot.com/science-2013-global-forest",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://earthenginepartners.appspot.com/science-2013-global-forest",
+    "Desc": "Titled \"Destruction of Forests,\" this page utilizes the Google Crisis Map to visualize and explore global forest change data. It provides an interactive overview of how forests worldwide have been altered."
+  },
+  {
+    "ID": "74",
+    "Medientyp": "Karten",
+    "Name": "Hessen Measurement Data Portal",
+    "Link": "https://www.hlnug.de/messwerte/datenportal",
+    "URL": "https://www.hlnug.de/messwerte/datenportal",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://www.hlnug.de/messwerte/datenportal",
+    "Desc": "The Hessen Measurement Data Portal provides access to various environmental and geological measurement values for the state of Hessen, including data on air quality, water, radioactivity, and earthquakes."
+  },
+  {
+    "ID": "75",
+    "Medientyp": "Karten",
+    "Name": "GeOps Mobility Portal: Live Public Transport Maps",
+    "Link": "https://mobility.portal.geops.io/",
+    "URL": "https://mobility.portal.geops.io/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://mobility.portal.geops.io/",
+    "Desc": "This GeOps Mobility Portal offers live, interactive maps displaying the real-time positions of public transport vehicles worldwide, from trains to trams. It serves as a comprehensive hub for public transport maps and related information."
+  },
+  {
+    "ID": "76",
+    "Medientyp": "Karten",
+    "Name": "Tourismusatlas Deutschland: Interactive Tourism Data & Insights",
+    "Link": "https://gis-hsl.hessen.de/portal/apps/experiencebuilder/experience/?id=acfee6ba10224912badabce97cab7035",
+    "URL": "https://gis-hsl.hessen.de/portal/apps/experiencebuilder/experience/?id=acfee6ba10224912badabce97cab7035",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://gis-hsl.hessen.de/portal/apps/experiencebuilder/experience/?id=acfee6ba10224912badabce97cab7035",
+    "Desc": "The Tourism Atlas Germany is an interactive geographic information system (GIS) platform providing comprehensive data and insights into the tourism sector across Germany."
+  },
+  {
+    "ID": "77",
+    "Medientyp": "Tools",
+    "Name": "Online 3D Gear Generator for 3D Printing",
+    "Link": "https://https://www.stlgears.com/generators/3dprint",
+    "URL": "https://https/www.stlgears.com/generators/3dprint",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://https/www.stlgears.com/generators/3dprint",
+    "Desc": "The 3D Gear Generator provides an online tool for creating custom gear designs. It is specifically tailored for generating models suitable for 3D printing."
+  },
+  {
+    "ID": "78",
+    "Medientyp": "Tools",
+    "Name": "3D Gear Generator: Online Tool",
+    "Link": "https://https://geargenerator.com/beta/#$eOXOHkXN$$YN5G6PxxAZoJAYpfQcbyAd1otCU@FJjxSj8DQ2uIrFjgNKQ2r@A",
+    "URL": "https://https/geargenerator.com/beta/#$eOXOHkXN$$YN5G6PxxAZoJAYpfQcbyAd1otCU@FJjxSj8DQ2uIrFjgNKQ2r@A",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://https/geargenerator.com/beta/#$eOXOHkXN$$YN5G6PxxAZoJAYpfQcbyAd1otCU@FJjxSj8DQ2uIrFjgNKQ2r@A",
+    "Desc": "This 3D gear generator provides a powerful online tool for designing and customizing virtual gears. Users can create precise 3D gear models for various applications directly through their browser."
+  },
+  {
+    "ID": "79",
+    "Medientyp": "Tools",
+    "Name": "Gear Generator: Online Tool for Gear Design & Animation",
+    "Link": "https://geargenerator.com/",
+    "URL": "https://geargenerator.com/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://geargenerator.com/",
+    "Desc": "Gear Generator is an online tool for creating and animating involute spur gears and full gear systems, enabling users to customize properties, compose layouts, and download designs in DXF or SVG format."
+  },
+  {
+    "ID": "80",
+    "Medientyp": "Tools",
+    "Name": "Google Fonts: Online Library of Open-Source Fonts",
+    "Link": "https://fonts.google.com/",
+    "URL": "https://fonts.google.com/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://fonts.google.com/",
+    "Desc": "Google Fonts offers an extensive online library where users can browse, preview, and download a diverse collection of open-source fonts for use in web, print, and other creative projects."
+  },
+  {
+    "ID": "81",
+    "Medientyp": "Tools",
+    "Name": "Online Python IDE",
+    "Link": "https://www.online-python.com/",
+    "URL": "https://www.online-python.com/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://www.online-python.com/",
+    "Desc": "Online Python provides a free, web-based IDE and compiler for users to write, run, and share Python code directly in their browser without requiring any local setup. It's an efficient tool for learning, practicing, and developing Python programs online, offering features like code sharing and support for popular modules."
+  },
+  {
+    "ID": "82",
+    "Medientyp": "Tools / Simulation",
+    "Name": "MakeCode: Online Block & JavaScript Code Editor",
+    "Link": "https://maker.makecode.com/#editor",
+    "URL": "https://maker.makecode.com/#editor",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://maker.makecode.com/#editor",
+    "Desc": "This online MakeCode editor provides a versatile platform for programming. Users can develop code using either a block-based visual interface or traditional JavaScript."
+  },
+  {
+    "ID": "83",
+    "Medientyp": "Tools",
+    "Name": "ESA: Online Astronomy & Space Exploration Tools",
+    "Link": "https://astro-apps.org/",
+    "URL": "https://astro-apps.org/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://astro-apps.org/",
+    "Desc": "Discover the European Space Agency's (ESA) online simulation tools and applications, likely focused on astronomy and space exploration."
+  },
+  {
+    "ID": "84",
+    "Medientyp": "Simulation",
+    "Name": "Apollo in Real Time: Real-Time Journey Through Apollo Missions",
+    "Link": "https://apolloinrealtime.org/",
+    "URL": "https://apolloinrealtime.org/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://apolloinrealtime.org/",
+    "Desc": "Apollo in Real Time provides an immersive, real-time journey through historical Apollo missions, utilizing authentic recordings and transmissions to recreate key events."
+  },
+  {
+    "ID": "85",
+    "Medientyp": "Simulation",
+    "Name": "Moonjs: Interactive Apollo Guidance Computer (AGC) Simulator",
+    "Link": "https://svtsim.com/moonjs/agc.html",
+    "URL": "https://svtsim.com/moonjs/agc.html",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://svtsim.com/moonjs/agc.html",
+    "Desc": "Moonjs is an online simulator that faithfully recreates the Apollo Guidance Computer (AGC) and its DSKY interface. It allows users to interact with actual Apollo flight software, offering an immersive experience of the system that guided lunar missions."
+  },
+  {
+    "ID": "86",
+    "Medientyp": "Tools",
+    "Name": "Sky & Telescope: Interactive Astronomy Tools",
+    "Link": "https://skyandtelescope.org/observing/interactive-sky-watching-tools/",
+    "URL": "https://skyandtelescope.org/observing/interactive-sky-watching-tools/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://skyandtelescope.org/observing/interactive-sky-watching-tools/",
+    "Desc": "Discover a collection of interactive astronomy tools designed to assist users with sky-watching and celestial observation."
+  },
+  {
+    "ID": "87",
+    "Medientyp": "Tools",
+    "Name": "NASA Exoplanets: Official Science & Resources",
+    "Link": "https://science.nasa.gov/exoplanets/",
+    "URL": "https://science.nasa.gov/exoplanets/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://science.nasa.gov/exoplanets/",
+    "Desc": "This NASA page provides comprehensive information and tools for exploring exoplanets. It features news, multimedia, and interactive content related to the ongoing search for planets beyond our solar system."
+  },
+  {
+    "ID": "88",
+    "Medientyp": "simulation",
+    "Name": "En-ROADS: Climate Change Scenario Simulator",
+    "Link": "https://en-roads.climateinteractive.org/scenario.html?v=24.10.0",
+    "URL": "https://en-roads.climateinteractive.org/scenario.html?v=24.10.0",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://en-roads.climateinteractive.org/scenario.html?v=24.10.0",
+    "Desc": "Explore various climate change scenarios and their potential impacts using En-ROADS, an interactive climate simulator."
+  },
+  {
+    "ID": "89",
+    "Medientyp": "Daten",
+    "Name": "Gapminder: Global Social & Economic Data Tools",
+    "Link": "www.gapminder.org/tools",
+    "URL": "http://wwww.gapminder.org/tools",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/http://wwww.gapminder.org/tools",
+    "Desc": "\"Soziale Daten Weltweit\" (Social Data Worldwide) on Gapminder offers interactive tools for exploring and visualizing global social and economic data. This resource provides a comprehensive way to understand worldwide trends and statistics across various development indicators."
+  },
+  {
+    "ID": "90",
+    "Medientyp": "Tools",
+    "Name": "World Magnetic Model (WMM): Data, Software, and Documentation",
+    "Link": "https://www.ncei.noaa.gov/products/world-magnetic-model",
+    "URL": "https://www.ncei.noaa.gov/products/world-magnetic-model",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://www.ncei.noaa.gov/products/world-magnetic-model",
+    "Desc": "This page provides access to the World Magnetic Model (WMM), a standard geomagnetic field model essential for navigation and heading systems. It includes downloadable data, software, and documentation, with updates issued every five years to reflect changes in Earth's magnetic field."
+  },
+  {
+    "ID": "91",
+    "Medientyp": "Tools/Simulation",
+    "Name": "Orbiting Now: Live Satellite Tracking & Orbital Information",
+    "Link": "https://orbit.ing-now.com/",
+    "URL": "https://orbit.ing-now.com/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://orbit.ing-now.com/",
+    "Desc": "This website offers a live satellite tracker and extensive orbital information for thousands of active satellites. Users can explore various orbit types, specific satellite constellations like Starlink and OneWeb, and even celestial bodies such as the Moon and other solar system objects."
+  },
+  {
+    "ID": "92",
+    "Medientyp": "Simulation",
+    "Name": "WorldWide Telescope: Online Space Exploration Platform",
+    "Link": "WorldWide Telescope",
+    "URL": "https://worldwidetelescope.org/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://worldwidetelescope.org/",
+    "Desc": "WorldWide Telescope (WWT) is an online platform enabling virtual space exploration. It serves as a web client where users can view extensive astronomical images and navigate the cosmos."
+  },
+  {
+    "ID": "93",
+    "Medientyp": "Simulation",
+    "Name": "Quantum Flytrap: Interactive Quantum Simulator",
+    "Link": "https://lab.quantumflytrap.com/lab",
+    "URL": "https://lab.quantumflytrap.com/lab",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://lab.quantumflytrap.com/lab",
+    "Desc": "Explore Quantum Flytrap's virtual lab, featuring an interactive quantum simulator for users."
+  },
+  {
+    "ID": "94",
+    "Medientyp": "Daten",
+    "Name": "NASA Open Data Portal",
+    "Link": "NASA Open Data Portal",
+    "URL": "https://data.nasa.gov/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://data.nasa.gov/",
+    "Desc": "Data.nasa.gov is NASA's official open data portal, offering a publicly accessible catalog of diverse datasets spanning science, space exploration, and aeronautics. It provides essential metadata and links to foster transparency, collaboration, and scientific advancement."
+  },
+  {
+    "ID": "95",
+    "Medientyp": "Tools",
+    "Name": "Gaia Sky: Real-time 3D Universe Visualization",
+    "Link": "zah.uni-heidelberg.de",
+    "URL": "https://zah.uni-heidelberg.de/gaia/outreach/gaiasky/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://zah.uni-heidelberg.de/gaia/outreach/gaiasky/",
+    "Desc": "Gaia Sky is a real-time, open-source 3D astronomy visualization platform for desktop and VR. It enables users to explore the universe by navigating through billions of scientific data points, from celestial bodies to distant galaxies, including data from ESA's Gaia mission."
+  },
+  {
+    "ID": "96",
+    "Medientyp": "Karten",
+    "Name": "Light Pollution Map: Global Interactive Atlas",
+    "Link": "Light pollution map",
+    "URL": "https://www.lightpollutionmap.info/#zoom=4.00&lat=45.8720&lon=14.5470&state=eyJiYXNlbWFwIjoiTGF5ZXJCaW5nUm9hZCIsIm92ZXJsYXkiOiJ3YV8yMDE1Iiwib3ZlcmxheWNvbG9yIjpmYWxzZSwib3ZlcmxheW9wYWNpdHkiOjYwLCJmZWF0dXJlc29wYWNpdHkiOjg1fQ==",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://www.lightpollutionmap.info/#zoom=4.00&lat=45.8720&lon=14.5470&state=eyJiYXNlbWFwIjoiTGF5ZXJCaW5nUm9hZCIsIm92ZXJsYXkiOiJ3YV8yMDE1Iiwib3ZlcmxheWNvbG9yIjpmYWxzZSwib3ZlcmxheW9wYWNpdHkiOjYwLCJmZWF0dXJlc29wYWNpdHkiOjg1fQ==",
+    "Desc": "This interactive map provides a global visualization of light pollution, offering detailed satellite data and tools to identify dark sky locations and monitor light levels over time."
+  },
+  {
+    "ID": "97",
+    "Medientyp": "Tools/Daten",
+    "Name": "APOGEE Data: Probing Milky Way Evolution",
+    "Link": "sdss.org",
+    "URL": "http://sdss.org/surveys/apogee/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/http://sdss.org/surveys/apogee/",
+    "Desc": "This astronomy database details the Apache Point Observatory Galactic Evolution Experiment (APOGEE), a large-scale survey using infrared spectroscopy to map the Milky Way's chemical and dynamical evolution. It provides access to extensive datasets on hundreds of thousands of stars within our galaxy."
+  },
+  {
+    "ID": "98",
+    "Medientyp": "Tools/Daten",
+    "Name": "Heavens-Above: Satellite Tracking & Astronomy Tools",
+    "Link": "https://heavens-above.com/",
+    "URL": "https://heavens-above.com/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://heavens-above.com/",
+    "Desc": "Heavens-Above offers comprehensive satellite tracking, including real-time positions and pass predictions for objects like the ISS and Starlink. It also provides a variety of astronomical tools and charts for observing the night sky."
+  },
+  {
+    "ID": "99",
+    "Medientyp": "Daten",
+    "Name": "CERN Vistar Displays: Real-Time Operational Data",
+    "Link": "Vistars",
+    "URL": "https://op-webtools.web.cern.ch/vistar/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://op-webtools.web.cern.ch/vistar/",
+    "Desc": "This page provides access to CERN's \"Vistar\" displays, offering real-time operational data and status updates directly from their control centers. These screens cover a wide array of systems, including the LHC, SPS, and various ongoing experiments like CMS and ATLAS."
+  },
+  {
+    "ID": "100",
+    "Medientyp": "Daten",
+    "Name": "Solar and Heliospheric Observatory (SOHO): Live Solar Data & Resources",
+    "Link": "https://soho.nascom.nasa.gov/",
+    "URL": "https://soho.nascom.nasa.gov/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://soho.nascom.nasa.gov/",
+    "Desc": "The Solar and Heliospheric Observatory (SOHO) homepage offers live data, news, and educational resources related to the sun, highlighting its mission as an international cooperation."
+  },
+  {
+    "ID": "101",
+    "Medientyp": "Sonstiges",
+    "Name": "NOVA Labs: Interactive Science & Financial Literacy Labs",
+    "Link": "Home | NOVA Labs | PBS",
+    "URL": "https://www.pbs.org/wgbh/nova/labs/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://www.pbs.org/wgbh/nova/labs/",
+    "Desc": "Explore various science disciplines and financial literacy through interactive, game-like labs on the NOVA Labs platform from PBS. Users engage with real data and scientific principles to solve problems and deepen their understanding."
+  },
+  {
+    "ID": "102",
+    "Medientyp": "Daten",
+    "Name": "ISS Live Stream: Real-Time Earth Views",
+    "Link": "https://www.youtube.com/live/O9mYwRlucZY?si=1IKqH6iwbQcgzoQf",
+    "URL": "https://www.youtube.com/live/O9mYwRlucZY?si=1IKqH6iwbQcgzoQf",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://www.youtube.com/live/O9mYwRlucZY?si=1IKqH6iwbQcgzoQf",
+    "Desc": "Experience breathtaking real-time views of Earth and beyond with this live stream directly from the International Space Station (ISS). This page offers continuous footage from the orbiting laboratory, showcasing our planet from a unique perspective."
+  },
+  {
+    "ID": "103",
+    "Medientyp": "Daten",
+    "Name": "NOAA/NWS Space Weather Prediction Center: Forecasts & Alerts",
+    "Link": "Homepage | NOAA / NWS Space Weather Prediction Center",
+    "URL": "https://www.swpc.noaa.gov/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://www.swpc.noaa.gov/",
+    "Desc": "The NOAA / NWS Space Weather Prediction Center provides comprehensive forecasts, alerts, and real-time data regarding solar activity and space weather phenomena. This vital resource helps predict events like auroras and assess their potential impacts on various systems."
+  },
+  {
+    "ID": "104",
+    "Medientyp": "Tools",
+    "Name": "NASA's Universe of Learning: Astrophysics Educational Resources",
+    "Link": "Universe of Learning Homepage | NASA's UoL",
+    "URL": "https://www.universe-of-learning.org/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://www.universe-of-learning.org/",
+    "Desc": "NASA's Universe of Learning offers interactive educational resources and direct connections to experts from NASA's Astrophysics missions. This initiative aims to inspire STEM learning and engagement for learners, families, and educators."
+  },
+  {
+    "ID": "105",
+    "Medientyp": "Daten",
+    "Name": "NASA Universe: A Comprehensive Image Collection",
+    "Link": "https://www.fromearthtotheuniverse.org",
+    "URL": "https://www.fromearthtotheuniverse.org/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://www.fromearthtotheuniverse.org/",
+    "Desc": "This website features a comprehensive NASA image collection, showcasing stunning visuals of the universe. It serves as an engaging resource for exploring the cosmos, from our planet to distant galaxies."
+  },
+  {
+    "ID": "106",
+    "Medientyp": "Daten",
+    "Name": "Astrophysics Data System (ADS): Astrophysics Research Database",
+    "Link": "https://ui.adsabs.harvard.edu",
+    "URL": "https://ui.adsabs.harvard.edu/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://ui.adsabs.harvard.edu/",
+    "Desc": "The Astrophysics Data System (ADS) is a comprehensive online database dedicated to astrophysics research. It provides a platform for searching and accessing an extensive collection of scientific literature and data in the field."
+  },
+  {
+    "ID": "107",
+    "Medientyp": "Simulation",
+    "Name": "Scale of the Universe: Interactive Exploration",
+    "Link": "Maßstab des Universums",
+    "URL": "https://scaleofuniverse.com/de",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://scaleofuniverse.com/de",
+    "Desc": "Explore the immense scale of the universe, from cosmic expanses to subatomic particles, through an interactive experience that invites users to zoom and discover. This engaging tool visually illustrates the vastness of both the visible and invisible worlds."
+  },
+  {
+    "ID": "108",
+    "Medientyp": "Simulation",
+    "Name": "Physics Online: Interactive Simulations & Experiments",
+    "Link": "Experimentieren Online - Physikdidaktik - Salzburg",
+    "URL": "https://physikdidaktik.info/index.php/Experimentieren_Online?form=MG0AV3",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://physikdidaktik.info/index.php/Experimentieren_Online?form=MG0AV3",
+    "Desc": "This page provides a comprehensive online collection of interactive physics learning resources, including simulations, applets, and virtual experiments, curated to support physics education. It features various tools for understanding concepts, from general physics to specific topics like astrophysics and Kepler's laws."
+  },
+  {
+    "ID": "109",
+    "Medientyp": "Tools",
+    "Name": "ZUM-Unterrichten: Physics Teaching Materials",
+    "Link": "Physik – ZUM-Unterrichten",
+    "URL": "https://unterrichten.zum.de/wiki/Physik",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://unterrichten.zum.de/wiki/Physik",
+    "Desc": "Discover a comprehensive collection of teaching materials and resources for Physics on ZUM-Unterrichten, covering key topics such as energy and electric charge."
+  },
+  {
+    "ID": "110",
+    "Medientyp": "Tools",
+    "Name": "QRCode2STL: 3D Printable QR Code Generator",
+    "Link": "qrcode2stl - Generate 3d printable QR codes.",
+    "URL": "https://printer.tools/qrcode2stl/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://printer.tools/qrcode2stl/",
+    "Desc": "QRCode2STL is a free online tool that enables users to generate custom QR codes specifically designed for 3D printing."
+  },
+  {
+    "ID": "111",
+    "Medientyp": "Daten",
+    "Name": "Corvogon: Space Engine Procedural Planet",
+    "Link": "Corvogon | Space Engine planetary Database Wiki | Fandom",
+    "URL": "https://se-database.fandom.com/wiki/Corvogon",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://se-database.fandom.com/wiki/Corvogon",
+    "Desc": "This page provides detailed information about Corvogon, a temperate procedural planet within the Space Engine universe, including its physical properties, surface conditions, atmosphere, and the presence of multicellular life."
+  },
+  {
+    "ID": "112",
+    "Medientyp": "Daten",
+    "Name": "Google Trends: Discover Popular Search Trends & Insights",
+    "Link": "Google Trends",
+    "URL": "https://trends.google.de/trends/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://trends.google.de/trends/",
+    "Desc": "Google Trends offers a dynamic platform to explore current and historical search interest, revealing what topics are popular and trending worldwide or in specific regions. It provides valuable insights into public curiosity and emerging trends based on search query data."
+  },
+  {
+    "ID": "113",
+    "Medientyp": "Sonstiges/Sammlung",
+    "Name": "Just For Fun: Entertaining Web Apps & Creative Projects",
+    "Link": "Just For Fun",
+    "URL": "https://justforfun.io/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://justforfun.io/",
+    "Desc": "Explore Just For Fun, a curated collection of creative coding projects and entertaining web applications. It showcases whimsical tools, interactive art, and unique digital experiences designed simply for amusement."
+  },
+  {
+    "ID": "114",
+    "Medientyp": "Tools",
+    "Name": "Online IPv4 & IPv6 Network Utilities & Diagnostics",
+    "Link": "Welcome to tools.uebi.net",
+    "URL": "http://tools.uebi.net/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/http://tools.uebi.net/",
+    "Desc": "This website offers a comprehensive suite of online internet tools, primarily focusing on network diagnostics and utilities for both IPv4 and IPv6. Users can find various tools for connection checks, IP address management, and network security functions."
+  },
+  {
+    "ID": "115",
+    "Medientyp": "Sammlung",
+    "Name": "BBC Sound Effects Archive",
+    "Link": "BBC Sound Effects",
+    "URL": "https://sound-effects.bbcrewind.co.uk/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://sound-effects.bbcrewind.co.uk/",
+    "Desc": "The BBC Sound Effects Archive offers a vast collection of over 30,000 sound effects for search and experimentation. Users can utilize these sounds for personal, educational, or licensed projects."
+  },
+  {
+    "ID": "116",
+    "Medientyp": "Tools/Simulation",
+    "Name": "3JCN Physics Simulation: Free Interactive 3D Physics Resource",
+    "Link": "https://www.new3jcn.com/simulation.html",
+    "URL": "https://www.new3jcn.com/simulation.html",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://www.new3jcn.com/simulation.html",
+    "Desc": "Explore a collection of over 280 free, interactive 3D physics simulations designed as an educational resource. These simulations cover diverse topics including mechanics, thermodynamics, electricity, optics, and modern physics."
+  },
+  {
+    "ID": "117",
+    "Medientyp": "Tools/Simulation",
+    "Name": "Effectual Learning: Interactive 3D Physics Simulations for STEM",
+    "Link": "Interactive 3D Physics Simulations | Effectual Learning for STEM",
+    "URL": "https://effectuall.github.io/index.html",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://effectuall.github.io/index.html",
+    "Desc": "Effectual Learning provides interactive 3D physics simulations designed to transform abstract concepts into engaging visual experiences and enhance STEM learning. These modules help students visualize complex principles, improving understanding and retention through hands-on engagement."
+  },
+  {
+    "ID": "118",
+    "Medientyp": "Tools",
+    "Name": "Calligrapher.ai: Realistic Computer Handwriting Generator",
+    "Link": "https://www.calligrapher.ai",
+    "URL": "https://www.calligrapher.ai/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://www.calligrapher.ai/",
+    "Desc": "Calligrapher.ai is an online tool designed to generate realistic, customizable computer handwriting. Users can fine-tune various parameters, including speed, legibility, stroke width, and style, to create diverse digital handwritten outputs."
+  },
+  {
+    "ID": "119",
+    "Medientyp": "Simulation",
+    "Name": "Kaspersky Cyberthreat Live Map: Live Global Cyberthreats",
+    "Link": "MAP | Kaspersky Cyberthreat live map",
+    "URL": "https://cybermap.kaspersky.com/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://cybermap.kaspersky.com/",
+    "Desc": "This page presents Kaspersky's Cyberthreat Live Map, offering a real-time visualization of cyberattack detections occurring globally. It provides a dynamic overview of current cybersecurity threats worldwide."
+  },
+  {
+    "ID": "120",
+    "Medientyp": "Daten",
+    "Name": "Google Trends TV: Top Trending Searches",
+    "Link": "Google Trends Visualizer",
+    "URL": "https://trends.google.com/trends/hottrends/visualize?nrow=5&ncol=5",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://trends.google.com/trends/hottrends/visualize?nrow=5&ncol=5",
+    "Desc": "Experience a dynamic visualization of Google's top trending searches from the past 24 hours, presented in a \"Trends TV\" format."
+  },
+  {
+    "ID": "121",
+    "Medientyp": "Daten",
+    "Name": "NASA Scientific Visualization Studio: Earth & Space Science Visualizations",
+    "Link": "NASA SVS | Home",
+    "URL": "https://svs.gsfc.nasa.gov/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://svs.gsfc.nasa.gov/",
+    "Desc": "The NASA Scientific Visualization Studio (SVS) offers a rich collection of data-backed visualizations, animations, and images designed to promote a greater understanding of Earth and Space Sciences. It serves as a key resource for both scientific communication and public outreach."
+  },
+  {
+    "ID": "122",
+    "Medientyp": "Karten",
+    "Name": "Open Infrastructure Map: Interactive Online Map",
+    "Link": "Open Infrastructure Map",
+    "URL": "https://openinframap.org/#5.39/50.48/8.992",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://openinframap.org/#5.39/50.48/8.992",
+    "Desc": "Open Infrastructure Map is an interactive online platform designed to visualize and explore various infrastructure components."
+  },
+  {
+    "ID": "123",
+    "Medientyp": "Tools",
+    "Name": "FlowingData: Insightful Data Visualization and Statistics",
+    "Link": "FlowingData - Data Visualization and Statistics",
+    "URL": "https://flowingdata.com/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://flowingdata.com/",
+    "Desc": "FlowingData offers insightful articles and projects on data visualization and statistics, covering a wide range of topics from the science of alcohol and AI capabilities to interactive mapping and common chart errors."
+  },
+  {
+    "ID": "124",
+    "Medientyp": "Tools",
+    "Name": "Einstein Online: Accessible Guide to Relativity and Cosmology",
+    "Link": "Einstein-Online",
+    "URL": "https://www.einstein-online.info/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://www.einstein-online.info/",
+    "Desc": "Einstein Online is an educational web portal providing accessible information on Einstein's theories of relativity and their exciting applications, spanning from subatomic particles to cosmology. It covers topics like general and special relativity, gravitational waves, and black holes for a broad audience."
+  },
+  {
+    "ID": "125",
+    "Medientyp": "Daten",
+    "Name": "Hubble Space Telescope: Official NASA Website",
+    "Link": "https://hubblesite.org/",
+    "URL": "https://hubblesite.org/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://hubblesite.org/",
+    "Desc": "This is the official NASA website for the Hubble Space Telescope, offering a comprehensive resource of news, stunning images, videos, and scientific discoveries from the iconic observatory."
+  },
+  {
+    "ID": "126",
+    "Medientyp": "Tools",
+    "Name": "Funny Android Apps: Diverse Recommendations",
+    "Link": "Games and mobile apps to support science | Laser Labs",
+    "URL": "https://www.laserlabs.org/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://www.laserlabs.org/",
+    "Desc": "This page likely features a collection of funny Android apps covering various themes, offering entertaining recommendations."
+  },
+  {
+    "ID": "127",
+    "Medientyp": "Tools",
+    "Name": "NASA SPICE Geometry Calculator: Planetary Orbit & Space Mission Tools",
+    "Link": "SPICE Geometry Calculator",
+    "URL": "https://wgc.jpl.nasa.gov:8443/webgeocalc/#NewCalculation",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://wgc.jpl.nasa.gov:8443/webgeocalc/#NewCalculation",
+    "Desc": "NASA's SPICE Geometry Calculator offers web-based tools for computing planetary orbits and essential geometric data crucial for space mission planning."
+  },
+  {
+    "ID": "128",
+    "Medientyp": "Tools",
+    "Name": "Google Colab: Cloud-Based Jupyter Notebook Environment",
+    "Link": "Willkommen bei Colaboratory - Colab",
+    "URL": "https://colab.research.google.com/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://colab.research.google.com/",
+    "Desc": "Google Colab is a free, cloud-based Jupyter notebook environment that provides easy access to Google's Python tools for coding, data analysis, and machine learning directly in your browser."
+  },
+  {
+    "ID": "129",
+    "Medientyp": "Tools/Simulation",
+    "Name": "Fourier Transforms: An Interactive & Accessible Introduction",
+    "Link": "An Interactive Introduction to Fourier Transforms",
+    "URL": "https://www.jezzamon.com/fourier/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://www.jezzamon.com/fourier/",
+    "Desc": "This interactive guide provides an accessible introduction to Fourier transforms, illustrating how they break down complex patterns, from sounds to drawings, into their fundamental sine wave components. It demonstrates their practical applications in fields like audio processing, focusing on understanding \"what it actually does\" rather than the underlying mathematics."
+  },
+  {
+    "ID": "130",
+    "Medientyp": "Tools/Simulation",
+    "Name": "Explorable Explanations: Interactive Physics Simulations",
+    "Link": "Physics | Explorable Explanations",
+    "URL": "https://explorabl.es/physics/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://explorabl.es/physics/",
+    "Desc": "This page offers interactive \"explorable explanations\" and thought experiments focusing on physics. Users can learn complex physics concepts by playing with ideas and simulations."
+  },
+  {
+    "ID": "131",
+    "Medientyp": "Tools/Simulation",
+    "Name": "The Birthday Paradox: An Interactive Experiment",
+    "Link": "https://pudding.cool/2018/04/birthday-paradox/",
+    "URL": "https://pudding.cool/2018/04/birthday-paradox/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://pudding.cool/2018/04/birthday-paradox/",
+    "Desc": "This interactive page delves into the Birthday Paradox, an intriguing statistical phenomenon. It uses live reader data and engaging explanations to demonstrate why it's surprisingly probable for two people in a small group to share a birthday."
+  },
+  {
+    "ID": "132",
+    "Medientyp": "Sonstiges",
+    "Name": "Patatap: Interactive Animation and Sound Kit",
+    "Link": "Patatap",
+    "URL": "https://patatap.com/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://patatap.com/",
+    "Desc": "Patatap is an interactive web-based tool described as a \"portable animation and sound kit.\" It enables users to create unique melodies accompanied by moving shapes, generating distinctive visual and auditory experiences."
+  },
+  {
+    "ID": "133",
+    "Medientyp": "Tools",
+    "Name": "Interstellar-like Arpeggiated Music: Interactive Demo",
+    "Link": "Musical Chord Progression Arpeggiator",
+    "URL": "https://codepen.io/jak_e/full/qNrZyw",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://codepen.io/jak_e/full/qNrZyw",
+    "Desc": "Explore an interactive Codepen demo designed to generate atmospheric, Interstellar-like music. It showcases the use of arpeggiated sequences to evoke a grand, cinematic sound."
+  },
+  {
+    "ID": "134",
+    "Medientyp": "Sonstiges",
+    "Name": "Typatone: Online Text-to-Music Tool",
+    "Link": "Typatone",
+    "URL": "https://typatone.com/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://typatone.com/",
+    "Desc": "Typatone is an engaging online tool that transforms text into music by assigning a unique musical note to each letter typed. It allows users to create musical compositions simply by writing."
+  },
+  {
+    "ID": "135",
+    "Medientyp": "Tools",
+    "Name": "Deutsches Museum Digital: Science & Technology Collections Online",
+    "Link": "Deutsches Museum Digital",
+    "URL": "https://digital.deutsches-museum.de/de/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://digital.deutsches-museum.de/de/",
+    "Desc": "Deutsches Museum Digital is the online portal to the museum's vast collections, allowing users to explore thousands of digitized objects, books, and archival materials covering the history of science and technology."
+  },
+  {
+    "ID": "136",
+    "Medientyp": "Tools",
+    "Name": "MindStudio.ai: Create Your Own AI Chatbots",
+    "Link": "AI Workers - MindStudio",
+    "URL": "https://app.mindstudio.ai/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://app.mindstudio.ai/",
+    "Desc": "MindStudio.ai is an application that allows users to create their own AI chatbots. It provides a platform for developing custom conversational AI solutions."
+  },
+  {
+    "ID": "137",
+    "Medientyp": "Sonstiges",
+    "Name": "Simone Marzulli: Full-Stack Software Engineer & 1980s Computer Emulator",
+    "Link": "www.simone.computer",
+    "URL": "http://www.simone.computer/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/http://www.simone.computer/",
+    "Desc": "Simone Marzulli's personal website showcases his work as a full-stack software engineer and features a playful 1980s computer emulator."
+  },
+  {
+    "ID": "138",
+    "Medientyp": "Sonstiges",
+    "Name": "Infinite Mac: Web-Based Classic Mac & NeXT OS Emulator",
+    "Link": "Infinite Mac",
+    "URL": "https://infinitemac.org/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://infinitemac.org/",
+    "Desc": "Infinite Mac is a web-based project dedicated to making classic Mac and NeXT operating system emulation easily accessible. It allows users to experience a broad range of vintage macOS versions, from System 6 to macOS 9, directly in their browser."
+  },
+  {
+    "ID": "139",
+    "Medientyp": "Simulation",
+    "Name": "NUKEMAP: Nuclear Detonation Simulator",
+    "Link": "NUKEMAP by Alex Wellerstein",
+    "URL": "https://nuclearsecrecy.com/nukemap/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://nuclearsecrecy.com/nukemap/",
+    "Desc": "NUKEMAP is an interactive simulator that allows users to visualize the potential impact of a nuclear detonation at any chosen global location. Users can customize warhead yield and other parameters to display various effects, including blast overpressure, thermal radiation, and radioactive fallout."
+  },
+  {
+    "ID": "139",
+    "Medientyp": "Tools/Simulation",
+    "Name": "Discover ESA: Interactive Tours & Virtual Visits",
+    "Link": "https://discover.esa.int/#/en",
+    "URL": "https://discover.esa.int/#/en",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://discover.esa.int/#/en",
+    "Desc": "Discover the European Space Agency (ESA) through engaging interactive tours and virtual visits, offering an immersive way to explore its work and facilities."
+  },
+  {
+    "ID": "140",
+    "Medientyp": "Datenquelle",
+    "Name": "Free Music Archive: Royalty-Free Music for Content Creators",
+    "Link": "https://freemusicarchive.org/",
+    "URL": "https://freemusicarchive.org/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://freemusicarchive.org/",
+    "Desc": "Free Music Archive (FMA) offers a vast library of royalty-free and free-to-download music from independent artists, empowering content creators to find soundtracks for their projects while supporting musicians worldwide."
+  },
+  {
+    "ID": "140",
+    "Medientyp": "Tools",
+    "Name": "Google AI Studio: Platform for Gemini AI",
+    "Link": "https://aistudio.google.com/",
+    "URL": "https://aistudio.google.com/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://aistudio.google.com/",
+    "Desc": "Google AI Studio is a platform for accessing and utilizing the latest Google Gemini AI models, enabling users to work with advanced artificial intelligence capabilities."
+  },
+  {
+    "ID": "141",
+    "Medientyp": "Tools/Sammlung",
+    "Name": "Google Labs: Home for AI Experiments",
+    "Link": "https://labs.google/",
+    "URL": "https://labs.google/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://labs.google/",
+    "Desc": "Google Labs is Google's official hub for showcasing and allowing users to try out its cutting-edge artificial intelligence experiments. It features a diverse collection of innovative AI-powered tools and prototypes designed for various applications, from filmmaking to personal styling."
+  },
+  {
+    "ID": "141",
+    "Medientyp": "Tools",
+    "Name": "CutList Optimizer: Online Cutting Plan Generator",
+    "Link": "CutList Optimizer",
+    "URL": "https://www.cutlistoptimizer.com/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://www.cutlistoptimizer.com/",
+    "Desc": "CutList Optimizer is an online tool designed to generate efficient cutting plans for panels and other materials, helping users minimize waste and optimize stock utilization."
+  },
+  {
+    "ID": "142",
+    "Medientyp": "Datenquelle",
+    "Name": "SketchUp 3D Warehouse: 3D Models for Twinmotion",
+    "Link": "https://3dwarehouse.sketchup.com/",
+    "URL": "https://3dwarehouse.sketchup.com/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://3dwarehouse.sketchup.com/",
+    "Desc": "The SketchUp 3D Warehouse is a comprehensive online archive providing 3D models for import. It specifically caters to users looking for models to integrate into Twinmotion."
+  },
+  {
+    "ID": "142",
+    "Medientyp": "Daten",
+    "Name": "Statcounter Global Stats: Worldwide Market Share Statistics",
+    "Link": "Statcounter Global Stats - Browser, OS, Search Engine including Mobile Usage Share",
+    "URL": "https://gs.statcounter.com/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://gs.statcounter.com/",
+    "Desc": "Statcounter Global Stats provides extensive worldwide market share statistics for web browsers, operating systems, and search engines, including mobile usage. It offers customizable charts and data downloads across various regions and timeframes."
+  },
+  {
+    "ID": "144",
+    "Medientyp": "Simulation",
+    "Name": "Custom Fourier Series Visualizer",
+    "Link": "https://nasirkhalid24.github.io/Custom-Fourier-Series-Visualizer/",
+    "URL": "https://nasirkhalid24.github.io/Custom-Fourier-Series-Visualizer/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://nasirkhalid24.github.io/Custom-Fourier-Series-Visualizer/",
+    "Desc": "This web application is a Fourier Series visualizer that allows users to explore various waveforms like square, triangle, and sawtooth. Users can also define custom series by adjusting parameters such as numerator, denominator, and coefficient."
+  },
+  {
+    "ID": "145",
+    "Medientyp": "Simulation",
+    "Name": "Quantum Moves 2: An Engaging Game of Quantum Phenomena",
+    "Link": "https://www.scienceathome.org/games/quantum-moves-2/",
+    "URL": "https://www.scienceathome.org/games/quantum-moves-2/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://www.scienceathome.org/games/quantum-moves-2/",
+    "Desc": "This page features \"Quantum Moves 2,\" an engaging game designed to let players interact with and manipulate quantum phenomena. It provides a unique, hands-on approach to understanding the principles of the quantum world through play."
+  },
+  {
+    "ID": "146",
+    "Medientyp": "Simulation",
+    "Name": "Online Gravity Simulator: Explore & Create Astronomical Simulations",
+    "Link": "https://gravitysimulator.org/",
+    "URL": "https://gravitysimulator.org/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://gravitysimulator.org/",
+    "Desc": "This online gravity simulator allows users to explore a vast array of astronomical scenarios, from exoplanets and spacecraft orbits to galactic collisions. Users can also create their own simulations, making it a powerful tool for visualizing celestial mechanics."
+  },
+  {
+    "ID": "147",
+    "Medientyp": "Simulation",
+    "Name": "Interactive Math, Physics & Engineering Applets",
+    "Link": "https://www.falstad.com/mathphysics.html",
+    "URL": "https://www.falstad.com/mathphysics.html",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://www.falstad.com/mathphysics.html",
+    "Desc": "Explore a diverse collection of interactive JavaScript applets designed to visualize and explain complex concepts across various fields of mathematics, physics, and engineering. Topics covered range from wave mechanics and electromagnetism to quantum mechanics and thermodynamics."
+  },
+  {
+    "ID": "148",
+    "Medientyp": "Simulation",
+    "Name": "myPhysicsLab: Interactive Physics Simulations",
+    "Link": "https://www.myphysicslab.com/",
+    "URL": "https://www.myphysicslab.com/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://www.myphysicslab.com/",
+    "Desc": "myPhysicsLab offers a diverse collection of interactive, real-time physics simulations, allowing users to explore concepts from basic springs and pendulums to complex rigid body dynamics. Users can manipulate objects, adjust parameters like gravity, and customize or share their experimental setups."
+  },
+  {
+    "ID": "149",
+    "Medientyp": "Simulation",
+    "Name": "Fractal Lab: Interactive WebGL Fractal Explorer",
+    "Link": "https://hirnsohle.de/test/fractalLab/",
+    "URL": "https://hirnsohle.de/test/fractalLab/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://hirnsohle.de/test/fractalLab/",
+    "Desc": "Fractal Lab is an interactive online WebGL explorer that enables users to create and manipulate 2D and 3D fractals in real time. It offers extensive controls for navigation, parameter adjustment, and even direct editing of the GLSL shader formulas."
+  },
+  {
+    "ID": "150",
+    "Medientyp": "Simulation",
+    "Name": "CircuitLab: Online Circuit Design Software",
+    "Link": "https://www.circuitlab.com/editor/#?id=7pq5wm&from=homepage",
+    "URL": "https://www.circuitlab.com/editor/#?id=7pq5wm&from=homepage",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://www.circuitlab.com/editor/#?id=7pq5wm&from=homepage",
+    "Desc": "This is an online circuit design software that enables users to edit and create circuits directly within their web browser."
+  },
+  {
+    "ID": "151",
+    "Medientyp": "Simulation",
+    "Name": "Matter.js Physics Engine: Online Demo",
+    "Link": "https://brm.io/matter-js/demo/#newtonsCradle",
+    "URL": "https://brm.io/matter-js/demo/#newtonsCradle",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://brm.io/matter-js/demo/#newtonsCradle",
+    "Desc": "Explore an interactive online demo of the Matter.js physics engine, showcasing its capabilities through simulations like Newton's Cradle. This page allows users to experience the engine's physics in action."
+  },
+  {
+    "ID": "152",
+    "Medientyp": "Sammlung",
+    "Name": "MathsIsFun.com: Interactive Math Learning Resources",
+    "Link": "https://www.mathsisfun.com/index.htm",
+    "URL": "https://www.mathsisfun.com/index.htm",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://www.mathsisfun.com/index.htm",
+    "Desc": "MathsIsFun.com is a comprehensive educational website designed to make learning mathematics engaging and accessible for all ages. It offers a vast collection of resources, including interactive tools, games, worksheets, and clear explanations across a wide range of math topics."
+  },
+  {
+    "ID": "153",
+    "Medientyp": "Tools",
+    "Name": "Teachable Machine: No-Code AI Model Training",
+    "Link": "https://teachablemachine.withgoogle.com/",
+    "URL": "https://teachablemachine.withgoogle.com/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://teachablemachine.withgoogle.com/",
+    "Desc": "Teachable Machine is a web-based tool that allows users to quickly train custom machine learning models for image and sound recognition without writing any code."
+  },
+  {
+    "ID": "154",
+    "Medientyp": "Tools",
+    "Name": "Uptrends: Free Website Performance & Monitoring Tools",
+    "Link": "https://www.uptrends.de/tools",
+    "URL": "https://www.uptrends.de/tools",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://www.uptrends.de/tools",
+    "Desc": "This page from Uptrends offers a collection of free, practical tools for comprehensive website screening and monitoring. These tools help users assess their website's availability, performance, and technical health from various global vantage points."
+  },
+  {
+    "ID": "155",
+    "Medientyp": "Simulation",
+    "Name": "PhET: Free Online STEM Simulations",
+    "Link": "https://phet.colorado.edu/de/",
+    "URL": "https://phet.colorado.edu/de/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://phet.colorado.edu/de/",
+    "Desc": "PhET provides a comprehensive collection of free, award-winning online simulations from the University of Colorado, covering physics, chemistry, biology, geoscience, and mathematics. These interactive tools are designed to facilitate engaging learning experiences across various STEM disciplines."
+  },
+  {
+    "ID": "156",
+    "Medientyp": "Tools",
+    "Name": "TextFX: Creative Text Tools",
+    "Link": "TextFX",
+    "URL": "https://textfx.withgoogle.com/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://textfx.withgoogle.com/",
+    "Desc": "TextFX is a Google-hosted platform providing various tools for generating and exploring creative text effects and transformations."
+  },
+  {
+    "ID": "157",
+    "Medientyp": "Tools/Daten",
+    "Name": "Satellite Archive Tool: Free High-Resolution Satellite Images",
+    "Link": "Satellite Archive Tool",
+    "URL": "https://search.landinfo.com/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://search.landinfo.com/",
+    "Desc": "This page provides access to free, high-resolution satellite images through a comprehensive satellite archive tool."
+  },
+  {
+    "ID": "158",
+    "Medientyp": "Simulation",
+    "Name": "NUKEMAP: Nuclear Bomb Impact Simulator",
+    "Link": "https://nuclearsecrecy.com/nukemap/",
+    "URL": "https://nuclearsecrecy.com/nukemap/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://nuclearsecrecy.com/nukemap/",
+    "Desc": "NUKEMAP is an interactive online simulator that allows users to detonate virtual nuclear bombs at any chosen location, visualizing the projected impacts of blast, thermal radiation, and radioactive fallout. This tool provides a powerful way to understand the devastating scale and various effects of nuclear detonations."
+  },
+  {
+    "ID": "159",
+    "Medientyp": "Sammlung",
+    "Name": "Neal.fun: Engaging Online Creations",
+    "Link": "neal.fun",
+    "URL": "https://neal.fun",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://neal.fun",
+    "Desc": "Neal.fun is a personal website by Neal showcasing a variety of unique web-based games and creative projects. It serves as a hub for his engaging online creations."
+  },
+  {
+    "ID": "160",
+    "Medientyp": "Simulation",
+    "Name": "Next-Generation Molecular Workbench: Visual, Interactive Science Simulations for Education",
+    "Link": "mw.concord.org/nextgen",
+    "URL": "http://mw.concord.org/nextgen",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/http://mw.concord.org/nextgen",
+    "Desc": "The Next-Generation Molecular Workbench provides visual, interactive online simulations designed for teaching and learning science across various fields like biology, chemistry, and physics. Users can explore dynamic models and computational experiments covering topics from molecular interactions to macroscopic phenomena."
+  },
+  {
+    "ID": "161",
+    "Medientyp": "Sonstiges",
+    "Name": "Gandalf: AI Jailbreaking Game",
+    "Link": "https://gandalf.lakera.ai/baseline",
+    "URL": "https://gandalf.lakera.ai/baseline",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://gandalf.lakera.ai/baseline",
+    "Desc": "Gandalf is an engaging AI jailbreaking game designed to test your skills at finding and exploiting vulnerabilities in artificial intelligence systems. It challenges players to ethically \"hack\" the AI."
+  },
+  {
+    "ID": "162",
+    "Medientyp": "Simulation",
+    "Name": "Nicky Case: Interactive Simulations & Explorable Explanations",
+    "Link": "https://ncase.me/",
+    "URL": "https://ncase.me/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://ncase.me/",
+    "Desc": "Nicky Case's website features a collection of interactive simulations and \"explorable explanations\" designed for curious and playful individuals to learn about complex topics from game theory to societal systems. Explore engaging projects that offer unique insights through immersive play."
+  },
+  {
+    "ID": "163",
+    "Medientyp": "Tools",
+    "Name": "3DLogoLab: Free Online 3D Rotating Logo Generator",
+    "Link": "https://www.3dlogolab.io/3d-logo-generator-free",
+    "URL": "https://www.3dlogolab.io/3d-logo-generator-free",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://www.3dlogolab.io/3d-logo-generator-free",
+    "Desc": "3DLogoLab offers a free online generator for creating custom 3D and rotating logos."
+  },
+  {
+    "ID": "164",
+    "Medientyp": "Tools / Simulation",
+    "Name": "R74n: Pixel Art Simulations & Digital Utilities",
+    "Link": "https://r74n.com/",
+    "URL": "https://r74n.com/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://r74n.com/",
+    "Desc": "R74n is a website offering a diverse collection of engaging pixel-art simulations, unique games, and quirky utility tools."
+  },
+  {
+    "ID": "165",
+    "Medientyp": "Tools",
+    "Name": "GenChess: Generate Unique AI Chess Pieces",
+    "Link": "https://labs.google/genchess/",
+    "URL": "https://labs.google/genchess/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://labs.google/genchess/",
+    "Desc": "GenChess is an AI-powered tool from Google Labs that allows users to create unique or unusual chess pieces. It leverages artificial intelligence to generate diverse and imaginative designs for these figures."
+  },
+  {
+    "ID": "166",
+    "Medientyp": "Tools",
+    "Name": "n8n: AI Workflow Automation Platform for Technical Teams",
+    "Link": "https://n8n.io/",
+    "URL": "https://n8n.io/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://n8n.io/",
+    "Desc": "n8n.io offers a powerful and flexible AI workflow automation platform for technical teams. It enables users to build multi-step AI agents and integrate over 500 applications using either code or a drag-and-drop interface, with options for self-hosting or cloud deployment."
+  },
+  {
+    "ID": "167",
+    "Medientyp": "Tools",
+    "Name": "Staying: Interactive Code & Algorithm Visualization",
+    "Link": "https://staying.fun/en/features/algorithm-visualize",
+    "URL": "https://staying.fun/en/features/algorithm-visualize",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://staying.fun/en/features/algorithm-visualize",
+    "Desc": "Staying is an interactive platform providing real-time code visualization for Python, JavaScript, and C++. It allows users to visually understand how algorithms execute step-by-step."
+  },
+  {
+    "ID": "168",
+    "Medientyp": "Tools",
+    "Name": "Natural Language Playlist: AI Spotify Playlist Generator",
+    "Link": "https://www.naturallanguageplaylist.com/generate",
+    "URL": "https://www.naturallanguageplaylist.com/generate",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://www.naturallanguageplaylist.com/generate",
+    "Desc": "This website enables users to generate Spotify playlists by describing their desired music using natural language. It leverages AI to understand musical and cultural features, creating personalized mixtapes."
+  },
+  {
+    "ID": "169",
+    "Medientyp": "Tools/Daten",
+    "Name": "Library of Babel: Every Possible Text Online",
+    "Link": "https://libraryofbabel.info/",
+    "URL": "https://libraryofbabel.info/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://libraryofbabel.info/",
+    "Desc": "This online library is a digital realization of Jorge Luis Borges' \"Library of Babel\" concept. It simulates an infinite collection containing every possible permutation of characters, allowing users to browse, search, or discover random texts within its vast digital shelves."
+  },
+  {
+    "ID": "170",
+    "Medientyp": "Tools/Daten",
+    "Name": "If the Moon Were One Pixel: Interactive Solar System Scale",
+    "Link": "https://joshworth.com/dev/pixelspace/pixelspace_solarsystem.html",
+    "URL": "https://joshworth.com/dev/pixelspace/pixelspace_solarsystem.html",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://joshworth.com/dev/pixelspace/pixelspace_solarsystem.html",
+    "Desc": "This interactive visualization redefines scale by portraying the solar system as if the Moon were just one pixel, starkly revealing the immense, often incomprehensible distances and vast emptiness of space between celestial bodies."
+  },
+  {
+    "ID": "171",
+    "Medientyp": "3D Tools / Karten",
+    "Name": "TopoExport: Online 3D Terrain Exporter",
+    "Link": "https://app.topoexport.com/",
+    "URL": "https://app.topoexport.com/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://app.topoexport.com/",
+    "Desc": "TopoExport is a web-based tool designed for exporting 3D terrain models. It provides a convenient solution for users needing to generate and download terrain data."
+  },
+  {
+    "ID": "172",
+    "Medientyp": "Tools/Sammlung",
+    "Name": "The Pudding: Interactive Visual Explanations",
+    "Link": "https://pudding.cool/",
+    "URL": "https://pudding.cool/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://pudding.cool/",
+    "Desc": "The Pudding is a digital publication offering a collection of interactive and visual explanations, exploring a diverse array of topics through data-driven journalism and engaging storytelling. It transforms complex information into accessible and innovative experiences."
+  },
+  {
+    "ID": "173",
+    "Medientyp": "Tools",
+    "Name": "The Bézier Game: Master Bézier Curves",
+    "Link": "https://bezier.method.ac/",
+    "URL": "https://bezier.method.ac/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://bezier.method.ac/",
+    "Desc": "Master the art of creating precise Bézier curves with The Bézier Game, an interactive online tool designed to help users practice and hone their pen tool skills."
+  },
+  {
+    "ID": "174",
+    "Medientyp": "Tools",
+    "Name": "Napkin AI: Visual AI for Business Storytelling",
+    "Link": "https://www.napkin.ai/",
+    "URL": "https://www.napkin.ai/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://www.napkin.ai/",
+    "Desc": "Napkin AI is a visual AI tool that transforms text into a variety of engaging visuals like infographics, diagrams, and charts. It streamlines business storytelling by enabling users to quickly and effectively communicate ideas visually."
+  },
+  {
+    "ID": "175",
+    "Medientyp": "Tools",
+    "Name": "MovieLens: Personalized Movie Recommendations",
+    "Link": "https://movielens.org/",
+    "URL": "https://movielens.org/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://movielens.org/",
+    "Desc": "MovieLens is a non-commercial platform that provides personalized movie recommendations, allowing users to rate films and build custom taste profiles. Run by a research lab, it also offers rich movie data and advanced search tools, contributing to the development of new recommendation technologies."
+  },
+  {
+    "ID": "176",
+    "Medientyp": "Tools",
+    "Name": "Gemini 3D Co-Drawing: AI-Powered 3D Object Drawing",
+    "Link": "https://huggingface.co/spaces/Trudy/gemini-3d-drawing",
+    "URL": "https://huggingface.co/spaces/Trudy/gemini-3d-drawing",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://huggingface.co/spaces/Trudy/gemini-3d-drawing",
+    "Desc": "This Hugging Face Space provides an AI-powered co-drawing tool, leveraging Gemini, for creating 3D objects."
+  },
+  {
+    "ID": "177",
+    "Medientyp": "Tools",
+    "Name": "Voxtral: Reliable Audio Transcription",
+    "Link": "https://huggingface.co/spaces/MohamedRashad/Voxtral",
+    "URL": "https://huggingface.co/spaces/MohamedRashad/Voxtral",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://huggingface.co/spaces/MohamedRashad/Voxtral",
+    "Desc": "Voxtral is a Hugging Face Space designed for reliable audio transcription. It offers a dependable tool for accurately converting spoken content into text."
+  },
+  {
+    "ID": "178",
+    "Medientyp": "Tools",
+    "Name": "Flourish: Interactive Data Visualization & Storytelling Platform",
+    "Link": "https://flourish.studio/",
+    "URL": "https://flourish.studio/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://flourish.studio/",
+    "Desc": "Flourish is a powerful, no-code data visualization platform designed to help users create interactive charts, maps, and multimedia content. It enables the transformation of complex data into engaging, shareable stories and visuals without requiring any coding skills."
+  },
+  {
+    "ID": "179",
+    "Medientyp": "Tools / Karten",
+    "Name": "Chronas: Interactive Online History of Humanity",
+    "Link": "https://www.chronas.org/",
+    "URL": "https://www.chronas.org/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://www.chronas.org/",
+    "Desc": "Chronas is an interactive online platform dedicated to exploring the extensive history of humanity, inviting users to \"Enter History\" and discover the past."
+  },
+  {
+    "ID": "180",
+    "Medientyp": "Tools",
+    "Name": "Telescopius: Astronomy Tools & Astrophotography",
+    "Link": "https://telescopius.com/",
+    "URL": "https://telescopius.com/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://telescopius.com/",
+    "Desc": "Telescopius.com provides an astronomy tool primarily for simulating telescopes, also offering various resources for astrophotography."
+  },
+  {
+    "ID": "181",
+    "Medientyp": "Tools",
+    "Name": "Traceroute-Online: Visual Network Path Mapping",
+    "Link": "https://traceroute-online.com/",
+    "URL": "https://traceroute-online.com/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://traceroute-online.com/",
+    "Desc": "Traceroute-Online.com offers an advanced visual traceroute tool that maps network paths on a world map, enriching the output with ASN and geolocation data for comprehensive network connectivity analysis from a remote server."
+  },
+  {
+    "ID": "185",
+    "Medientyp": "Tools",
+    "Name": "FLUX Playground: AI Image Editor",
+    "Link": "https://playground.bfl.ai/image/edit",
+    "URL": "https://playground.bfl.ai/image/edit",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://playground.bfl.ai/image/edit",
+    "Desc": "FLUX Playground is an AI-powered online tool enabling users to edit and transform images using text instructions. It offers diverse functionalities, from basic adjustments like relighting and object removal to creative presets such as cartooning and style transformations."
+  },
+  {
+    "ID": "186",
+    "Medientyp": "Sonstiges",
+    "Name": "Hex Clock: Current Time as Dark Hex Colors",
+    "Link": "https://www.jacopocolo.com/hexclock/",
+    "URL": "https://www.jacopocolo.com/hexclock/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://www.jacopocolo.com/hexclock/",
+    "Desc": "Explore a unique digital clock that converts the current time into a precise hexadecimal color, progressing through a specific 24-hour spectrum. This hex clock represents each moment as a distinct color code, often within a dark range."
+  },
+  {
+    "ID": "187",
+    "Medientyp": "Tools / Simulation",
+    "Name": "The World Wide Web Project: Original CERN Documentation",
+    "Link": "https://line-mode.cern.ch/www/hypertext/WWW/TheProject.html",
+    "URL": "https://line-mode.cern.ch/www/hypertext/WWW/TheProject.html",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://line-mode.cern.ch/www/hypertext/WWW/TheProject.html",
+    "Desc": "This page provides access to the foundational documentation of the original World Wide Web project from CERN, presented as part of a historical recreation of its early form. It outlines the project's ambitious goal of universal information access, its history, technical details, and software components."
+  },
+  {
+    "ID": "188",
+    "Medientyp": "Tools / Simulation",
+    "Name": "OneZoom: Interactive Tree of Life Explorer",
+    "Link": "https://www.onezoom.org/life/@biota=93302?otthome=%40biota%3D93302#x668,y1087,w1.4303",
+    "URL": "https://www.onezoom.org/life/@biota=93302?otthome=%40biota%3D93302#x668,y1087,w1.4303",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://www.onezoom.org/life/@biota=93302?otthome=%40biota%3D93302#x668,y1087,w1.4303",
+    "Desc": "Explore an interactive 'Tree of Life' that visually maps the evolutionary relationships and immense diversity of all known species on Earth. This comprehensive explorer allows users to navigate through the vast biological classification, from microscopic life forms to complex organisms."
+  },
+  {
+    "ID": "189",
+    "Medientyp": "3D-Tool",
+    "Name": "Free Online STL Viewer",
+    "Link": "https://stl-viewer.dualbox.com/",
+    "URL": "https://stl-viewer.dualbox.com/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://stl-viewer.dualbox.com/",
+    "Desc": "This is a free, feature-rich online STL viewer designed for conveniently rendering and exploring 3D models directly in your web browser."
+  },
+  {
+    "ID": "190",
+    "Medientyp": "Karten / Daten",
+    "Name": "EOS LandViewer: Latest Satellite Imagery",
+    "Link": "https://eos.com/landviewer/",
+    "URL": "https://eos.com/landviewer/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://eos.com/landviewer/",
+    "Desc": "EOS LandViewer provides a portal to access the latest and most up-to-date satellite imagery in near real-time. This service offers current views of Earth from space."
+  },
+  {
+    "ID": "191",
+    "Medientyp": "Tools/Simulation",
+    "Name": "YouTube Atlas: Interactive Map of Channel Networks",
+    "Link": "https://youtubeatlas.com/",
+    "URL": "https://youtubeatlas.com/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://youtubeatlas.com/",
+    "Desc": "YouTube Atlas offers an interactive visualization mapping all YouTube channels and their connections. It allows users to explore the intricate network and relationships between different channels."
+  },
+  {
+    "ID": "192",
+    "Medientyp": "Tools/Daten",
+    "Name": "Google's Experimental AI Learning Tool: Explore Artificial Intelligence",
+    "Link": "https://learning.google.com/experiments/learn-about/signup",
+    "URL": "https://learning.google.com/experiments/learn-about/signup",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://learning.google.com/experiments/learn-about/signup",
+    "Desc": "Sign up for Google's experimental AI learning tool on this page, designed to help users explore and understand artificial intelligence."
+  },
+  {
+    "ID": "193",
+    "Medientyp": "Tools",
+    "Name": "LinkReceipt: Easy Link Tracking",
+    "Link": "https://linkreceipt.com/",
+    "URL": "https://linkreceipt.com/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://linkreceipt.com/",
+    "Desc": "LinkReceipt.com provides a simple, secure service that allows users to track if and when a shared link has been opened, offering insights into content engagement. This easy-to-use platform requires no sign-up or login."
+  },
+  {
+    "ID": "194",
+    "Medientyp": "Sammlung",
+    "Name": "Cheatography: Free Cheat Sheets & Quick References",
+    "Link": "https://cheatography.com/",
+    "URL": "https://cheatography.com/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://cheatography.com/",
+    "Desc": "Cheatography.com provides a vast collection of over 6,000 free cheat sheets, revision aids, and quick references across diverse subjects like programming, software, business, and education. Users can download these concise guides or create and share their own for various topics."
+  },
+  {
+    "ID": "195",
+    "Medientyp": "Tools",
+    "Name": "Google Labs FX: AI Tools for Creative Media",
+    "Link": "https://labs.google/fx",
+    "URL": "https://labs.google/fx",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://labs.google/fx",
+    "Desc": "Google Labs FX provides a suite of AI-powered tools designed to help users create and transform content, including generating videos, transforming text into images, and bringing new musical ideas to life."
+  },
+  {
+    "ID": "196",
+    "Medientyp": "3D-Tool",
+    "Name": "Experiments Hub: Innovative 3D Web UI Examples",
+    "Link": "https://atlab.io/",
+    "URL": "https://atlab.io/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://atlab.io/",
+    "Desc": "This \"Experiments Hub\" showcases a collection of extraordinary and innovative 3D Web user interface examples."
+  },
+  {
+    "ID": "197",
+    "Medientyp": "Tools/Simulation",
+    "Name": "Online WebGL Fractal Explorer",
+    "Link": "https://script-schmiede.de/labs/fractals/r3/",
+    "URL": "https://script-schmiede.de/labs/fractals/r3/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://script-schmiede.de/labs/fractals/r3/",
+    "Desc": "This online WebGL and JavaScript renderer allows users to interactively explore various fractals. Features include clicking to center, mouse wheel zooming, and a fullscreen option, all designed for modern browsers."
+  },
+  {
+    "ID": "198",
+    "Medientyp": "Tools",
+    "Name": "BuildCores: 3D PC Builder & Part Picker",
+    "Link": "https://www.buildcores.com/",
+    "URL": "https://www.buildcores.com/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://www.buildcores.com/",
+    "Desc": "BuildCores offers an online 3D PC builder and part picker, enabling users to configure and visualize their custom computer setups."
+  },
+  {
+    "ID": "199",
+    "Medientyp": "Tools",
+    "Name": "Google Illuminate: AI-Powered Audio for Personalized Learning",
+    "Link": "https://illuminate.google.com/",
+    "URL": "https://illuminate.google.com/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://illuminate.google.com/",
+    "Desc": "Google's Illuminate allows users to create realistic AI-powered audio discussions from their own data, providing a personalized way to learn or engage with content."
+  },
+  {
+    "ID": "200",
+    "Medientyp": "Tools",
+    "Name": "Google NotebookLM: AI Assistant for Your Content",
+    "Link": "https://notebooklm.google.com/",
+    "URL": "https://notebooklm.google.com/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://notebooklm.google.com/",
+    "Desc": "NotebookLM is Google's AI chatbot designed to help you interact with your own uploaded documents and information. This tool allows users to gain intelligent insights, summaries, and answers directly from their specific content."
+  },
+  {
+    "ID": "201",
+    "Medientyp": "Tools",
+    "Name": "Magic Resume: AI-Driven Resume Editor",
+    "Link": "https://magicv.art/en",
+    "URL": "https://magicv.art/en",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://magicv.art/en",
+    "Desc": "Magic Resume is a free, AI-driven online editor designed to help users quickly create professional resumes. It offers smart grammar checks, professional suggestions, and secure local data storage, emphasizing user privacy and ease of use."
+  },
+  {
+    "ID": "202",
+    "Medientyp": "Tools",
+    "Name": "GenType: AI-Powered Custom Alphabet Generator",
+    "Link": "https://labs.google/gentype",
+    "URL": "https://labs.google/gentype",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://labs.google/gentype",
+    "Desc": "GenType is a Google Labs experiment that leverages artificial intelligence to generate unique alphabets, allowing users to create letters from virtually any concept or object."
+  },
+  {
+    "ID": "203",
+    "Medientyp": "Tools",
+    "Name": "BestSimilar.com: Find Similar Movies & TV Shows",
+    "Link": "https://bestsimilar.com/",
+    "URL": "https://bestsimilar.com/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://bestsimilar.com/",
+    "Desc": "BestSimilar.com is a recommendation service designed to help you discover new movies and TV shows by finding similar titles based on your preferences or by exploring various themes. It provides curated lists and suggestions to assist in choosing your next watch."
+  },
+  {
+    "ID": "204",
+    "Medientyp": "Tools",
+    "Name": "Firebase Studio: The Full-Stack AI Workspace",
+    "Link": "https://studio.firebase.google.com/",
+    "URL": "https://studio.firebase.google.com/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://studio.firebase.google.com/",
+    "Desc": "Firebase Studio is an AI-powered workspace designed to accelerate the full-stack development lifecycle, enabling users to build backends, front ends, and mobile applications with comprehensive AI assistance. It streamlines the creation of various apps, including AI-driven ones, by leveraging AI agents like Gemini for coding, debugging, and testing."
+  },
+  {
+    "ID": "205",
+    "Medientyp": "3D-Tool",
+    "Name": "BioDigital: Interactive 3D Anatomy & Disease Platform",
+    "Link": "https://www.biodigital.com/",
+    "URL": "https://www.biodigital.com/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://www.biodigital.com/",
+    "Desc": "BioDigital offers an interactive 3D software platform that provides comprehensive visualizations of human anatomy, diseases, and treatments, making complex health information engaging and easy to understand."
+  },
+  {
+    "ID": "206",
+    "Medientyp": "Tools / Simulation",
+    "Name": "Interactive Solar System Explorer",
+    "Link": "https://www.solarsystemscope.com/",
+    "URL": "https://www.solarsystemscope.com/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://www.solarsystemscope.com/",
+    "Desc": "This website offers an interactive exploration of the solar system, allowing users to visualize and learn about celestial bodies and their movements."
+  },
+  {
+    "ID": "207",
+    "Medientyp": "Sammlung",
+    "Name": "Solar System 3D Texture Collection",
+    "Link": "https://www.solarsystemscope.com/textures",
+    "URL": "https://www.solarsystemscope.com/textures",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://www.solarsystemscope.com/textures",
+    "Desc": "Discover a vast collection of high-resolution 3D textures for planets, moons, and other celestial bodies throughout our Solar System."
+  },
+  {
+    "ID": "208",
+    "Medientyp": "Tools",
+    "Name": "Imaginary Teleprompter: Free Professional Online Solution",
+    "Link": "https://imaginarysense.github.io/Imaginary-Teleprompter/",
+    "URL": "https://imaginarysense.github.io/Imaginary-Teleprompter/",
+    "ImageURL": "https://image.thum.io/get/width/900/wait/8/crop/900/https://imaginarysense.github.io/Imaginary-Teleprompter/",
+    "Desc": "This online teleprompter provides a free and professional solution with extensive customization for text display, speed, and orientation. It's designed for diverse setups, supporting rich text editing, multi-screen use, and local data management."
+  }
+]
