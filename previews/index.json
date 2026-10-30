@@ -1,0 +1,1766 @@
+{
+ "3d-contentcentral": {
+  "failed": "page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.3dcontentcentral.com/",
+  "icon": true
+ },
+ "3d-house-planner": {
+  "v": "9f6bda83",
+  "icon": true
+ },
+ "3d-warehouse": {
+  "v": "ecfff98b",
+  "icon": true
+ },
+ "3dlogolab": {
+  "v": "c45e6d00",
+  "icon": true
+ },
+ "3jcn-physics": {
+  "v": "07591edf",
+  "icon": true
+ },
+ "adsb-exchange": {
+  "v": "b780618a",
+  "icon": true
+ },
+ "ahmia": {
+  "v": "eeb62343",
+  "icon": false
+ },
+ "ai-explorables": {
+  "v": "38fec372",
+  "icon": true
+ },
+ "allsky": {
+  "v": "5fadffdd",
+  "icon": true
+ },
+ "alphafold-db": {
+  "v": "0efec29d",
+  "icon": true
+ },
+ "animista": {
+  "v": "5a8733b4",
+  "icon": true
+ },
+ "antigravity": {
+  "v": "2e4b6930",
+  "icon": true
+ },
+ "apod": {
+  "v": "238ea22c",
+  "icon": true
+ },
+ "apogee": {
+  "v": "c928c584",
+  "icon": true
+ },
+ "apollo-in-real-time": {
+  "v": "d247e08e",
+  "icon": true
+ },
+ "archive-today": {
+  "failed": "HTTP 429",
+  "icon": true
+ },
+ "ark-starmap": {
+  "v": "d3c20da6",
+  "icon": true
+ },
+ "artemis-ii-arow": {
+  "v": "94df5031",
+  "icon": true
+ },
+ "artemis-ii-timeline": {
+  "v": "d4bca264",
+  "icon": false
+ },
+ "artemis-lunar-flyby": {
+  "v": "640b8920",
+  "icon": true
+ },
+ "artemispics": {
+  "v": "936acb84",
+  "icon": true
+ },
+ "ascii-banner": {
+  "v": "98b63a5c",
+  "icon": true
+ },
+ "astroapps": {
+  "v": "0b451af6",
+  "icon": false
+ },
+ "astrocelerate": {
+  "v": "f6c88a34",
+  "icon": true
+ },
+ "astrodmx": {
+  "v": "3d625d18",
+  "icon": true
+ },
+ "astrometry-net": {
+  "v": "94126e0c",
+  "icon": false
+ },
+ "astronaut-photography": {
+  "v": "fbbcc9ab",
+  "icon": true
+ },
+ "audio-function-generator": {
+  "v": "9cc8220b",
+  "icon": false
+ },
+ "awesome": {
+  "v": "b61212d1",
+  "icon": true
+ },
+ "awesome-design-tools": {
+  "v": "f59cb3ac",
+  "icon": true
+ },
+ "awesome-electronics": {
+  "v": "797d98f2",
+  "icon": true
+ },
+ "bahn-expert": {
+  "v": "cfd35799",
+  "icon": true
+ },
+ "bbc-sound-effects": {
+  "v": "f191a066",
+  "icon": true
+ },
+ "bestsimilar": {
+  "v": "c4af7494",
+  "icon": true
+ },
+ "bezier-game": {
+  "v": "b709c758",
+  "icon": true
+ },
+ "bgp-he": {
+  "v": "682487e2",
+  "icon": true
+ },
+ "bgp-tools": {
+  "v": "990723fb",
+  "icon": true
+ },
+ "billiards": {
+  "v": "cf8d4e09",
+  "icon": true
+ },
+ "bing-image-creator": {
+  "v": "481687ce",
+  "icon": true
+ },
+ "biodigital": {
+  "v": "a32b3910",
+  "icon": true
+ },
+ "biodiversity-mapping": {
+  "v": "a47a87b9",
+  "icon": true
+ },
+ "birthday-paradox": {
+  "v": "837cf1d2",
+  "icon": true
+ },
+ "bkg-applications": {
+  "failed": "HTTP 403",
+  "icon": true
+ },
+ "blackbody": {
+  "v": "05fa4814",
+  "icon": true
+ },
+ "bleibzuhause": {
+  "v": "a36692e6",
+  "icon": true
+ },
+ "blitzortung": {
+  "v": "0275dfa2",
+  "icon": true
+ },
+ "bloch-sphere-simulator": {
+  "v": "f1d013d6",
+  "icon": false
+ },
+ "bnetza-data-portal": {
+  "v": "a0363b61",
+  "icon": true
+ },
+ "bnetza-emf": {
+  "v": "eea690ab",
+  "icon": true
+ },
+ "bodima": {
+  "v": "652ae1f7",
+  "icon": true
+ },
+ "boing": {
+  "v": "34d6157b",
+  "icon": true
+ },
+ "browserleaks": {
+  "v": "78b174ff",
+  "icon": true
+ },
+ "bug-bounty-search": {
+  "v": "942ee46c",
+  "icon": false
+ },
+ "buildcores": {
+  "v": "a410790d",
+  "icon": true
+ },
+ "calligrapher-ai": {
+  "v": "0470399f",
+  "icon": false
+ },
+ "canvas-ui": {
+  "v": "24987011",
+  "icon": true
+ },
+ "carbon": {
+  "v": "0f7c18a8",
+  "icon": true
+ },
+ "censys": {
+  "failed": "HTTP 403",
+  "icon": true
+ },
+ "cern-vistars": {
+  "v": "1c63764b",
+  "icon": true
+ },
+ "chalkist": {
+  "v": "e9c4fda0",
+  "icon": true
+ },
+ "cheatography": {
+  "v": "5c071233",
+  "icon": true
+ },
+ "chemspeller": {
+  "v": "21d331a9",
+  "icon": false
+ },
+ "chrome-icon-generator": {
+  "v": "1753dc7c",
+  "icon": false
+ },
+ "chrome-music-lab": {
+  "v": "d6dbb258",
+  "icon": true
+ },
+ "chronas": {
+  "v": "e6cf187b",
+  "icon": true
+ },
+ "circuitlab": {
+  "v": "946c2afc",
+  "icon": true
+ },
+ "clear-outside": {
+  "v": "bccdc98a",
+  "icon": true
+ },
+ "climate-explorer": {
+  "v": "25101413",
+  "icon": true
+ },
+ "climate-from-space": {
+  "v": "5d4a6c12",
+  "icon": true
+ },
+ "cloudflare-speed": {
+  "v": "4f652103",
+  "icon": true
+ },
+ "cloudhiker": {
+  "v": "6c859bfb",
+  "icon": true
+ },
+ "collimation-checker": {
+  "v": "e6b5ec7e",
+  "icon": true
+ },
+ "colorable": {
+  "v": "c56d04bd",
+  "icon": true
+ },
+ "comparador-pnoa": {
+  "v": "32e20bef",
+  "icon": true
+ },
+ "connectorbook": {
+  "v": "2d97c807",
+  "icon": true
+ },
+ "coolors": {
+  "failed": "HTTP 403",
+  "icon": true
+ },
+ "copernicus-browser": {
+  "failed": "blank page",
+  "icon": false
+ },
+ "correct-the-map": {
+  "v": "f478a615",
+  "icon": false
+ },
+ "creatorchords": {
+  "v": "f49b2480",
+  "icon": true
+ },
+ "cryptome": {
+  "v": "4c54baff",
+  "icon": true
+ },
+ "css-loaders": {
+  "v": "df023c69",
+  "icon": true
+ },
+ "css-tricks": {
+  "v": "d718d4c7",
+  "icon": true
+ },
+ "cutlist-optimizer": {
+  "v": "68d3f872",
+  "icon": true
+ },
+ "cyberchef": {
+  "v": "a6d2253f",
+  "icon": false
+ },
+ "cyclosm": {
+  "v": "bf6574e3",
+  "icon": true
+ },
+ "darmstadt-3d": {
+  "v": "917dbdc0",
+  "icon": true
+ },
+ "data-commons": {
+  "v": "6fd49cbf",
+  "icon": true
+ },
+ "dataset-search": {
+  "v": "3733f966",
+  "icon": true
+ },
+ "david-rumsey": {
+  "v": "9fc601a4",
+  "icon": true
+ },
+ "de-cix-stats": {
+  "v": "a332d268",
+  "icon": true
+ },
+ "depth-anything-3": {
+  "v": "4ab8c887",
+  "icon": false
+ },
+ "desert-ant-labs": {
+  "v": "4261a723",
+  "icon": true
+ },
+ "deutsches-museum-digital": {
+  "v": "eb5e988f",
+  "icon": true
+ },
+ "developer-portfolios": {
+  "v": "814e56a9",
+  "icon": true
+ },
+ "dialed-shape": {
+  "v": "7b7f66b1",
+  "icon": true
+ },
+ "diercke-klimagraph": {
+  "v": "9e4c6c4d",
+  "icon": false
+ },
+ "diffchecker-images": {
+  "v": "2019a294",
+  "icon": true
+ },
+ "digitalplat": {
+  "v": "f9bbeb91",
+  "icon": true
+ },
+ "discover-esa": {
+  "v": "92369b19",
+  "icon": true
+ },
+ "dns-speed-test": {
+  "v": "e94ac691",
+  "icon": true
+ },
+ "dnsviz": {
+  "v": "8554ca3b",
+  "icon": false
+ },
+ "dop-viewer": {
+  "failed": "HTTP 400",
+  "icon": true
+ },
+ "double-pendulum": {
+  "v": "6b9cf9d9",
+  "icon": false
+ },
+ "dsn-now": {
+  "v": "a99e564d",
+  "icon": true
+ },
+ "duome": {
+  "failed": "page.goto: Timeout 25000ms exceeded.",
+  "icon": true
+ },
+ "dwd-geoserver": {
+  "v": "fee8d5bb",
+  "icon": false
+ },
+ "dwsim": {
+  "v": "49b0fa22",
+  "icon": false
+ },
+ "earth-engine-apps": {
+  "v": "3e6248fc",
+  "icon": true
+ },
+ "earth-engine-catalog": {
+  "v": "38544b8a",
+  "icon": true
+ },
+ "earth-nullschool": {
+  "v": "3f95f363",
+  "icon": true
+ },
+ "earthdata-search": {
+  "v": "762ef474",
+  "icon": true
+ },
+ "earthexplorer": {
+  "v": "7e5dc0d2",
+  "icon": true
+ },
+ "earthviewer": {
+  "v": "46323de2",
+  "icon": true
+ },
+ "echa-chemicals": {
+  "failed": "HTTP 403",
+  "icon": true
+ },
+ "ecoexplorer": {
+  "v": "4ef2d7f8",
+  "icon": true
+ },
+ "eea-search": {
+  "v": "45c23746",
+  "icon": true
+ },
+ "effectual-learning": {
+  "v": "04c7f833",
+  "icon": false
+ },
+ "einstein-online": {
+  "v": "45654dfc",
+  "icon": false
+ },
+ "embedding-projector": {
+  "v": "9be9563b",
+  "icon": true
+ },
+ "en-roads": {
+  "v": "564aeddf",
+  "icon": true
+ },
+ "enisa-tools": {
+  "v": "2433aa52",
+  "icon": true
+ },
+ "environmental-insights": {
+  "v": "c8882dde",
+  "icon": true
+ },
+ "eo-browser": {
+  "v": "0d35979d",
+  "icon": true
+ },
+ "eos-landviewer": {
+  "v": "433c4727",
+  "icon": true
+ },
+ "epoch-ai-data-centers": {
+  "v": "a05894ea",
+  "icon": true
+ },
+ "esa-eo-catalogue": {
+  "failed": "page.goto: Timeout 25000ms exceeded.",
+  "icon": false
+ },
+ "esa-eo-tools": {
+  "v": "d38534a9",
+  "icon": true
+ },
+ "esa-hubble-videos": {
+  "v": "fbd5990d",
+  "icon": true
+ },
+ "esasky": {
+  "v": "28332613",
+  "icon": true
+ },
+ "evdc-orbit-tool": {
+  "v": "bf43b0d9",
+  "icon": true
+ },
+ "every-second": {
+  "v": "b8a4eb4e",
+  "icon": true
+ },
+ "everycircuit": {
+  "v": "62ff836c",
+  "icon": true
+ },
+ "experimentieren-online": {
+  "v": "7c4a6e8a",
+  "icon": true
+ },
+ "experiments-hub": {
+  "v": "be4ce0df",
+  "icon": false
+ },
+ "explorable-explanations-physics": {
+  "v": "a515ee45",
+  "icon": true
+ },
+ "eyes-mars-2020": {
+  "failed": "page.screenshot: Timeout 30000ms exceeded.",
+  "icon": true
+ },
+ "eyes-mars-relay": {
+  "v": "2bd2e900",
+  "icon": true
+ },
+ "eyes-on-asteroids": {
+  "v": "b478fc24",
+  "icon": true
+ },
+ "eyes-on-exoplanets": {
+  "v": "8f4d68a5",
+  "icon": true
+ },
+ "eyes-on-the-earth": {
+  "v": "4ee6ca77",
+  "icon": true
+ },
+ "eyes-on-the-solar-system": {
+  "v": "6dd4e9ec",
+  "icon": true
+ },
+ "ezscreenshots": {
+  "v": "d03b67e6",
+  "icon": true
+ },
+ "f-stop": {
+  "v": "f07773ba",
+  "icon": false
+ },
+ "falstad": {
+  "v": "7b43c600",
+  "icon": true
+ },
+ "fdroid-metrics": {
+  "v": "f303a77c",
+  "icon": false
+ },
+ "fedeo-client": {
+  "v": "da707a9a",
+  "icon": false
+ },
+ "fellipe": {
+  "v": "4dd5bf75",
+  "icon": true
+ },
+ "firebase-studio": {
+  "v": "0a43d976",
+  "icon": true
+ },
+ "fishing-the-feed": {
+  "v": "a7d2cf2f",
+  "icon": true
+ },
+ "flight-club": {
+  "v": "a7d18ac7",
+  "icon": true
+ },
+ "flood-hub": {
+  "v": "51cbda12",
+  "icon": true
+ },
+ "flourish": {
+  "v": "97b1fefc",
+  "icon": true
+ },
+ "flowingdata": {
+  "v": "9f732411",
+  "icon": true
+ },
+ "flux-playground": {
+  "failed": "HTTP 429",
+  "icon": true
+ },
+ "fogcam": {
+  "v": "f12d7722",
+  "icon": false
+ },
+ "forensically": {
+  "v": "08d9aeed",
+  "icon": true
+ },
+ "forever-components": {
+  "v": "73c73c7e",
+  "icon": true
+ },
+ "fotoforensics": {
+  "failed": "HTTP 403",
+  "icon": true
+ },
+ "fourier-series-visualizer": {
+  "v": "6149ca04",
+  "icon": false
+ },
+ "fourier-transforms": {
+  "v": "c2c45250",
+  "icon": true
+ },
+ "fractal-lab": {
+  "v": "d7364e38",
+  "icon": true
+ },
+ "frankfurt-cockpit": {
+  "v": "2ef28b4c",
+  "icon": true
+ },
+ "free-music-archive": {
+  "v": "8dfa0ca7",
+  "icon": true
+ },
+ "freefrontend": {
+  "v": "98e6ed29",
+  "icon": true
+ },
+ "gaia-sky": {
+  "v": "8f5cbfa2",
+  "icon": true
+ },
+ "gandalf": {
+  "v": "f9eb98b1",
+  "icon": true
+ },
+ "gapminder-tools": {
+  "v": "4552ed3e",
+  "icon": true
+ },
+ "gear-generator": {
+  "failed": "page.goto: Timeout 25000ms exceeded.",
+  "icon": false
+ },
+ "gemini-3d-drawing": {
+  "v": "0c35542e",
+  "icon": true
+ },
+ "gemini-notebook": {
+  "v": "048f44c7",
+  "icon": true
+ },
+ "generative-manim": {
+  "v": "aa12095b",
+  "icon": false
+ },
+ "gentype": {
+  "v": "f52cd968",
+  "icon": true
+ },
+ "geoportal-frankfurt": {
+  "v": "773b72ee",
+  "icon": true
+ },
+ "geoportal-hessen": {
+  "v": "77e57049",
+  "icon": true
+ },
+ "geops-mobility": {
+  "v": "31cf57ed",
+  "icon": true
+ },
+ "geotraceroute": {
+  "v": "ff1585bf",
+  "icon": false
+ },
+ "geschichtsspuren": {
+  "v": "41005458",
+  "icon": true
+ },
+ "global-forest-change": {
+  "failed": "blank page",
+  "icon": true
+ },
+ "gnrailnav": {
+  "v": "5b6196c6",
+  "icon": true
+ },
+ "goce-swarm-explorer": {
+  "failed": "blank page",
+  "icon": false
+ },
+ "google-ai-studio": {
+  "v": "923e9882",
+  "icon": true
+ },
+ "google-colab": {
+  "v": "423a03b4",
+  "icon": true
+ },
+ "google-fonts": {
+  "v": "36e555b7",
+  "icon": true
+ },
+ "google-illuminate": {
+  "v": "c9f55226",
+  "icon": false
+ },
+ "google-labs": {
+  "v": "88045974",
+  "icon": true
+ },
+ "google-labs-fx": {
+  "v": "580e7b24",
+  "icon": true
+ },
+ "google-language-explorer": {
+  "failed": "blank page",
+  "icon": true
+ },
+ "google-maps-space": {
+  "v": "2cc112fd",
+  "icon": true
+ },
+ "google-trends": {
+  "v": "6dca2dc8",
+  "icon": true
+ },
+ "google-trends-tv": {
+  "v": "f98c0752",
+  "icon": true
+ },
+ "gps-tools": {
+  "v": "0e628276",
+  "icon": true
+ },
+ "graph-game": {
+  "v": "81d031c1",
+  "icon": true
+ },
+ "gravity-simulator": {
+  "v": "0c77482e",
+  "icon": true
+ },
+ "green-screen": {
+  "v": "e71a0f96",
+  "icon": true
+ },
+ "gssc-gnss-data": {
+  "v": "a7ae0d25",
+  "icon": true
+ },
+ "heavens-above": {
+  "v": "6ff7cc06",
+  "icon": true
+ },
+ "hedavi-explorer": {
+  "failed": "blank page",
+  "icon": true
+ },
+ "hex-clock": {
+  "v": "205d8e79",
+  "icon": false
+ },
+ "heywhatsthat": {
+  "v": "ec6f3158",
+  "icon": true
+ },
+ "histography": {
+  "v": "a2e2ed0a",
+  "icon": true
+ },
+ "hlnug-messdaten": {
+  "v": "afbd6a7e",
+  "icon": true
+ },
+ "hover-css": {
+  "v": "84dc8a2f",
+  "icon": false
+ },
+ "html-generators": {
+  "v": "8e951c5a",
+  "icon": true
+ },
+ "hubble": {
+  "v": "b51c1255",
+  "icon": true
+ },
+ "igs-network": {
+  "v": "07b8753d",
+  "icon": true
+ },
+ "ilograph": {
+  "v": "b7ef1149",
+  "icon": true
+ },
+ "image-glitcher": {
+  "v": "d83cd481",
+  "icon": true
+ },
+ "imaginary-teleprompter": {
+  "v": "8a6590a7",
+  "icon": false
+ },
+ "imis-geoportal": {
+  "v": "3ec264b4",
+  "icon": true
+ },
+ "infinite-mac": {
+  "v": "9cc67f1b",
+  "icon": true
+ },
+ "information-is-beautiful": {
+  "v": "106b2456",
+  "icon": true
+ },
+ "interactive-ml-list": {
+  "v": "837c9ee1",
+  "icon": true
+ },
+ "internet-map": {
+  "v": "ec12e9b3",
+  "icon": true
+ },
+ "internet-traffic-report": {
+  "v": "27645f13",
+  "icon": false
+ },
+ "interstellar-arpeggiator": {
+  "v": "ffb9fcfd",
+  "icon": true
+ },
+ "interstellar-wormhole": {
+  "v": "c5195d6e",
+  "icon": false
+ },
+ "ipvoid": {
+  "failed": "page.screenshot: Protocol error (Page.captureScreenshot): Unable to capture screenshot",
+  "icon": true
+ },
+ "iqair": {
+  "failed": "HTTP 429",
+  "icon": true
+ },
+ "iss-live": {
+  "v": "12af0bdb",
+  "icon": true
+ },
+ "iss-mimic": {
+  "v": "0ecbb64f",
+  "icon": false
+ },
+ "just-for-fun": {
+  "v": "7e7ad9b6",
+  "icon": true
+ },
+ "kaggle-datasets": {
+  "v": "b438d629",
+  "icon": true
+ },
+ "kaspersky-cybermap": {
+  "v": "286d1e49",
+  "icon": true
+ },
+ "kepler-gl": {
+  "v": "8eff1418",
+  "icon": true
+ },
+ "koalas-to-the-max": {
+  "v": "f0205227",
+  "icon": true
+ },
+ "language-map-world": {
+  "v": "9eec1ba4",
+  "icon": true
+ },
+ "languagemap-vercel": {
+  "v": "8dcd727e",
+  "icon": true
+ },
+ "laser-labs": {
+  "v": "624ac069",
+  "icon": true
+ },
+ "learn-about": {
+  "v": "2aab2120",
+  "icon": true
+ },
+ "leolabs": {
+  "v": "877224cb",
+  "icon": false
+ },
+ "library-of-babel": {
+  "v": "5e348b32",
+  "icon": true
+ },
+ "library-of-time": {
+  "v": "29dbba94",
+  "icon": false
+ },
+ "light-pollution-map": {
+  "v": "ce1e8cc0",
+  "icon": true
+ },
+ "lightningmaps": {
+  "v": "ef230445",
+  "icon": true
+ },
+ "lightyear-fm": {
+  "v": "ffcfe0b1",
+  "icon": true
+ },
+ "linkreceipt": {
+  "v": "0e8d42f8",
+  "icon": true
+ },
+ "liveatc": {
+  "failed": "HTTP 403",
+  "icon": true
+ },
+ "magic-resume": {
+  "v": "71283fcc",
+  "icon": true
+ },
+ "makecode-maker": {
+  "v": "59e8b599",
+  "icon": true
+ },
+ "mapchart": {
+  "v": "1e77fead",
+  "icon": true
+ },
+ "mapchecking": {
+  "v": "cb233c9f",
+  "icon": true
+ },
+ "mapcomplete-surveillance": {
+  "v": "e405f551",
+  "icon": true
+ },
+ "maplibre-data-viewer": {
+  "v": "73e5ad01",
+  "icon": false
+ },
+ "maputnik": {
+  "v": "cb7e3fbd",
+  "icon": true
+ },
+ "marginalia": {
+  "v": "820a21a7",
+  "icon": true
+ },
+ "marine-data-portal": {
+  "v": "8e64ee42",
+  "icon": true
+ },
+ "markdown-flow": {
+  "v": "69a1e04f",
+  "icon": false
+ },
+ "mathsisfun": {
+  "v": "47eb0f24",
+  "icon": true
+ },
+ "mathworld": {
+  "v": "b0493fd4",
+  "icon": true
+ },
+ "matter-js": {
+  "v": "ddda6b37",
+  "icon": false
+ },
+ "mccollough-effect": {
+  "v": "12e74160",
+  "icon": true
+ },
+ "medieval-city-generator": {
+  "v": "9d870260",
+  "icon": true
+ },
+ "meshtastic-site-planner": {
+  "v": "0bf28903",
+  "icon": true
+ },
+ "mindstudio": {
+  "v": "bb72504c",
+  "icon": true
+ },
+ "mixboard": {
+  "v": "4d23ead4",
+  "icon": true
+ },
+ "mlab-speed": {
+  "v": "79f31907",
+  "icon": true
+ },
+ "mobilithek": {
+  "v": "1d1a0180",
+  "icon": true
+ },
+ "molecular-workbench": {
+  "v": "fa652439",
+  "icon": true
+ },
+ "mondverlauf": {
+  "v": "06a7e274",
+  "icon": true
+ },
+ "monkeytype": {
+  "v": "15c307e8",
+  "icon": true
+ },
+ "mood2know": {
+  "v": "24aa0d01",
+  "icon": false
+ },
+ "moon-one-pixel": {
+  "v": "87c9a2ca",
+  "icon": true
+ },
+ "moon2stl": {
+  "v": "b4c92054",
+  "icon": false
+ },
+ "moonjs-agc": {
+  "v": "07dd5155",
+  "icon": false
+ },
+ "moral-machine": {
+  "v": "5152beb1",
+  "icon": true
+ },
+ "morse-learn": {
+  "v": "fd679435",
+  "icon": true
+ },
+ "mosaic-js": {
+  "v": "f19e2222",
+  "icon": true
+ },
+ "motionelements-free": {
+  "v": "750b28c5",
+  "icon": true
+ },
+ "movielens": {
+  "v": "76002fbf",
+  "icon": true
+ },
+ "myphysicslab": {
+  "v": "57f684f2",
+  "icon": true
+ },
+ "myshiptracking": {
+  "v": "dff44a40",
+  "icon": true
+ },
+ "n8n": {
+  "v": "33fbf71e",
+  "icon": true
+ },
+ "napkin-ai": {
+  "v": "5e4b5891",
+  "icon": true
+ },
+ "nasa-ads": {
+  "v": "f63b86ca",
+  "icon": true
+ },
+ "nasa-eclipse-2026": {
+  "v": "4723e2b8",
+  "icon": true
+ },
+ "nasa-exoplanets": {
+  "v": "bb538a0f",
+  "icon": true
+ },
+ "nasa-image-of-the-day": {
+  "v": "5497eb7e",
+  "icon": true
+ },
+ "nasa-open-data": {
+  "v": "7dfbd08e",
+  "icon": true
+ },
+ "nasa-svs": {
+  "v": "28abe2ed",
+  "icon": true
+ },
+ "nasa-worldview": {
+  "v": "e4b8cfdf",
+  "icon": true
+ },
+ "natural-earth": {
+  "v": "0be28172",
+  "icon": true
+ },
+ "neal-fun": {
+  "failed": "HTTP 403",
+  "icon": true
+ },
+ "nerd-fonts": {
+  "v": "dcda25ed",
+  "icon": true
+ },
+ "netzausbau-map": {
+  "v": "b1c9d600",
+  "icon": true
+ },
+ "neuroglancer": {
+  "v": "99b1b124",
+  "icon": false
+ },
+ "newt-web": {
+  "v": "c60913c3",
+  "icon": true
+ },
+ "ngram-viewer": {
+  "v": "e7036abc",
+  "icon": true
+ },
+ "nicky-case": {
+  "v": "aad5b55d",
+  "icon": true
+ },
+ "night-earth": {
+  "v": "1cbb0405",
+  "icon": true
+ },
+ "noaa-apt-decoder": {
+  "v": "43bae02a",
+  "icon": true
+ },
+ "noaa-data-access-viewer": {
+  "v": "22495327",
+  "icon": true
+ },
+ "nofacescan": {
+  "v": "949eb625",
+  "icon": true
+ },
+ "nova-labs": {
+  "v": "7b678648",
+  "icon": true
+ },
+ "nukemap": {
+  "v": "105f3896",
+  "icon": true
+ },
+ "oacapture": {
+  "v": "bf78cd62",
+  "icon": true
+ },
+ "odl-info": {
+  "v": "d97b2322",
+  "icon": true
+ },
+ "oepnvkarte": {
+  "v": "3656cc02",
+  "icon": true
+ },
+ "oklch": {
+  "v": "765f74f4",
+  "icon": true
+ },
+ "onezoom": {
+  "v": "ff59a08a",
+  "icon": true
+ },
+ "online-python": {
+  "v": "32bfddbf",
+  "icon": true
+ },
+ "ooni-explorer": {
+  "v": "acf309fb",
+  "icon": true
+ },
+ "open-infrastructure-map": {
+  "v": "e68736cf",
+  "icon": true
+ },
+ "openorienteeringmap": {
+  "v": "e637bef0",
+  "icon": true
+ },
+ "openrailwaymap": {
+  "v": "6f7c2153",
+  "icon": true
+ },
+ "openrocket": {
+  "v": "11c95dbb",
+  "icon": true
+ },
+ "openspeedtest": {
+  "v": "f60c888c",
+  "icon": true
+ },
+ "openstreetbrowser": {
+  "v": "bfc277f6",
+  "icon": true
+ },
+ "orbit-simulator": {
+  "v": "9dfed9bf",
+  "icon": false
+ },
+ "orbiter": {
+  "v": "70e48bba",
+  "icon": true
+ },
+ "orbiting-now": {
+  "v": "7764b45d",
+  "icon": true
+ },
+ "osm-buildings": {
+  "v": "fb4dd6c0",
+  "icon": true
+ },
+ "osmapp": {
+  "v": "cd4b0051",
+  "icon": true
+ },
+ "overpass-turbo": {
+  "v": "df4e5b5c",
+  "icon": true
+ },
+ "ovrley": {
+  "v": "29aec279",
+  "icon": true
+ },
+ "parol6": {
+  "v": "40ac54c0",
+  "icon": true
+ },
+ "parseltongue": {
+  "v": "f0a51ac9",
+  "icon": false
+ },
+ "part-db": {
+  "v": "1155d307",
+  "icon": true
+ },
+ "particify": {
+  "v": "7288de19",
+  "icon": true
+ },
+ "patatap": {
+  "v": "f198393c",
+  "icon": true
+ },
+ "people-in-space": {
+  "v": "83548e2e",
+  "icon": false
+ },
+ "phet": {
+  "v": "ce49d6a6",
+  "icon": true
+ },
+ "physik-im-advent": {
+  "v": "e490b0be",
+  "icon": true
+ },
+ "pi-delivery": {
+  "v": "20c3c4ce",
+  "icon": true
+ },
+ "pluto-time": {
+  "v": "107f5983",
+  "icon": true
+ },
+ "pomelli": {
+  "v": "b1ebe071",
+  "icon": true
+ },
+ "qrcode2stl": {
+  "v": "d9c39ddf",
+  "icon": false
+ },
+ "quantum-flytrap": {
+  "v": "9f0b05ff",
+  "icon": true
+ },
+ "quick-draw": {
+  "v": "9fc9d690",
+  "icon": true
+ },
+ "r74n": {
+  "v": "5512d4a8",
+  "icon": true
+ },
+ "railcation-tuesday": {
+  "v": "e996a5b7",
+  "icon": true
+ },
+ "ray-so": {
+  "v": "4e746969",
+  "icon": true
+ },
+ "rectify11": {
+  "v": "a7254acb",
+  "icon": true
+ },
+ "regex101": {
+  "v": "c9d4e9f9",
+  "icon": true
+ },
+ "remon": {
+  "v": "c64d88db",
+  "icon": true
+ },
+ "right-of-the-bell": {
+  "v": "8c0fa1ed",
+  "icon": true
+ },
+ "sankeydiagram": {
+  "v": "2a1471f9",
+  "icon": true
+ },
+ "satellite-archive-tool": {
+  "v": "5d9cd99d",
+  "icon": true
+ },
+ "satellite-tracker-lib": {
+  "v": "d4d965f0",
+  "icon": true
+ },
+ "satellitemap-space": {
+  "v": "c8e55417",
+  "icon": true
+ },
+ "scale-of-the-universe": {
+  "v": "6cc5a177",
+  "icon": true
+ },
+ "schrodinger-2d": {
+  "v": "1b1d7caf",
+  "icon": false
+ },
+ "scixplorer": {
+  "v": "849d0fd7",
+  "icon": true
+ },
+ "scott-buckley-music": {
+  "v": "4356a924",
+  "icon": true
+ },
+ "screenshot-studio": {
+  "v": "0375ea0a",
+  "icon": true
+ },
+ "shadowmap": {
+  "v": "10ee17ba",
+  "icon": true
+ },
+ "shodan": {
+  "failed": "HTTP 403",
+  "icon": true
+ },
+ "shodan-2000": {
+  "v": "92a02096",
+  "icon": true
+ },
+ "shopify-live-globe": {
+  "v": "a47142f8",
+  "icon": true
+ },
+ "show-me-the-way": {
+  "v": "fe9af675",
+  "icon": false
+ },
+ "sigrok": {
+  "v": "312dec54",
+  "icon": true
+ },
+ "simone-computer": {
+  "v": "bfe94988",
+  "icon": true
+ },
+ "sky-telescope-tools": {
+  "failed": "HTTP 403",
+  "icon": true
+ },
+ "skymap-galaxies": {
+  "v": "e4023af4",
+  "icon": true
+ },
+ "slower-speed-of-light": {
+  "v": "397efb0e",
+  "icon": true
+ },
+ "snazzy-maps": {
+  "v": "130505f8",
+  "icon": true
+ },
+ "socialify": {
+  "v": "1ae5f391",
+  "icon": true
+ },
+ "sofi-agorion": {
+  "v": "96bbf825",
+  "icon": false
+ },
+ "soho": {
+  "v": "2157d93b",
+  "icon": true
+ },
+ "solar-system-scope": {
+  "v": "939cef76",
+  "icon": true
+ },
+ "solar-system-textures": {
+  "v": "a41f49b1",
+  "icon": true
+ },
+ "space-3d": {
+  "failed": "HTTP 403",
+  "icon": false
+ },
+ "space-launch-hub": {
+  "v": "5278e2cd",
+  "icon": true
+ },
+ "spaceweatherlive": {
+  "v": "aef9f2a0",
+  "icon": true
+ },
+ "spulenomat": {
+  "v": "a0d3cb2b",
+  "icon": true
+ },
+ "srem-data-plotting": {
+  "failed": "page.goto: Timeout 25000ms exceeded.",
+  "icon": true
+ },
+ "statcounter": {
+  "v": "5653cf27",
+  "icon": true
+ },
+ "staying": {
+  "v": "f22f0691",
+  "icon": true
+ },
+ "stella-nova": {
+  "v": "3e665c98",
+  "icon": true
+ },
+ "stl-viewer": {
+  "v": "7587de87",
+  "icon": true
+ },
+ "stlgears": {
+  "v": "8fb5f00b",
+  "icon": true
+ },
+ "strecs3d": {
+  "v": "f6db3203",
+  "icon": true
+ },
+ "strml": {
+  "v": "3e8ddda7",
+  "icon": true
+ },
+ "sudo-aquarelle": {
+  "v": "618675d0",
+  "icon": false
+ },
+ "suno": {
+  "v": "12cc9486",
+  "icon": true
+ },
+ "swpc": {
+  "v": "17c16583",
+  "icon": true
+ },
+ "teachable-machine": {
+  "v": "2afdc660",
+  "icon": true
+ },
+ "teilchenwelt": {
+  "v": "c5620786",
+  "icon": true
+ },
+ "telescopius": {
+  "v": "de3de6dd",
+  "icon": true
+ },
+ "tensorflow-playground": {
+  "v": "a391eede",
+  "icon": true
+ },
+ "terrain2stl": {
+  "v": "4ac1d76e",
+  "icon": false
+ },
+ "testmy-net": {
+  "v": "0c28471e",
+  "icon": true
+ },
+ "textfx": {
+  "v": "17ce3bcc",
+  "icon": true
+ },
+ "the-analog-thing": {
+  "v": "b75622fc",
+  "icon": true
+ },
+ "the-egg": {
+  "v": "0e9cfdc6",
+  "icon": true
+ },
+ "the-noun-project": {
+  "v": "722ea63a",
+  "icon": true
+ },
+ "the-pudding": {
+  "v": "a2e0ae01",
+  "icon": true
+ },
+ "theme-generator": {
+  "failed": "HTTP 403",
+  "icon": true
+ },
+ "thru-de": {
+  "v": "a6aaff97",
+  "icon": false
+ },
+ "thuenen-landatlas": {
+  "v": "0f45de61",
+  "icon": false
+ },
+ "tone-generator": {
+  "v": "78c7a3b9",
+  "icon": false
+ },
+ "tone-transfer": {
+  "v": "dc23d9b8",
+  "icon": true
+ },
+ "topoexport": {
+  "v": "c9827c6e",
+  "icon": true
+ },
+ "touch-mapper": {
+  "v": "9d7c64ab",
+  "icon": true
+ },
+ "tourismusatlas": {
+  "v": "41188084",
+  "icon": false
+ },
+ "traceroute-online": {
+  "v": "f4b0095c",
+  "icon": false
+ },
+ "trassenfinder": {
+  "v": "da18bae1",
+  "icon": true
+ },
+ "travic": {
+  "v": "829ec175",
+  "icon": true
+ },
+ "typatone": {
+  "v": "f7443e73",
+  "icon": true
+ },
+ "uba-daten": {
+  "v": "efb0a8e7",
+  "icon": true
+ },
+ "uba-metadata": {
+  "v": "13778f77",
+  "icon": false
+ },
+ "uispace": {
+  "v": "44fd2636",
+  "icon": false
+ },
+ "unifi-design-center": {
+  "v": "809cfc29",
+  "icon": true
+ },
+ "universe-of-learning": {
+  "v": "26b5f4c5",
+  "icon": true
+ },
+ "universe-today": {
+  "v": "62be4ad9",
+  "icon": true
+ },
+ "uptrends-tools": {
+  "v": "9fef3e14",
+  "icon": true
+ },
+ "uradmonitor": {
+  "v": "af0004cb",
+  "icon": true
+ },
+ "usgs-data-releases": {
+  "failed": "page.goto: Timeout 25000ms exceeded.",
+  "icon": true
+ },
+ "usgs-water-data": {
+  "v": "988302bd",
+  "icon": true
+ },
+ "utsubo": {
+  "v": "79f45c28",
+  "icon": true
+ },
+ "valyu-history": {
+  "v": "b3782040",
+  "icon": true
+ },
+ "ventusky": {
+  "v": "845cb9bd",
+  "icon": true
+ },
+ "vesselfinder": {
+  "v": "ab847e50",
+  "icon": true
+ },
+ "vires-aeolus": {
+  "v": "44d20c08",
+  "icon": true
+ },
+ "visuphy": {
+  "v": "0671a047",
+  "icon": true
+ },
+ "voxtral": {
+  "v": "b23571c5",
+  "icon": true
+ },
+ "wanderkarten-3d": {
+  "failed": "HTTP 403",
+  "icon": false
+ },
+ "weatherlab": {
+  "v": "64874a4b",
+  "icon": true
+ },
+ "weavesilk": {
+  "v": "bf112c20",
+  "icon": true
+ },
+ "webgeocalc": {
+  "v": "7b9721d5",
+  "icon": false
+ },
+ "webgl-fractal-explorer": {
+  "v": "f15a380d",
+  "icon": true
+ },
+ "whats-my-jnd": {
+  "v": "a15705a0",
+  "icon": true
+ },
+ "whatsmyname": {
+  "v": "7188489c",
+  "icon": false
+ },
+ "wheelmap": {
+  "failed": "HTTP 403",
+  "icon": true
+ },
+ "where-is-the-iss": {
+  "v": "e3d3b974",
+  "icon": false
+ },
+ "who-is-in-space": {
+  "v": "43ed37b5",
+  "icon": true
+ },
+ "wifiman": {
+  "v": "f6709dad",
+  "icon": true
+ },
+ "wikisky": {
+  "v": "c6753bb9",
+  "icon": true
+ },
+ "windowswap": {
+  "v": "da1a8b27",
+  "icon": true
+ },
+ "wodniack": {
+  "v": "043a8057",
+  "icon": true
+ },
+ "world-births-deaths": {
+  "v": "f6f8fb48",
+  "icon": true
+ },
+ "world-imagery-wayback": {
+  "v": "5d0d8af3",
+  "icon": true
+ },
+ "world-magnetic-model": {
+  "v": "d3a6e634",
+  "icon": true
+ },
+ "worldmapper": {
+  "v": "c68114c7",
+  "icon": true
+ },
+ "worldometers-population": {
+  "v": "23f989a8",
+  "icon": true
+ },
+ "worldwide-telescope": {
+  "v": "b4ceb749",
+  "icon": false
+ },
+ "www-project": {
+  "v": "4c7f3023",
+  "icon": true
+ },
+ "youtube-atlas": {
+  "v": "69b53aa4",
+  "icon": true
+ },
+ "youtube-geofind": {
+  "v": "14c3bb19",
+  "icon": true
+ },
+ "z-image-turbo": {
+  "v": "4af4168e",
+  "icon": true
+ },
+ "zoom-earth": {
+  "v": "a2bbae9d",
+  "icon": true
+ },
+ "zum-physik": {
+  "v": "5d2a1710",
+  "icon": true
+ }
+}
