@@ -1,66 +1,74 @@
-# Cool WebApp Search Engine 🚀
+# Cool WebApps
 
-**[► View Project Live](https://professorquantumuniverse.github.io/Cool-WebApp-Searchengine/)**
+**[► Open the catalogue](https://professorquantumuniverse.github.io/Cool-WebApp-Searchengine/)**
 
-[![JavaScript](https://img.shields.io/badge/JavaScript-47.5%25-yellow?style=for-the-badge&logo=javascript)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-[![CSS](https://img.shields.io/badge/CSS-28.4%25-blue?style=for-the-badge&logo=css3)](https://developer.mozilla.org/en-US/docs/Web/CSS)
-[![HTML](https://img.shields.io/badge/HTML-24.1%25-orange?style=for-the-badge&logo=html5)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+A hand-picked catalogue of useful, curious and beautiful websites: interactive maps, satellite imagery, space and astronomy tools, science simulations, open data, AI experiments, developer helpers and the odd toy. More than 400 entries in 16 categories.
 
-A sleek and powerful search engine designed for discovering web applications. This project provides a clean, user-friendly interface to browse, filter, and explore a curated collection of web apps.
+## Features
 
-## ✨ Features
+- **Instant search** across names, taglines, descriptions, tags and domains, with typo tolerance.
+- **Categories, tags and favourites.** Favourites are stored only in your browser.
+- **Shareable links.** Every search, filter and entry has its own URL (for example `?cat=space` or `#nukemap`).
+- **Detail view** with a live screenshot, description, tags and a direct link.
+- **"Surprise me"** opens a random site.
+- **Light and dark mode**, responsive layout, keyboard friendly (press <kbd>/</kbd> to search).
+- No framework, no build step: plain HTML, CSS and JavaScript.
 
-- **⚡ Blazing-Fast Live Search:** Find applications in real-time as you type.
-- **🎨 Modern & Sleek Design:** A clean, engaging, and fully responsive user interface.
-- **👁️ Detailed View:** Click on any app to see detailed information, descriptions, and direct links.
-- **⚙️ Lightweight & Performant:** Built with pure, vanilla JavaScript, HTML, and CSS. No heavy frameworks, just raw performance.
-- **🌙 Dark & Light Mode:** Automatically adapts to your system's theme for optimal viewing comfort.
+## Data
 
-## 🛠️ Tech Stack
+All entries live in [`data.json`](data.json); there is no external database. The file has three parts:
 
-This project is built from the ground up using core web technologies:
+```json
+{
+  "updated": "2026-10-29",
+  "categories": [
+    { "id": "maps", "name": "Maps & Geodata", "description": "Interactive maps, GIS portals and cartography tools" }
+  ],
+  "entries": [
+    {
+      "id": "nukemap",
+      "name": "NUKEMAP",
+      "tagline": "Simulate the effects of a nuclear detonation",
+      "description": "Alex Wellerstein's map that shows blast radius, fallout and casualties for any weapon yield at any location.",
+      "url": "https://nuclearsecrecy.com/nukemap/",
+      "category": "science",
+      "tags": ["nuclear", "simulation", "history", "map"],
+      "source": "sheet"
+    }
+  ]
+}
+```
 
-- **Frontend:**
-  - **HTML5:** For the fundamental structure of the web application.
-  - **CSS3:** For all styling, responsive design, and modern features like custom properties (variables).
-  - **JavaScript (ES6+):** Powers all the application logic, including search, data fetching, and dynamic DOM manipulation.
+| Field | Notes |
+| --- | --- |
+| `id` | Unique, lowercase with dashes. Used in links (`#id`). |
+| `name`, `tagline`, `description` | Short name, one-line summary, one or two sentences. |
+| `url` | Clean URL without tracking or map-position parameters. |
+| `category` | One of the category ids. |
+| `tags` | Lowercase keywords for search. |
+| `added` | Optional date (`YYYY-MM-DD`); recent entries get a "New" badge. |
+| `source` | Where the entry came from (`sheet` = the former Google Sheet, `bookmarks` = browser bookmarks). |
 
-## 🚀 Getting Started
+To add a site, add an entry to `data.json` and run the check:
 
-To get a local copy up and running, follow these simple steps.
+```sh
+node scripts/validate.mjs
+```
 
-### Prerequisites
+Or [suggest a site](https://github.com/ProfessorQuantumUniverse/Cool-WebApp-Searchengine/issues/new?labels=suggestion&title=Suggest%20a%20site%3A%20) via an issue.
 
-All you need is a modern web browser.
+## Running locally
 
-> [!NOTE]
-> 🚧 **THE MAIN BRANCH IS THE FUTURISTIC REDESIGN BRANCH** 🚧
->
+`data.json` is loaded with `fetch`, so the page needs to be served over HTTP rather than opened as a file:
 
+```sh
+npx serve .
+```
 
-### Installation
+## Credits
 
-1.  Clone the repository:
-    ```sh
-    git clone https://github.com/ProfessorQuantumUniverse/Cool-WebApp-Searchengine.git
-    ```
-2.  Navigate to the project directory:
-    ```sh
-    cd Cool-WebApp-Searchengine
-    ```
-3.  Open the `index.html` file in your browser. That's it!
+Screenshots by [thum.io](https://www.thum.io/), favicons via Google. Made by [@ProfessorQuantumUniverse](https://github.com/ProfessorQuantumUniverse).
 
+## License
 
-## 👤 Author
-
-**ProfessorQuantumUniverse**
-
-- GitHub: [@ProfessorQuantumUniverse](https://github.com/ProfessorQuantumUniverse)
-
-## 📜 License
-
-This project is licensed under the MIT License. See the `LICENSE` file for more information.
-
----
-
-*This README was crafted with ❤️ and code.*
+GNU General Public License v3.0, see [`LICENSE`](LICENSE).
