@@ -1,0 +1,39 @@
+name: Suggest a site
+description: Propose a useful, curious or beautiful website for the catalogue.
+title: "Suggest: "
+labels: [suggestion]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for the tip! Fields filled in on the website are already here; check them and submit.
+  - type: input
+    id: url
+    attributes:
+      label: URL
+      description: Link to the site, without tracking parameters.
+      placeholder: https://example.com/
+    validations:
+      required: true
+  - type: input
+    id: name
+    attributes:
+      label: Name
+      placeholder: Example Atlas
+  - type: input
+    id: category
+    attributes:
+      label: Category
+      description: "One of: Maps & Geodata, Earth Observation, Weather & Environment, Space & Astronomy, Science & Simulations, Learning & Reference, Data & Statistics, AI & Machine Learning, Developer Tools, Design & Inspiration, Music, Audio & Video, Network, Security & OSINT, Transport & Tracking, 3D, CAD & Making, Fun & Curiosities, Collections & Discovery."
+  - type: input
+    id: tags
+    attributes:
+      label: Tags
+      description: A few lowercase keywords, separated by commas.
+      placeholder: map, history, simulation
+  - type: textarea
+    id: why
+    attributes:
+      label: Why it's cool
+      description: One or two sentences on what the site does.
+    validations:
+      required: true

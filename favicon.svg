@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <style>
+    .bg { fill: #1f4fd8; }
+    .fg { fill: none; stroke: #fff; stroke-linecap: round; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #6f8fff; }
+      .fg { stroke: #050b22; }
+    }
+  </style>
+  <rect class="bg" width="32" height="32" rx="8"/>
+  <g class="fg">
+    <circle cx="14" cy="14" r="7.5" stroke-width="2.2"/>
+    <ellipse cx="14" cy="14" rx="3.2" ry="7.5" stroke-width="1.6"/>
+    <path d="M6.5 14h15" stroke-width="1.6"/>
+    <path d="M19.6 19.6 25 25" stroke-width="3.2"/>
+  </g>
+</svg>

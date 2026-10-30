@@ -1,0 +1,32 @@
+name: Report a problem with an entry
+description: A link is broken, the description is wrong or the preview looks off.
+title: "Problem with "
+labels: [entry]
+body:
+  - type: input
+    id: entry
+    attributes:
+      label: Entry
+      description: The id of the entry (the part after # in its link).
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: URL
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What's wrong?
+      options:
+        - The link is broken or the site is gone
+        - The name, description or category is wrong
+        - The preview image is wrong or ugly
+        - Something else
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: Anything that helps to fix it, for example the new address.

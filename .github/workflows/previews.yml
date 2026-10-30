@@ -1,0 +1,71 @@
+# Takes screenshots for new catalogue entries and commits them to previews/.
+name: Previews
+
+on:
+  push:
+    branches: [main]
+    paths: [data.json]
+  workflow_dispatch:
+    inputs:
+      ids:
+        description: Comma-separated entry ids to re-shoot (empty = only entries without a preview)
+        required: false
+        default: ''
+      all:
+        description: Re-shoot every entry
+        type: boolean
+        default: false
+      retry_failed:
+        description: Also retry entries whose last attempt failed
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: previews
+  cancel-in-progress: false
+
+jobs:
+  previews:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - run: npx playwright install --with-deps chromium
+
+      - run: node scripts/validate.mjs
+
+      - name: Take screenshots
+        env:
+          IDS: ${{ inputs.ids }}
+          ALL: ${{ inputs.all }}
+          RETRY: ${{ inputs.retry_failed }}
+        run: |
+          args=()
+          if [ -n "$IDS" ]; then args+=(--ids "$IDS"); fi
+          if [ "$ALL" = "true" ]; then args+=(--all); fi
+          if [ "$RETRY" = "true" ]; then args+=(--retry-failed); fi
+          node scripts/previews.mjs "${args[@]}"
+
+      - name: Commit previews
+        run: |
+          git add previews
+          if git diff --cached --quiet; then
+            echo "No changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Update previews"
+          git pull --rebase
+          git push
